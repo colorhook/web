@@ -43,6 +43,7 @@ switch ($_POST['act'])
  */
 function search_goods_list()
 {
+	return api_err('0x007', '暂时不提供此服务功能 - myshop');
     check_auth();   //检查基本权限
 
     $version = '1.0';   //版本号
@@ -110,7 +111,8 @@ function search_goods_list()
  *  商品详细信息接口函数
  */
 function search_goods_detail()
-{
+{	
+	return api_err('0x007', '暂时不提供此服务功能 - myshop');
     check_auth();   //检查基本权限
 
     $version = '1.0';   //版本号
@@ -178,6 +180,8 @@ function search_deleted_goods_list()
  */
 function search_products_list()
 {
+	return api_err('0x007', '暂时不提供此服务功能 - myshop');
+
     check_auth();   //检查基本权限
 
     $version = '1.0';   //版本号
@@ -234,6 +238,8 @@ function search_products_list()
  */
 function search_site_info()
 {
+	return api_err('0x007', '暂时不提供此服务功能 - myshop');
+
     check_auth();   //检查基本权限
 
     $version = '1.0';   //版本号
@@ -258,7 +264,9 @@ function search_site_info()
  *  权限校验函数
  */
 function check_auth()
-{
+{	
+	return true;
+
     $license = get_shop_license();  // 取出网店 license信息
     if (empty($license['certificate_id']) || empty($license['token']) || empty($license['certi']))
     {

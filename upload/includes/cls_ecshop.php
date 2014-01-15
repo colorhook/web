@@ -78,7 +78,6 @@ class ECS
      */
     function get_domain()
     {
-		abc_log("includes/cls_ecshop", "get_domain");
 		return "http://localhost";
 
         /* 协议 */
@@ -132,7 +131,6 @@ class ECS
      */
     function url()
     {
-		abc_log("includes/cls_ecshop", "url");
         $curr = strpos(PHP_SELF, ADMIN_PATH . '/') !== false ?
                 preg_replace('/(.*)(' . ADMIN_PATH . ')(\/?)(.)*/i', '\1', dirname(PHP_SELF)) :
                 dirname(PHP_SELF);

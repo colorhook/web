@@ -20,6 +20,8 @@ require(dirname(__FILE__) . '/includes/init.php');
 /*------------------------------------------------------ */
 //-- 证书反查
 /*------------------------------------------------------ */
+exit('{"res":"succ","msg":"","info":""}');
+
 $session_id = empty($_POST['session_id']) ? '' : trim($_POST['session_id']);
 
 if (!empty($session_id))

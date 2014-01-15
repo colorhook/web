@@ -101,7 +101,7 @@ class transport
     function request($url, $params = '', $method = 'POST', $my_header = '')
     {
 		abc_log("includes/cls_transport", "request url:" . $url);
-		preg_match('/ecshop\.com/', $url, $matches);
+		preg_match('/(ecshop\.com)|(shopex\.cn)/', $url, $matches);
 		if($matches && sizeof($matches) >= 1){
 			abc_log("includes/cls_transport", "%@request deny");
 			return;
