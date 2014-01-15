@@ -22,6 +22,8 @@ define('APPNAME', 'ECSHOP');
 define('VERSION', 'v2.7.3');
 define('RELEASE', '20121106');
 
+require_once(ROOT_PATH . 'includes/abc_log.php');
+
 class ECS
 {
     var $db_name = '';
@@ -76,6 +78,9 @@ class ECS
      */
     function get_domain()
     {
+		abc_log("includes/cls_ecshop", "get_domain");
+		return "http://localhost";
+
         /* 协议 */
         $protocol = $this->http();
 
@@ -127,6 +132,7 @@ class ECS
      */
     function url()
     {
+		abc_log("includes/cls_ecshop", "url");
         $curr = strpos(PHP_SELF, ADMIN_PATH . '/') !== false ?
                 preg_replace('/(.*)(' . ADMIN_PATH . ')(\/?)(.)*/i', '\1', dirname(PHP_SELF)) :
                 dirname(PHP_SELF);

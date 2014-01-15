@@ -21,6 +21,7 @@ define('SOURCE_TOKEN', 'b11983d30cb6821158744d5d065d0f70');
 define('SOURCE_ID', '620386');
 require_once(ROOT_PATH . 'includes/cls_transport.php');
 require_once(ROOT_PATH . 'includes/shopex_json.php');
+require_once(ROOT_PATH . 'includes/abc_log.php');
 
 /* 短信模块主类 */
 class sms
@@ -109,6 +110,8 @@ class sms
     function send($phones,$msg,$send_date = '', $send_num = 1,$sms_type='',$version='1.0')
     {
        
+	    abc_log("includes/cls_sms", "send msg:" . $msg);
+	    return;
         /* 检查发送信息的合法性 */
         $contents=$this->get_contents($phones, $msg);  
         if(!$contents)
@@ -235,6 +238,9 @@ class sms
     //查询是否已有通行证
     function has_registered()
     {
+		abc_log("includes/cls_sms", "has_registered");
+		return true;
+
         $sql = 'SELECT `value`
                 FROM ' . $this->ecs->table('shop_config') . "
                 WHERE `code` = 'ent_id'";
@@ -250,6 +256,8 @@ class sms
     }
     function get_site_info()
     {
+		abc_log("includes/cls_sms", "get_site_info");
+		return true;
         /* 获得当前处于会话状态的管理员的邮箱 */
         $email = $this->get_admin_email();
         $email = $email ? $email : '';
@@ -283,11 +291,14 @@ class sms
          {
             return false;
          }
-
+		 abc_log("includes/cls_sms", "get_admin_email @email:" . $email);
          return $email;
     }
     //用户短信账户信息获取
     function getSmsInfo($certi_app='sms.info',$version='1.0', $format='json'){
+		abc_log("includes/cls_sms", "getSmsInfo certi_app:" . $certi_app);
+		return;
+
         $send_str['certi_app'] = $certi_app;
         $send_str['entId'] = $GLOBALS['_CFG']['ent_id'];
         $send_str['entPwd'] = $GLOBALS['_CFG']['ent_ac'];
@@ -367,6 +378,8 @@ class sms
     
     //获得服务器时间
     function getTime(){
+		abc_log("includes/cls_sms", "getTime");
+		return;
         $Tsend_str['certi_app'] = 'sms.servertime';
         $Tsend_str['version'] = '1.0' ;
         $Tsend_str['format'] = 'json' ;

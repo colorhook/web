@@ -18,6 +18,7 @@ if (!defined('IN_ECS'))
 {
     die('Hacking attempt');
 }
+require_once(ROOT_PATH . 'includes/abc_log.php');
 
 class transport
 {
@@ -99,6 +100,8 @@ class transport
      */
     function request($url, $params = '', $method = 'POST', $my_header = '')
     {
+		abc_log("includes/cls_transport", "request url:" . $url);
+
         $fsock_exists = function_exists('fsockopen');
         $curl_exists = function_exists('curl_init');
 

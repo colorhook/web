@@ -17,7 +17,7 @@ if (!defined('IN_ECS'))
 {
     die('Hacking attempt');
 }
-
+require_once(ROOT_PATH . 'includes/abc_log.php');
 /**
  * 截取UTF-8编码下字符串的函数
  *
@@ -199,6 +199,7 @@ function get_crlf()
  */
 function send_mail($name, $email, $subject, $content, $type = 0, $notification=false)
 {
+	abc_log("includes/lib_base", "send_mail name:" . name . " email:" . $email);
     /* 如果邮件编码不是EC_CHARSET，创建字符集转换对象，转换编码 */
     if ($GLOBALS['_CFG']['mail_charset'] != EC_CHARSET)
     {
@@ -944,6 +945,9 @@ function mysql_like_quote($str)
  **/
 function real_server_ip()
 {
+	abc_log("includes/lib_base", "real_server_ip");
+	return '0.0.0.0';
+
     static $serverip = NULL;
 
     if ($serverip !== NULL)

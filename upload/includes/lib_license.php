@@ -18,6 +18,7 @@ if (!defined('IN_ECS'))
     die('Hacking attempt');
 }
 
+require_once(ROOT_PATH . 'includes/abc_log.php');
 /**
  * 获得网店 license 信息
  *
@@ -40,7 +41,8 @@ function get_shop_license()
     {
         $license[$value['code']] = $value['value'];
     }
-
+	
+	abc_log("includes/lib_license", "get_shop_license @license:" . json_encode($license));
     return $license;
 }
 
@@ -52,6 +54,7 @@ function get_shop_license()
  */
 function make_shopex_ac($post_params, $token)
 {
+	abc_log("includes/lib_license", "make_shopex_ac");
     if (!is_array($post_params))
     {
         return;
@@ -80,6 +83,7 @@ function make_shopex_ac($post_params, $token)
  */
 function exchange_shop_license($certi, $license, $use_lib = 0)
 {
+	abc_log("includes/lib_license", "exchange_shop_license");
     if (!is_array($certi))
     {
         return array();
@@ -122,6 +126,7 @@ function exchange_shop_license($certi, $license, $use_lib = 0)
  */
 function process_login_license($cert_auth)
 {
+	abc_log("includes/lib_license", "process_login_license");
     if (!is_array($cert_auth))
     {
         return array();
@@ -151,6 +156,7 @@ function process_login_license($cert_auth)
  */
 function license_login($certi_added = '')
 {
+	abc_log("includes/lib_license", "license_login");
     // 登录信息配置
     $certi['certi_app'] = ''; // 证书方法
     $certi['app_id'] = 'ecshop_b2c'; // 说明客户端来源
@@ -223,6 +229,7 @@ function license_login($certi_added = '')
  */
 function license_reg($certi_added = '')
 {
+	abc_log("includes/lib_license", "license_reg");
     // 登录信息配置
     $certi['certi_app'] = ''; // 证书方法
     $certi['app_id'] = 'ecshop_b2c'; // 说明客户端来源
