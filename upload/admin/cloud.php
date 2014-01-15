@@ -46,7 +46,7 @@ $act = !empty($_REQUEST['act']) ? $_REQUEST['act'] :  'index';
 $must = array('version','ecs_lang','charset','patch','stamp','api_ver');
 if($act =='menu_api')
 {
-
+	return;
     if (!admin_priv('all','',false))
     {
         make_json_result('0');
@@ -91,6 +91,7 @@ if($act =='menu_api')
 }
 elseif($act == 'cloud_remind')
 {
+	return;
     $api_data = read_static_cache('cloud_remind');
     
     if($api_data === false || (isset($api_data['api_time']) && $api_data['api_time']<date('Ymd')) )
@@ -133,7 +134,7 @@ elseif($act == 'cloud_remind')
 }
 elseif($act == 'close_remind')
 {
-
+	return;
     $remind_id=$_REQUEST['remind_id'];
     $t = new transport('-1',5);
     $apiget = "ver= $data[version] &ecs_lang= $data[ecs_lang] &charset= $data[charset] &certificate_id=$data[certificate_id]&ent_id=$data[ent_id]&remind_id=$remind_id";
@@ -216,7 +217,7 @@ else
         $url = parse_url($_GET['link']);
         if (!empty($url['host']))
         {
-            ecs_header("Location: ".$url['scheme']."://".$url['host'].$url['path']."?".$url['query'].$query."\n");
+            //ecs_header("Location: ".$url['scheme']."://".$url['host'].$url['path']."?".$url['query'].$query."\n");
             exit();
         }
     }
@@ -225,7 +226,7 @@ else
     {
         $query .= '&'.$v.'='.$data[$v];
     }
-    ecs_header("Location: http://cloud.ecshop.com/api.php?act=".$act.$query."\n");
+    //ecs_header("Location: http://cloud.ecshop.com/api.php?act=".$act.$query."\n");
     exit();
 }
 

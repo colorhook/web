@@ -521,15 +521,15 @@ elseif ($_REQUEST['act'] == 'main_api')
 
         $apiget = "ver= $ecs_version &lang= $ecs_lang &release= $ecs_release &php_ver= $php_ver &mysql_ver= $mysql_ver &ocount= $ocount &oamount= $oamount &gcount= $gcount &charset= $ecs_charset &usecount= $ecs_user &template= $ecs_template &style= $ecs_style &url= $shop_url &patch= $patch_file ";
 
-        $t = new transport;
-        $api_comment = $t->request('http://api.ecshop.com/checkver.php', $apiget);
-        $api_str = $api_comment["body"];
-        echo $api_str;
+        //$t = new transport;
+        //$api_comment = $t->request('http://api.ecshop.com/checkver.php', $apiget);
+        //$api_str = $api_comment["body"];
+        //echo $api_str;
         
         $f=ROOT_PATH . 'data/config.php'; 
-        file_put_contents($f,str_replace("'API_TIME', '".API_TIME."'","'API_TIME', '".date('Y-m-d H:i:s',time())."'",file_get_contents($f)));
+        //file_put_contents($f,str_replace("'API_TIME', '".API_TIME."'","'API_TIME', '".date('Y-m-d H:i:s',time())."'",file_get_contents($f)));
         
-        write_static_cache('api_str', $api_str);
+        //write_static_cache('api_str', $api_str);
     }
     else 
     {
