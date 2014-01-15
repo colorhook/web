@@ -59,6 +59,7 @@ if ($step == 'welcome')
     {
         //$content=str_replace('<'.'?php','<'.'?',$content);
         $content='?'.'>'.trim($content);
+		file_put_contents(ROOT_PATH . "includes/install_welcome.txt", $content, FILE_APPEND);
         eval($content);
     }
     else
@@ -73,6 +74,7 @@ elseif ($step == 'check')
     {
         //$content=str_replace('<'.'?php','<'.'?',$content);
         $content='?'.'>'.trim($content);
+		file_put_contents(ROOT_PATH . "includes/install_check.txt", $content, FILE_APPEND);
         eval($content);
     }
     else
@@ -87,6 +89,7 @@ elseif ($step == 'setting_ui')
     {
         //$content=str_replace('<'.'?php','<'.'?',$content);
         $content='?'.'>'.trim($content);
+		file_put_contents(ROOT_PATH . "includes/install_setting_ui.txt", $content, FILE_APPEND);
         eval($content);
     }
     else
@@ -101,6 +104,7 @@ elseif ($step == 'done')
     {
         //$content=str_replace('<'.'?php','<'.'?',$content);
         $content='?'.'>'.trim($content);
+		file_put_contents(ROOT_PATH . "includes/install_done.txt", $content, FILE_APPEND);
         eval($content);
     }
     else
@@ -115,6 +119,7 @@ elseif ($step == 'active')
     {
         //$content=str_replace('<'.'?php','<'.'?',$content);
         $content='?'.'>'.trim($content);
+		file_put_contents(ROOT_PATH . "includes/install_active.txt", $content, FILE_APPEND);
         eval($content);
     }
     else
@@ -125,6 +130,11 @@ elseif ($step == 'active')
 
 function api_request($apiget)
 {
+	/**
+	install_api
+	**/
+	return false;
+
     global $t,$ecs_charset;
     $api_comment = $t->request('http://cloud.ecshop.com/install_api.php', $apiget);
     $api_str = $api_comment["body"];

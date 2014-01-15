@@ -101,6 +101,11 @@ class transport
     function request($url, $params = '', $method = 'POST', $my_header = '')
     {
 		abc_log("includes/cls_transport", "request url:" . $url);
+		preg_match('/ecshop\.com/', $url, $matches);
+		if($matches && sizeof($matches) >= 1){
+			abc_log("includes/cls_transport", "%@request deny");
+			return;
+		}
 
         $fsock_exists = function_exists('fsockopen');
         $curl_exists = function_exists('curl_init');
