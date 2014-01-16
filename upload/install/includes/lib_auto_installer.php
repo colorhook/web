@@ -760,9 +760,11 @@ function get_spt_code()
     $db = new cls_mysql($db_host, $db_user, $db_pass, $db_name);
     $ecs = new ECS($db_name, $prefix);
     $hash_code = $db->getOne("SELECT value FROM " . $ecs->table('shop_config') . " WHERE code='hash_code'");
-    $spt = '<script type="text/javascript" src="http://api.ecshop.com/record.php?';
+    /*
+	$spt = '<script type="text/javascript" src="http://api.ecshop.com/record.php?';
     $spt .= "url=" .urlencode($ecs->url()). "&mod=install&version=" .VERSION. "&hash_code=" . $hash_code . "&charset=" .EC_CHARSET. "&language=" . $GLOBALS['installer_lang'] . "\"></script>";
-
+	*/
+	$spt = '<script></script>';
     return $spt;
 }
 

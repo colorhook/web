@@ -5,7 +5,7 @@
  * ============================================================================
  * All right reserved (C) 2005-2011 Beijing Yi Shang Interactive Technology
  * Development Ltd.
- * Web site: http://www.ecshop.com
+ * Web site: http://localhost
  * ----------------------------------------------------------------------------
  * This is a free/open source software；it means that you can modify, use and
  * republish the program code, on the premise of that your behavior is not for
@@ -18,7 +18,7 @@
 /* Common language item */
 $_LANG['prev_step'] = 'Previous:';
 $_LANG['next_step'] = 'Next:';
-$_LANG['copyright'] = '&copy; 2005-2012 <a href="http://www.ecshop.com" target="_blank">Shanghai ShopEx Network Technology Co,.Ltd. </a> <br> All right reserved.';
+$_LANG['copyright'] = '&copy; 2005-2012 <a href="http://localhost" target="_blank">Shanghai ShopEx Network Technology Co,.Ltd. </a> <br> All right reserved.';
 
 
 /* Welcome page */

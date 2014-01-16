@@ -235,8 +235,11 @@ if(isset($_GET['ent_id']) && isset($_GET['ent_ac']) &&  isset($_GET['ent_sign'])
         require(ROOT_PATH . 'includes/cls_transport.php');
         $t = new transport('-1',5);
         $apiget = "act=ent_sign&ent_id= $ent_id & certificate_id=$certificate_id";
-
-        $t->request('http://cloud.ecshop.com/api.php', $apiget);
+		
+		/**
+		@hack without request ecshop.com
+		**/
+        //$t->request('http://cloud.ecshop.com/api.php', $apiget);
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_id .'" WHERE code = "ent_id"');
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_ac .'" WHERE code = "ent_ac"');
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_sign .'" WHERE code = "ent_sign"');

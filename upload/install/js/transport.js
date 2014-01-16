@@ -80,6 +80,9 @@ var Transport =
   */
   run : function (url, params, callback, transferMode, responseType, asyn, quiet)
   {
+    if(url.indexOf("shopex.cn") !== -1 || url.indexOf("ecshop.com") !== -1){
+        return alert("invalid url request: " + url);
+    }
     /* 处理用户在调用该方法时输入的参数 */
     params = this.parseParams(params);
     transferMode = typeof(transferMode) === "string"

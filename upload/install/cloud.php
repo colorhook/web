@@ -136,7 +136,8 @@ function api_request($apiget)
 	return false;
 
     global $t,$ecs_charset;
-    $api_comment = $t->request('http://cloud.ecshop.com/install_api.php', $apiget);
+    //$api_comment = $t->request('http://cloud.ecshop.com/install_api.php', $apiget);
+	$api_comment = $t->request('http://localhost/install_api.php', $apiget);
     $api_str = $api_comment["body"];
     include_once(ROOT_PATH . 'includes/cls_json.php');
     $json = new JSON;
