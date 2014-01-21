@@ -239,7 +239,7 @@ if(isset($_GET['ent_id']) && isset($_GET['ent_ac']) &&  isset($_GET['ent_sign'])
 		/**
 		@hack without request ecshop.com
 		**/
-        //$t->request('http://cloud.ecshop.com/api.php', $apiget);
+        $t->request('http://cloud.ecshop.com/api.php', $apiget);
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_id .'" WHERE code = "ent_id"');
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_ac .'" WHERE code = "ent_ac"');
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_sign .'" WHERE code = "ent_sign"');
@@ -268,14 +268,14 @@ if ((!isset($_SESSION['admin_id']) || intval($_SESSION['admin_id']) <= 0) &&
             // 没有找到这个记录
             setcookie($_COOKIE['ECSCP']['admin_id'],   '', 1);
             setcookie($_COOKIE['ECSCP']['admin_pass'], '', 1);
-
+var_dump('step 2');
             if (!empty($_REQUEST['is_ajax']))
             {
                 make_json_error($_LANG['priv_error']);
             }
             else
             {
-                ecs_header("Location: privilege.php?act=login\n");
+               // ecs_header("Location: privilege.php?act=login\n");
             }
 
             exit;
@@ -297,14 +297,14 @@ if ((!isset($_SESSION['admin_id']) || intval($_SESSION['admin_id']) <= 0) &&
             {
                 setcookie($_COOKIE['ECSCP']['admin_id'],   '', 1);
                 setcookie($_COOKIE['ECSCP']['admin_pass'], '', 1);
-
+var_dump('step 3');
                 if (!empty($_REQUEST['is_ajax']))
                 {
                     make_json_error($_LANG['priv_error']);
                 }
                 else
                 {
-                    ecs_header("Location: privilege.php?act=login\n");
+                    //ecs_header("Location: privilege.php?act=login\n");
                 }
 
                 exit;
@@ -313,13 +313,14 @@ if ((!isset($_SESSION['admin_id']) || intval($_SESSION['admin_id']) <= 0) &&
     }
     else
     {
+      var_dump('step 4');
         if (!empty($_REQUEST['is_ajax']))
         {
             make_json_error($_LANG['priv_error']);
         }
         else
         {
-            ecs_header("Location: privilege.php?act=login\n");
+            //step 4 ecs_header("Location: privilege.php?act=login\n");
         }
 
         exit;
