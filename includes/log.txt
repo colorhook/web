@@ -45,3 +45,6 @@
 2014-01-19 11:29:28 [file] includes/lib_license [message] make_shopex_ac
 2014-01-19 11:29:28 [file] includes/lib_license [message] exchange_shop_license
 2014-01-19 11:29:28 [file] includes/cls_transport [message] request url:http://localhost/openapi/api.php
+2014-01-21 15:23:21 [file] includes/lib_base [message] send_mail name:name email:121453713@qq.com
+2014-01-21 15:23:29 [file] includes/lib_base [message] send_mail name:name email:121453713@qq.com
+2014-01-21 15:23:33 [file] includes/lib_base [message] send_mail name:name email:121453713@qq.com
