@@ -331,7 +331,7 @@ if ($_REQUEST['act'] != 'login' && $_REQUEST['act'] != 'signin' &&
     $_REQUEST['act'] != 'forget_pwd' && $_REQUEST['act'] != 'reset_pwd' && $_REQUEST['act'] != 'check_order')
 {
     $admin_path = preg_replace('/:\d+/', '', $ecs->url()) . ADMIN_PATH;
-    var_dump($admin_path);
+    /*
     if (!empty($_SERVER['HTTP_REFERER']) &&
         strpos(preg_replace('/:\d+/', '', $_SERVER['HTTP_REFERER']), $admin_path) === false)
     {
@@ -346,7 +346,7 @@ if ($_REQUEST['act'] != 'login' && $_REQUEST['act'] != 'signin' &&
         }
 
         exit;
-    }
+    }*/
 }
 
 /* 管理员登录后可在任何页面使用 act=phpinfo 显示 phpinfo() 信息 */
