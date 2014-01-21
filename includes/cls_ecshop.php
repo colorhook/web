@@ -18,9 +18,9 @@ if (!defined('IN_ECS'))
     die('Hacking attempt');
 }
 
-define('APPNAME', 'ECSHOP');
-define('VERSION', 'v2.7.3');
-define('RELEASE', '20121106');
+define('APPNAME', 'MYSHOP');
+define('VERSION', 'v1.0.0');
+define('RELEASE', '20140121');
 
 require_once(ROOT_PATH . 'includes/abc_log.php');
 

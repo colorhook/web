@@ -20,8 +20,6 @@ if (!defined('IN_ECS'))
 
 define('ECS_ADMIN', true);
 
-error_reporting(E_ALL);
-
 if (__FILE__ == '')
 {
     die('Fatal error code: 0');
@@ -182,6 +180,7 @@ if (!file_exists('../temp/compiled/admin'))
 clearstatcache();
 
 /* 如果有新版本，升级 */
+/*
 if (!isset($_CFG['ecs_version']))
 {
     $_CFG['ecs_version'] = 'v2.0.5';
@@ -195,7 +194,7 @@ if (preg_replace('/(?:\.|\s+)[a-z]*$/i', '', $_CFG['ecs_version']) != preg_repla
 
     exit;
 }
-
+*/
 /* 创建 Smarty 对象。*/
 require(ROOT_PATH . 'includes/cls_template.php');
 $smarty = new cls_template;
