@@ -236,9 +236,7 @@ if(isset($_GET['ent_id']) && isset($_GET['ent_ac']) &&  isset($_GET['ent_sign'])
         $t = new transport('-1',5);
         $apiget = "act=ent_sign&ent_id= $ent_id & certificate_id=$certificate_id";
 		
-		/**
-		@hack without request ecshop.com
-		**/
+	
         $t->request('http://cloud.ecshop.com/api.php', $apiget);
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_id .'" WHERE code = "ent_id"');
         $db->query('UPDATE '.$ecs->table('shop_config') . ' SET value = "'. $ent_ac .'" WHERE code = "ent_ac"');
@@ -333,16 +331,18 @@ if ($_REQUEST['act'] != 'login' && $_REQUEST['act'] != 'signin' &&
     $_REQUEST['act'] != 'forget_pwd' && $_REQUEST['act'] != 'reset_pwd' && $_REQUEST['act'] != 'check_order')
 {
     $admin_path = preg_replace('/:\d+/', '', $ecs->url()) . ADMIN_PATH;
+    var_dump($admin_path);
     if (!empty($_SERVER['HTTP_REFERER']) &&
         strpos(preg_replace('/:\d+/', '', $_SERVER['HTTP_REFERER']), $admin_path) === false)
     {
+      var_dump('step 5');
         if (!empty($_REQUEST['is_ajax']))
         {
             make_json_error($_LANG['priv_error']);
         }
         else
         {
-            ecs_header("Location: privilege.php?act=login\n");
+            //ecs_header("Location: privilege.php?act=login\n");
         }
 
         exit;
