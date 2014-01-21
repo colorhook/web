@@ -1,4 +1,7 @@
 temp
 .DS_Store
+data/config.php
+;data/flashdata
 data/install.lock
 data/install.txt
+;includes/abc_log.php
