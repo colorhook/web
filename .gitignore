@@ -1,2 +1,4 @@
-upload/temp
-upload/data/install.lock
+temp
+.DS_Store
+data/install.lock
+data/install.txt

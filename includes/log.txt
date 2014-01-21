@@ -1,0 +1,47 @@
+2014-01-16 08:24:55 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:24:55 [file] includes/lib_license [message] license_reg
+2014-01-16 08:24:55 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:24:55 [file] includes/lib_license [message] make_shopex_ac
+2014-01-16 08:24:55 [file] includes/lib_license [message] exchange_shop_license
+2014-01-16 08:24:55 [file] includes/cls_transport [message] request url:http://service.shopex.cn/openapi/api.php
+2014-01-16 08:24:55 [file] includes/cls_transport [message] %@request deny
+2014-01-16 08:32:32 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:32:32 [file] includes/lib_license [message] license_reg
+2014-01-16 08:32:32 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:32:32 [file] includes/lib_license [message] make_shopex_ac
+2014-01-16 08:32:32 [file] includes/lib_license [message] exchange_shop_license
+2014-01-16 08:32:32 [file] includes/cls_transport [message] request url:http://service.shopex.cn/openapi/api.php
+2014-01-16 08:32:32 [file] includes/cls_transport [message] %@request deny
+2014-01-16 08:33:07 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:33:07 [file] includes/lib_license [message] license_reg
+2014-01-16 08:33:07 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:33:07 [file] includes/lib_license [message] make_shopex_ac
+2014-01-16 08:33:07 [file] includes/lib_license [message] exchange_shop_license
+2014-01-16 08:33:07 [file] includes/cls_transport [message] request url:http://service.shopex.cn/openapi/api.php
+2014-01-16 08:33:07 [file] includes/cls_transport [message] %@request deny
+2014-01-16 08:41:24 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-16 08:41:29 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/service.shopex.cn\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:19:10 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:19:10 [file] includes/lib_license [message] license_reg
+2014-01-19 11:19:10 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:19:10 [file] includes/lib_license [message] make_shopex_ac
+2014-01-19 11:19:10 [file] includes/lib_license [message] exchange_shop_license
+2014-01-19 11:19:10 [file] includes/cls_transport [message] request url:http://localhost/openapi/api.php
+2014-01-19 11:20:18 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:20:18 [file] includes/lib_license [message] license_reg
+2014-01-19 11:20:18 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:20:18 [file] includes/lib_license [message] make_shopex_ac
+2014-01-19 11:20:18 [file] includes/lib_license [message] exchange_shop_license
+2014-01-19 11:20:18 [file] includes/cls_transport [message] request url:http://localhost/openapi/api.php
+2014-01-19 11:26:59 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:26:59 [file] includes/lib_license [message] license_reg
+2014-01-19 11:26:59 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:26:59 [file] includes/lib_license [message] make_shopex_ac
+2014-01-19 11:26:59 [file] includes/lib_license [message] exchange_shop_license
+2014-01-19 11:26:59 [file] includes/cls_transport [message] request url:http://localhost/openapi/api.php
+2014-01-19 11:29:28 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:29:28 [file] includes/lib_license [message] license_reg
+2014-01-19 11:29:28 [file] includes/lib_license [message] get_shop_license @license:{"certi":"http:\/\/localhost\/openapi\/api.php","certificate_id":"","token":""}
+2014-01-19 11:29:28 [file] includes/lib_license [message] make_shopex_ac
+2014-01-19 11:29:28 [file] includes/lib_license [message] exchange_shop_license
+2014-01-19 11:29:28 [file] includes/cls_transport [message] request url:http://localhost/openapi/api.php
