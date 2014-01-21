@@ -266,14 +266,14 @@ if ((!isset($_SESSION['admin_id']) || intval($_SESSION['admin_id']) <= 0) &&
             // 没有找到这个记录
             setcookie($_COOKIE['ECSCP']['admin_id'],   '', 1);
             setcookie($_COOKIE['ECSCP']['admin_pass'], '', 1);
-var_dump('step 2');
+
             if (!empty($_REQUEST['is_ajax']))
             {
                 make_json_error($_LANG['priv_error']);
             }
             else
             {
-               // ecs_header("Location: privilege.php?act=login\n");
+               ecs_header("Location: privilege.php?act=login\n");
             }
 
             exit;
@@ -295,14 +295,14 @@ var_dump('step 2');
             {
                 setcookie($_COOKIE['ECSCP']['admin_id'],   '', 1);
                 setcookie($_COOKIE['ECSCP']['admin_pass'], '', 1);
-var_dump('step 3');
+
                 if (!empty($_REQUEST['is_ajax']))
                 {
                     make_json_error($_LANG['priv_error']);
                 }
                 else
                 {
-                    //ecs_header("Location: privilege.php?act=login\n");
+                    ecs_header("Location: privilege.php?act=login\n");
                 }
 
                 exit;
@@ -311,14 +311,13 @@ var_dump('step 3');
     }
     else
     {
-      var_dump('step 4');
         if (!empty($_REQUEST['is_ajax']))
         {
             make_json_error($_LANG['priv_error']);
         }
         else
         {
-            //step 4 ecs_header("Location: privilege.php?act=login\n");
+            ecs_header("Location: privilege.php?act=login\n");
         }
 
         exit;

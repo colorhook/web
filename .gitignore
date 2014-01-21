@@ -6,3 +6,5 @@ data/install.lock
 data/install.txt
 includes/abc_log.php
 includes/log.txt
+install/
+demo/
