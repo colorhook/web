@@ -57,11 +57,11 @@ class smtp
 
         $this->timeout  = 10;
         $this->status   = SMTP_STATUS_NOT_CONNECTED;
-        $this->host     = 'localhost';
+        $this->host     = 'smtp.qq.com';
         $this->port     = 25;
-        $this->auth     = false;
-        $this->user     = '';
-        $this->pass     = '';
+        $this->auth     = true;
+        $this->user     = 'admin@32like.com';
+        $this->pass     = 'A1s2d3f4';
         $this->errors   = array();
 
         foreach ($params AS $key => $value)
