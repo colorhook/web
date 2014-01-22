@@ -13,10 +13,6 @@
  * $Id: cls_smtp.php 17217 2011-01-19 06:29:08Z liubo $
 */
 
-if (!defined('IN_ECS'))
-{
-    die('Hacking attempt');
-}
 
 define('SMTP_STATUS_NOT_CONNECTED', 1, true);
 define('SMTP_STATUS_CONNECTED',     2, true);
