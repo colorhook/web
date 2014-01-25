@@ -200,6 +200,7 @@ function get_crlf()
 function send_mail($name, $email, $subject, $content, $type = 0, $notification=false)
 {
 	abc_log("includes/lib_base", "send_mail name:" . $name . " email:" . $email);
+  
     /* 如果邮件编码不是EC_CHARSET，创建字符集转换对象，转换编码 */
     if ($GLOBALS['_CFG']['mail_charset'] != EC_CHARSET)
     {
