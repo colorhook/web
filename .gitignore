@@ -9,3 +9,4 @@ includes/log.txt
 install/
 demo/
 upload/
+*.psd
