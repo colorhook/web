@@ -26,35 +26,40 @@ var process_request = "{$lang.process_request}";
   <div class="logo f_l">
     <a href="./" target="_self"><img src="logo.png"/></a>
   </div>
-  <div class="keys f_l">
-   <script>
-    {literal}
-    function checkSearchForm(){
-        if(document.getElementById('keyword').value){
-            return true;
-        }else{
-            alert("{$lang.no_keywords}");
-            return false;
-        }
-    }
-    {/literal}
-    </script>
-    {if $searchkeywords}
-   {$lang.hot_search} ：
-   {foreach from=$searchkeywords item=val}
-   <a href="search.php?keywords={$val|escape:url}">{$val}</a>
-   {/foreach}
-   {/if}
-  </div>
-  <form id="searchForm" name="searchForm" method="get" action="search.php" onSubmit="return checkSearchForm()" class="f_r"  style="_position:relative; top:5px;">
-   <select name="category" id="category" class="B_input">
-      <option value="0">{$lang.all_category}</option>
-      {$category_list}
-    </select>
-   <input name="keywords" type="text" id="keyword" value="{$search_keywords|escape}" class="B_input" style="width:110px;"/>
-   <input name="imageField" type="submit" value="" class="go" style="cursor:pointer;" />
-   <a href="search.php?act=advanced_search">{$lang.advanced_search}</a>
-   </form>
+
+   <div class="ui-header-searchbar ui-searchbar ui-searchbar-full ui-header-searchbar ui-searchbar-mod-type ui-searchbar-mod-advanced">
+     <form id="searchForm" name="searchForm" method="get" action="search.php">
+        <div id="searchbar-type" class="ui-searchbar-type">
+	    <div class="ui-searchbar-type-value">
+	        <span id="searchbar-type-display" class="ui-searchbar-type-display">{$lang.all_category}</span>
+	        <span class="ui-searchbar-arrow ui-searchbar-arrow-down ui-searchbar-type-arrow"></span>
+	    </div>
+	    <ul id="searchbar-type-options" class="ui-searchbar-type-options" style="z-index: 99; position: absolute; left: -2px; top: 32px; display: none;">
+	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="products" rel="nofollow">Products</a></li>
+	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="suppliers" rel="nofollow">Suppliers</a></li>
+	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="buyers" rel="nofollow">Buyers</a></li>
+	    </ul>
+	    <!--<select name="category" id="category" class="B_input">
+		<option value="0">{$lang.all_category}</option>
+		{$category_list}
+	    </select>-->
+	</div>
+
+	<div class="ui-searchbar-main">
+	   <input type="text" id="keyword" class="ui-searchbar-keyword" name="keywords" autocomplete="off" value="{$search_keywords|escape}"
+	     x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:translate" lang="en" placeholder="请输入关键词">
+	   <input type="submit" name="imageField" id="searchbar-submit" class="ui-searchbar-submit" value="搜索">
+	   <a id="searchbar-advanced" rel="nofollow" class="ui-searchbar-advanced" href="search.php?act=advanced_search">{$lang.advanced_search}</a>
+	</div>
+     </form>
+   </div>
+   <div class="search-hots">
+       {if $searchkeywords}
+	 {foreach from=$searchkeywords item=val}
+	 <a href="search.php?keywords={$val|escape:url}">{$val}</a>
+	 {/foreach}
+	{/if}
+   </div>
 </div>
 
 <div class="ms-nav" class="clearfix">
@@ -72,8 +77,8 @@ var process_request = "{$lang.process_request}";
   <div class="f_r ms-menu">
     <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}</a>
     <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
-    <span class="separetor">|</span>
-    <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}>{$nav.namea>
+    <span class="sep">|</span>
+    <a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if} {if $nav.active eq 1} class="cur"{/if}>{$nav.name}</a>
     <!-- {/foreach} -->
   </div>
 </div>

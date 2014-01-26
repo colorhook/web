@@ -74,6 +74,7 @@
         overflow: "hidden",
         position: "relative"
       });
+
       $(".slidesjs-container", $element).wrapInner("<div class='slidesjs-control'>", $element).children();
       $(".slidesjs-control", $element).css({
         position: "relative",

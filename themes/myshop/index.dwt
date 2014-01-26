@@ -12,7 +12,6 @@
 <link rel="shortcut icon" href="favicon.ico" />
 <link rel="icon" href="animated_favicon.gif" type="image/gif" />
 <link href="{$ecs_css_path}" rel="stylesheet" type="text/css" />
-<link rel="alternate" type="application/rss+xml" title="RSS|{$page_title}" href="{$feed_url}" />
 {* 包含脚本文件 *}
 {insert_scripts files='jquery-1.9.0.min.js,jquery.slides.js,common.js,index.js'}
 </head>
@@ -20,26 +19,56 @@
 <!-- #BeginLibraryItem "/library/page_header.lbi" --><!-- #EndLibraryItem -->
 
 <div id="J-slider" class="ms-slider">
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)"/>
-		<a href=""></a>
+	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	  <a href="#">&nbsp;</a>
 	</div>
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)"/>
-		<a href=""></a>
+	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	  <a href="#">&nbsp;</a>
 	</div>
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)"/>
-		<a href=""></a>
+	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	  <a href="#">&nbsp;</a>
 	</div>
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)"/>
-		<a href=""></a>
+	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	  <a href="#">&nbsp;</a>
 	</div>
 </div>
 
-<!--
-    <div class="ms-notice">
-      <h3>{$lang.shop_notice}</h3>
-      <p>{$shop_notice}</p>
+
+<div class="ms-sys">
+  <div class="ms-mod">
+    <div class="ms-intro sys-item">
+      <h3>新手教程<span>Novice Tutorials</span></h3>
+      <div class="hd">
+       <ul>
+         <li><a href="#">关于主图</a></li>
+	 <li><a href="#">如何发布宝贝</a></li>
+	 <li><a href="#">如何下架宝贝</a></li>
+	 <li><a href="#">如何设置包邮</a></li>
+	 <li><a href="#">宝贝分类及运费模版设置</a></li>
+       </ul>
+      </div>
     </div>
--->
+    <div class="ms-lect sys-item">
+      <h3>时尚讲堂<span>Fasion Lecture</span></h3>
+      <div class="hd">
+       <ul>
+         <li><a href="#">【警惕】莫让二维码成支付宝被盗</a></li>
+	 <li><a href="#">【置顶】虚假交易申诉流程优化公告</a></li>
+	 <li><a href="#">【网商杂谈】吸引买家、为买家排除</a></li>
+	 <li><a href="#">【热点话题】淘宝卖家怒砸十五辆车</a></li>
+	 <li><a href="#">【经验畅谈】淘宝开店必学之店铺运</a></li>
+       </ul>
+      </div>
+    </div>
+    <div class="ms-notice sys-item">
+      <h3>{$lang.shop_notice}</h3>
+      <div class="hd">
+	<p>{$shop_notice}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 <!-- #BeginLibraryItem "/library/top10.lbi" -->
@@ -398,20 +427,22 @@ function check_email()
 <!--帮助-->
 
 <div class="ms-shop-tip ms-mod">
-  <img src="../images/shop-tip.jpg">
+  <img src="../images/vantage.jpg" width="1000" height="124"/>
+</div>
+<div class="ms-ensure">
+  <div class="ms-mod">
+    <div class="pay-image"></div>
+  </div>
 </div>
 <script>
 $(function(){
-  
-
-$("#J-slider").slidesjs({
-	navigation:{
+  $("#J-slider").slidesjs({
+         navigation:{
 	  active:false
 	},
 	width: 1600,
 	height: 400
-});
-
+  });
 });
 </script>
 <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->

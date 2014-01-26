@@ -13,11 +13,12 @@ Template Type: type_0
 /* ====================
      公共样式
 ==================== */
-body{background:#fff; font-size:12px; font-family:"宋体",Verdana, Arial; line-height:150%; margin:5px 0 0 0; padding:0; color:#404040;}
+body{background:#fff; font:12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif; line-height:150%; margin:0; padding:0; color:#404040;}
 div{margin:0 auto; padding:0;}
 h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{
 margin:0; padding:0; border:none; list-style-type:none;
 }
+img{display:block;}
 .block{
   width:1000px; height:auto;
 }
@@ -85,7 +86,7 @@ visibility:hidden;
   }
   .boxCenterList{padding:8px;}
   /*模块标题*/
-  h3{height:33px; line-height:33px; font-size:12px; background:url(images/h3title.gif) repeat-x left top; text-align:right;
+  h3{height:33px; line-height:33px; font-size:12px; text-align:right;
   padding:0 12px; font-weight:100;
   }
   h3.border{border:1px solid #c5e4ff; border-bottom:none;}
@@ -503,10 +504,14 @@ visibility:hidden;
 .ms-mod{width:1000px;margin:0 auto;text-align:left;}
 .ms-cap{height:34px;line-height:34px;border-bottom:#f0f0f0 1px solid;color:#888;}
 .ms-search{height:80px;overflow:hidden;}
-.ms-nav{height:27px;border-bottom:#e42141 3px solid;color:#555;}
-.ms-footer{height:260px;background-color:#e42141;}
-.ms-copyright{height:180px;}
-
+.ms-nav{height:32px;border-bottom:#e42141 3px solid;color:#555;}
+.ms-footer{height:260px;background-color:#e42141;color:#fff;}
+.ms-copyright{height:180px;color:#969696}
+.ms-copyright .copyright{background:url(images/copyright.jpg) no-repeat;height:51px;}
+.ms-footer .guide-item{padding:30px 0 10px 0;width:145px;line-height:24px;}
+.ms-footer h3{font-weight:bold;font-size:14px;text-align:left;padding-left:0;padding-bottom:5px;}
+.ms-footer a:link, .ms-footer a:visited{color:#fff;text-decoration:none;}
+.ms-footer a:hove, .ms-footer a:active{text-decoration:underline;}
 #J-slider,
 #J-slider .slidesjs-control{width:100%;height:400px;position:relative;overflow:hidden}
 #J-slider .item{position:absolute;left:0;top:0;width:100%;height:100%;background-position:center center;background-repeat:no-repeat;}
@@ -538,3 +543,99 @@ visibility:hidden;
 }
 .slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
 .slidesjs-pagination li a:hover { background-position: 0 -26px }
+
+/* search */
+.ui-header-searchbar {
+  margin: 0 295px 0 225px;
+  position: relative;
+  height: 31px;
+  border: 3px solid #e62041;
+}
+.ui-searchbar-type {
+ float: left;
+ position: relative;
+ border-right: 1px solid #e62041;
+ margin: 1px;
+ height: 29px;
+ width: 78px;
+ display: none;
+}
+.ui-searchbar-mod-type .ui-searchbar-type {
+ display: block;
+}
+.ui-searchbar-mod-type .ui-searchbar-main {
+  margin-left: 90px;
+  position:relative;
+}
+.ui-searchbar .ui-searchbar-keyword{
+	width: 99%;
+	margin: 0;
+	border: 0;
+	font: 400 14px/20px arial;
+	height: 20px;
+	padding: 6px 0 5px;
+	color: #333;
+	outline: none;
+	overflow: visible;
+	_line-height: 19px;
+	_height: 19px;
+	_width: 98%;
+}
+.ui-searchbar-type-value {
+	position: relative;
+	padding: 7px 0 0 6px;
+	cursor: pointer;
+	color: #e42141;
+}
+.ui-searchbar-arrow {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	border-width: 4px;
+	border-style: dashed;
+	border-color: transparent;
+	vertical-align: middle;
+	border-top-style: solid;
+}
+.ui-searchbar-type-value .ui-searchbar-arrow {
+	position: absolute;
+	border-top-color: #e62041;
+	top: 13px;
+	right: 8px;
+}
+.ui-searchbar-submit {
+	float: left;
+	width: 90px;
+	height: 37px;
+	margin-left: 2px;
+	outline:none;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font: 400 20px/37px Arial;
+	font-weight:bold;
+	background-color: #e62041;
+	_height: 34px;
+	_line-height: 34px;
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding: 1px 6px;
+	position: absolute;
+	right: -93px;
+	_right: -96px;
+	_overflow: visible;
+	top: -3px;
+}
+/* ms menu */
+.ms-cate{width:180px;height:32px;position:relative;background:#e52142}
+.ms-cate .cate-title{position:absolute;left:0;top:0;width:100%;height:100%;line-height:32px;}
+.ms-cate .cate-title h2{font-size:14px;padding-left:10px;width:130px;background:#303030;color:#fff;}
+.ms-cate .cate-title i{display:block;position:absolute;height:32px;width:50px;top:0;right:0;}
+.ms-cate .cate-list{position:absolute;height:400px;width:180px;background:#c61936;left:0;top:35px;z-index:100;}
+.ms-menu a:link, .ms-menu a:visited{color:#555;text-decoration:none;font-weight:bold;padding:0 10px;font-size:13px;}
+.ms-menu a.cur, .ms-menu a:hover, .ms-menu a:active{color:#e52142}
+.ms-menu .sep{color:#c8c8c8}
+.ms-ensure{background:#e3e3e3}
+.ms-ensure .ms-mod{position:relative;height:70px;}
+.ms-ensure .ms-mod .pay-image{position:absolute;top:5px;right:0;height:64px;width:467px;background:url(images/ensure.jpg)}

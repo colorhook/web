@@ -53,7 +53,7 @@ $smarty->assign('data_dir',    DATA_DIR);       // 数据目录
 if ($_REQUEST['step'] == 'add_to_cart')
 {
     include_once('includes/cls_json.php');
-    $_POST['goods']=strip_tags(urldecode($_POST['goods']));
+    @$_POST['goods']=strip_tags(urldecode($_POST['goods']));
     $_POST['goods'] = json_str_iconv($_POST['goods']);
 
     if (!empty($_REQUEST['goods_id']) && empty($_POST['goods']))

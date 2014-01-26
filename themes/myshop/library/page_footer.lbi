@@ -4,17 +4,40 @@
     <div class="slogan f_l"></div>
     <div class="newbie guide-item f_l">
       <h3>新手引导</h3>
+      <ul>
+       <li><a href="#">如何下订单</a></li>
+       <li><a href="#">下载教程</a></li>
+       <li><a href="#">发布上架宝贝</a></li>
+       <li><a href="#">下架宝贝</a></li>
+      </ul>
     </div>
     <div class="pay guide-item f_l">
       <h3>支付方式</h3>
+      <ul>
+       <li><a href="#">银行汇款</a></li>
+       <li><a href="#">支付宝支付</a></li>
+       <li><a href="#">财付通支付</a></li>
+      </ul>
     </div>
     <div class="express guide-item f_l">
       <h3>配送方式</h3>
+      <ul>
+       <li><a href="#">退换货政策</a></li>
+       <li><a href="#">快递收费</a></li>
+       <li><a href="#">设计包邮</a></li>
+      </ul>
     </div>
     <div class="contact guide-item f_l">
       <h3>联系合作</h3>
+      <ul>
+       <li><a href="#">公司简介</a></li>
+       <li><a href="#">联系我们</a></li>
+       <li><a href="#">常见问题</a></li>
+       <li><a href="#">加盟代理</a></li>
+       <li><a href="#">上门浅谈</a></li>
+      </ul>
     </div>
-    <div class="followus f_l">
+    <div class="followus guide-item f_l">
       <h3>关注我们的微信</h3>
     </div>
     
@@ -31,6 +54,8 @@
   </div>
 </div>
 <div class="ms-copyright ms-mod">
+ <p> &copy; 2013-2014 版权所有</p>
  <p>增值电信业务经营许可证：浙B</p>
+ <p class="copyright"></p>
 </div>
 
