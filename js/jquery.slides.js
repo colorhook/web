@@ -59,7 +59,8 @@
       $element = $(this.element);
       this.data = $.data(this);
       $.data(this, "animating", false);
-      $.data(this, "total", $element.children().not(".slidesjs-navigation", $element).length);
+   
+      $.data(this, "total", $element.children().length);
       $.data(this, "current", this.options.start - 1);
       $.data(this, "vendorPrefix", this._getVendorPrefix());
       if (typeof TouchEvent !== "undefined") {

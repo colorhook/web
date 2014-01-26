@@ -495,6 +495,7 @@ Ajax.call = Transport.run;
 // Augment the basic prototypes if they have not already been augmented.
 
 if ( ! Object.prototype.toJSONString) {
+  return;
     Array.prototype.toJSONString = function () {
         var a = ['['], // The array holding the text fragments.
             b,         // A boolean indicating that a comma is required.
