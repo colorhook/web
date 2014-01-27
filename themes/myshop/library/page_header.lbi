@@ -71,6 +71,54 @@ var process_request = "{$lang.process_request}";
       <i></i>
     </div>
     <div class="cate-list">
+      <div class="item">
+        <h3><a href="#">精品女装<span>&gt;</span></a></h3>
+	<ul>
+	  <li>韩系</li>
+	  <li>日系</li>
+	  <li>欧美风</li>
+	</ul>
+       </div>
+       <div class="item">
+        <h3><a href="#">精品男装<span>&gt;</span></a></h3>
+	<ul>
+	  <li>韩系</li>
+	  <li>日系</li>
+	  <li>欧美风</li>
+	</ul>
+       </div>
+       <div class="item">
+        <h3><a href="#">韩国代购<span>&gt;</span></a></h3>
+	<ul>
+	  <li>韩系</li>
+	  <li>日系</li>
+	  <li>欧美风</li>
+	</ul>
+       </div>
+       <div class="item">
+        <h3><a href="#">时尚潮鞋<span>&gt;</span></a></h3>
+	<ul>
+	  <li>韩系</li>
+	  <li>日系</li>
+	  <li>欧美风</li>
+	</ul>
+       </div>
+       <div class="item">
+        <h3><a href="#">百搭包包<span>&gt;</span></a></h3>
+	<ul>
+	  <li>韩系</li>
+	  <li>日系</li>
+	  <li>欧美风</li>
+	</ul>
+       </div>
+       <div class="item">
+        <h3><a href="#">时尚童装<span>&gt;</span></a></h3>
+	<ul>
+	  <li>韩系</li>
+	  <li>日系</li>
+	  <li>欧美风</li>
+	</ul>
+       </div>
     </div>
   </div>
   
