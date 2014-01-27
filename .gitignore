@@ -1,6 +1,6 @@
 temp
 .DS_Store
-data/config.php
+data/config*
 data/flashdata
 data/install.lock
 data/install.txt
@@ -10,4 +10,3 @@ install/
 demo/
 upload/
 *.psd
-data/config.php
