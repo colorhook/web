@@ -44,48 +44,28 @@
 	   <input type="text" id="keyword" class="ui-searchbar-keyword" name="keywords" autocomplete="off" value="{$search_keywords|escape}"
 	     x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:translate" lang="en" placeholder="请输入关键词">
 	   <input type="submit" name="imageField" id="searchbar-submit" class="ui-searchbar-submit" value="搜索">
-	   <a id="searchbar-advanced" rel="nofollow" class="ui-searchbar-advanced" href="search.php?act=advanced_search">{$lang.advanced_search}</a>
 	</div>
      </form>
    </div>
-   <script>
-   $(function(){
-     $("#searchbar-type").mouseenter(function(){
-	$(this).addClass("hover");
-     }).mouseleave(function(){
-	$(this).removeClass("hover");
-     });
-     $("#searchbar-type-options a").click(function(){
-       $("#searchbar-type").removeClass("hover");
-       var v = $(this).attr('data-value');
-       var c = $("#J_category").val();
-       if(v == c){
-         return;
-       }
-       $("#J_category").val(v);
-       $("#searchbar-type-display").text($(this).text());
-     });
-   });
-   </script>
    <div class="search-hots">
        {if $searchkeywords}
 	 {foreach from=$searchkeywords item=val}
 	 <a href="search.php?keywords={$val|escape:url}">{$val}</a>
 	 {/foreach}
 	{/if}
+	<a id="searchbar-advanced" rel="nofollow" class="ui-searchbar-advanced f_r" href="search.php?act=advanced_search">{$lang.advanced_search}</a>
    </div>
 </div>
 
-<div class="ms-nav" class="clearfix">
+<div id="J_nav" class="ms-nav {if $show_nav}show{/if}" class="clearfix">
  <div class="ms-mod">
- 
   <div class="f_l ms-cate">
     <div class="cate-title">
       <h2>全部分类</h2>
       <i></i>
     </div>
     <div class="cate-list">
-      <div class="item active">
+      <div class="item">
         <h3><a href="#">精品女装<span>&gt;</span></a></h3>
 	<ul>
 	  <li><a href="#" target="_blank">韩系</a></li>
@@ -145,4 +125,33 @@
   </div>
 </div>
 </div>
-
+<script>
+$(function(){
+     $("#searchbar-type").mouseenter(function(){
+	$(this).addClass("hover");
+     }).mouseleave(function(){
+	$(this).removeClass("hover");
+     });
+     $("#searchbar-type-options a").click(function(){
+       $("#searchbar-type").removeClass("hover");
+       var v = $(this).attr('data-value');
+       var c = $("#J_category").val();
+       if(v == c){
+         return;
+       }
+       $("#J_category").val(v);
+       $("#searchbar-type-display").text($(this).text());
+     });
+});
+$(function(){
+  var $nav = $("#J_nav");
+  var $cate = $nav.find(".ms-cate");
+  if(!$nav.hasClass("show")){
+    $cate.mouseenter(function(){
+      $nav.addClass("show");
+    }).mouseleave(function(){
+      $nav.removeClass("show");
+    });
+  }
+})
+</script>

@@ -98,11 +98,11 @@ $cache_id = sprintf('%X', crc32($_SESSION['user_rank'] . '-' . $_CFG['lang']));
 if (!$smarty->is_cached('index.dwt', $cache_id))
 {
     assign_template();
-
+	
     $position = assign_ur_here();
     $smarty->assign('page_title',      $position['title']);    // 页面标题
     $smarty->assign('ur_here',         $position['ur_here']);  // 当前位置
-
+	$smarty->assign('show_nav',        true);
     /* meta information */
     $smarty->assign('keywords',        htmlspecialchars($_CFG['shop_keywords']));
     $smarty->assign('description',     htmlspecialchars($_CFG['shop_desc']));
