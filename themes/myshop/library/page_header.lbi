@@ -1,12 +1,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script>
-var process_request = "{$lang.process_request}";
-</script>
+{insert_scripts files='jquery-1.9.0.min.js,transport.js,utils.js'}
 <div class="ms-cap clearfix">
  <div class="ms-mod">
-   {insert_scripts files='transport.js,utils.js'}
    <ul>
-    <li class="member-info">{insert name='member_info'} </li>
+   <li class="member-info">{insert name='member_info'} </li>
    <!--{if $navigator_list.top}-->
    <li id="topNav" class="clearfix">
     <!-- {foreach name=nav_top_list from=$navigator_list.top item=nav} -->
@@ -34,15 +31,13 @@ var process_request = "{$lang.process_request}";
 	        <span id="searchbar-type-display" class="ui-searchbar-type-display">{$lang.all_category}</span>
 	        <span class="ui-searchbar-arrow ui-searchbar-arrow-down ui-searchbar-type-arrow"></span>
 	    </div>
-	    <ul id="searchbar-type-options" class="ui-searchbar-type-options" style="z-index: 99; position: absolute; left: -2px; top: 32px; display: none;">
-	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="products" rel="nofollow">Products</a></li>
-	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="suppliers" rel="nofollow">Suppliers</a></li>
-	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="buyers" rel="nofollow">Buyers</a></li>
+	    <ul id="searchbar-type-options" class="ui-searchbar-type-options">
+	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="0" rel="nofollow">{$lang.all_category}</a></li>
+	      <!-- {foreach from=$category_origin_list item=val} -->
+	      <li class="ui-searchbar-type-option"><a href="javascript:void(0)" data-value="{$val.cat_id}" rel="nofollow">{$val.cat_name}</a></li>
+	      <!-- {/foreach} -->
 	    </ul>
-	    <!--<select name="category" id="category" class="B_input">
-		<option value="0">{$lang.all_category}</option>
-		{$category_list}
-	    </select>-->
+	    <input type="hidden" name="category" id="J_category" value="0"/>
 	</div>
 
 	<div class="ui-searchbar-main">
@@ -53,6 +48,25 @@ var process_request = "{$lang.process_request}";
 	</div>
      </form>
    </div>
+   <script>
+   $(function(){
+     $("#searchbar-type").mouseenter(function(){
+	$(this).addClass("hover");
+     }).mouseleave(function(){
+	$(this).removeClass("hover");
+     });
+     $("#searchbar-type-options a").click(function(){
+       $("#searchbar-type").removeClass("hover");
+       var v = $(this).attr('data-value');
+       var c = $("#J_category").val();
+       if(v == c){
+         return;
+       }
+       $("#J_category").val(v);
+       $("#searchbar-type-display").text($(this).text());
+     });
+   });
+   </script>
    <div class="search-hots">
        {if $searchkeywords}
 	 {foreach from=$searchkeywords item=val}
@@ -71,52 +85,52 @@ var process_request = "{$lang.process_request}";
       <i></i>
     </div>
     <div class="cate-list">
-      <div class="item">
+      <div class="item active">
         <h3><a href="#">精品女装<span>&gt;</span></a></h3>
 	<ul>
-	  <li>韩系</li>
-	  <li>日系</li>
-	  <li>欧美风</li>
+	  <li><a href="#" target="_blank">韩系</a></li>
+	  <li><a href="#" target="_blank">日系</a></li>
+	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
        <div class="item">
         <h3><a href="#">精品男装<span>&gt;</span></a></h3>
 	<ul>
-	  <li>韩系</li>
-	  <li>日系</li>
-	  <li>欧美风</li>
+	  <li><a href="#" target="_blank">韩系</a></li>
+	  <li><a href="#" target="_blank">日系</a></li>
+	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
        <div class="item">
         <h3><a href="#">韩国代购<span>&gt;</span></a></h3>
 	<ul>
-	  <li>韩系</li>
-	  <li>日系</li>
-	  <li>欧美风</li>
+	  <li><a href="#" target="_blank">韩系</a></li>
+	  <li><a href="#" target="_blank">日系</a></li>
+	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
        <div class="item">
         <h3><a href="#">时尚潮鞋<span>&gt;</span></a></h3>
 	<ul>
-	  <li>韩系</li>
-	  <li>日系</li>
-	  <li>欧美风</li>
+	  <li><a href="#" target="_blank">韩系</a></li>
+	  <li><a href="#" target="_blank">日系</a></li>
+	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
        <div class="item">
         <h3><a href="#">百搭包包<span>&gt;</span></a></h3>
 	<ul>
-	  <li>韩系</li>
-	  <li>日系</li>
-	  <li>欧美风</li>
+	  <li><a href="#" target="_blank">韩系</a></li>
+	  <li><a href="#" target="_blank">日系</a></li>
+	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
        <div class="item">
         <h3><a href="#">时尚童装<span>&gt;</span></a></h3>
 	<ul>
-	  <li>韩系</li>
-	  <li>日系</li>
-	  <li>欧美风</li>
+	  <li><a href="#" target="_blank">韩系</a></li>
+	  <li><a href="#" target="_blank">日系</a></li>
+	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
     </div>

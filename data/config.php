@@ -9,7 +9,7 @@ $db_name   = "myshop";
 $db_user   = "root";
 
 // database password
-$db_pass   = "123";
+$db_pass   = "";
 
 // table prefix
 $prefix    = "ecs_";

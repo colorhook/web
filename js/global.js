@@ -1,19 +1,18 @@
 /* $Id: global.js 15469 2008-12-19 06:34:44Z testyang $ */
 Object.extend = function(destination, source)
 {
-  for (property in source) {
-    destination[property] = source[property];
+  for (var property in source) {
+    if(source.hasOwnProperty(property)){
+      destination[property] = source[property];
+    }
   }
   return destination;
 }
 
-Object.prototype.extend = function(object)
-{
-  return Object.extend.apply(this, [this, object]);
-}
+
 
 //封装getEelementById函数
-function $()
+function $$()
 {
   var elements = new Array();
   for (var i = 0; i < arguments.length; i++) {

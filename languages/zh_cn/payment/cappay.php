@@ -16,7 +16,7 @@
 global $_LANG;
 
 $_LANG['cappay']      = '首信易支付';
-$_LANG['cappay_desc'] = '首信易支付作为具有国家资质认证、政府投资背景的中立第三方网上支付平台拥有雄厚的实力和卓越的信誉。同时，它也是国内唯一首家通过 ISO 9001：2000质量管理体系认证的支付平台。规范的流程及优异的服务品质为首信易支付于2005 和2006年连续两年赢得“电子支付用户信任奖”和2006年度“B2B支付创新奖”殊荣奠定了坚实的基础。<a href="http://cloud.ecshop.com/payment_apply.php?mod=cappay" target="_blank"><strong>点击这里立即注册首信易</strong></a>';
+$_LANG['cappay_desc'] = '首信易支付作为具有国家资质认证、政府投资背景的中立第三方网上支付平台拥有雄厚的实力和卓越的信誉。同时，它也是国内唯一首家通过 ISO 9001：2000质量管理体系认证的支付平台。规范的流程及优异的服务品质为首信易支付于2005 和2006年连续两年赢得“电子支付用户信任奖”和2006年度“B2B支付创新奖”殊荣奠定了坚实的基础。<a href="http://www1.beijing.com.cn/payease/b2c/flow.jsp?agent_id=44" target="_blank"><strong>点击这里立即注册首信易</strong></a>';
 $_LANG['cappay_account'] = '商户编号';
 $_LANG['cappay_key']     = 'MD5支付密钥';
 

@@ -1,13 +1,12 @@
 <div id="append_parent"></div>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<p class="f_l">{$lang.welcome}</p>
+<p class="f_r">
 {if $user_info}
-<font style="position:relative; top:10px;">
-{$lang.hello}，<font class="f4_b">{$user_info.username}</font>, {$lang.welcome_return}！
-<a href="user.php">{$lang.user_center}</a>|
- <a href="user.php?act=logout">{$lang.user_logout}</a>
-</font>
+  <a href="user.php">{$user_info.username}</a>
+  <a href="user.php?act=logout">退出</a>
 {else}
- {$lang.welcome}&nbsp;&nbsp;&nbsp;&nbsp;
- <a href="user.php"><img src="images/bnt_log.gif" /></a>
- <a href="user.php?act=register"><img src="images/bnt_reg.gif" /></a>
+  <a href="user.php">登录</a>
+  <a href="user.php?act=register">注册</a>
 {/if}
+</p>
