@@ -15,6 +15,7 @@
 define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
+require(dirname(__FILE__) . '/Excel/reader.php');
 require('includes/lib_goods.php');
 
 /*------------------------------------------------------ */
@@ -79,7 +80,17 @@ elseif ($_REQUEST['act'] == 'upload')
     $arr = array();
     $goods_list = array();
     $field_list = array_keys($_LANG['upload_goods']); // 字段列表
-    $data = file($_FILES['file']['tmp_name']);
+
+	/* hack encoding issue
+	$data = file($_FILES['file']['tmp_name']);
+	*/
+
+	$reader = new Spreadsheet_Excel_Reader();
+	$reader->setOutputEncoding("utf-8");
+	$reader->read($_FILES['file']['tmp_name']);
+	$data = $reader->sheet[0]['cells'];
+
+    
     if($_POST['data_cat'] == 'ecshop')
     {
         foreach ($data AS $line)
