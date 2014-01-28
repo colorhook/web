@@ -79,7 +79,7 @@ visibility:hidden;
   text-align:center; line-height:21px; color:#fff; border:none; cursor:pointer;
   }
   /*模块容器*/
-  .box{background:#f1f1f1; padding-bottom:2px; overflow:hidden;}
+  .box{padding-bottom:2px; overflow:hidden;}
   .box_1{border:1px solid #c5e4ff; background-color:#fff;}
   .box_2{border:1px solid #c5e4ff; background:url(images/box_2Bg.gif) repeat-x top left;
   background-color:#edf8fe;  overflow:hidden;
@@ -152,8 +152,9 @@ visibility:hidden;
   }
   #search .go{background:url(images/bnt_search.gif); border:none; width:52px; height:19px;/* position:relative; top:2px; utf8下*/}
   /*当前位置*/
-  #ur_here{border:1px solid #c5e4ff; border-top:none; background:url(images/uh_bg.gif) repeat-x left top;
-  height:36px; line-height:36px; padding:0 12px;
+  #ur_here{border:1px solid #e5e5e5;
+	height:36px; line-height:36px; padding:0 12px;
+	margin-top:5px;
   }
   #ur_here a{color:#006cce; text-decoration:none;}
 
