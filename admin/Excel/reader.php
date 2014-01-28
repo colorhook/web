@@ -28,7 +28,7 @@
 
 
 //require_once 'PEAR.php';
-require_once 'Spreadsheet/Excel/Reader/OLERead.php';
+require_once dirname(__FILE__) . '/OLERead.php';
 //require_once 'OLE.php';
 
 define('SPREADSHEET_EXCEL_READER_BIFF8',             0x600);
@@ -258,7 +258,7 @@ class Spreadsheet_Excel_Reader
      */ 
     function Spreadsheet_Excel_Reader()
     {
-        $this->_ole =& new OLERead();
+        $this->_ole = new OLERead();
         $this->setUTFEncoder('iconv');
     }
 
