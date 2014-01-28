@@ -81,14 +81,18 @@ elseif ($_REQUEST['act'] == 'upload')
     $goods_list = array();
     $field_list = array_keys($_LANG['upload_goods']); // 字段列表
 
-	/* hack encoding issue
+	/* hack encoding issue */
 	$data = file($_FILES['file']['tmp_name']);
-	*/
-
+	
+	
+	/*
 	$reader = new Spreadsheet_Excel_Reader();
 	$reader->setOutputEncoding("utf-8");
-	$reader->read($_FILES['file']['tmp_name']);
+	$target = $_FILES['file']['tmp_name'];
+
+	$reader->read($target);
 	$data = $reader->sheet[0]['cells'];
+	*/
 
     
     if($_POST['data_cat'] == 'ecshop')
