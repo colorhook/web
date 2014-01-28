@@ -10,6 +10,9 @@ $db_user   = "root";
 
 // database password
 $db_pass   = "123";
+if($_SERVER['MYSQL_HOME'] == 'D:\xampp\xampp\mysql\bin'){
+ $db_pass = '';
+}
 
 // table prefix
 $prefix    = "ecs_";
