@@ -251,7 +251,7 @@ function get_recommend_goods($type = '', $cats = '')
             {
                 if (!empty($goods_data[$key]))
                 {
-                    $num = get_library_number($data);
+                    $num = 5;//get_library_number($data);
                     $data_count = count($goods_data[$key]);
                     $num = $data_count > $num  ? $num : $data_count;
                     if ($order_type == 0)
