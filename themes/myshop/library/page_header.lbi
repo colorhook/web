@@ -65,6 +65,12 @@
       <i></i>
     </div>
     <div class="cate-list">
+         <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
+         <div class="item">
+         <h3><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></h3>
+         </div>
+         <!-- {/foreach} -->
+    <!--
       <div class="item">
         <h3><a href="#">精品女装<span>&gt;</span></a></h3>
 	<ul>
@@ -113,6 +119,7 @@
 	  <li><a href="#" target="_blank">欧美风</a></li>
 	</ul>
        </div>
+       -->
     </div>
   </div>
   
