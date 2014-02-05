@@ -37,13 +37,13 @@
   <div class="ms-mod clearfix">
     <h3 class="clearfix">
       <ul class='q-link clearfix'>
-        <li><a href="#" target="_blank">羽绒服</a></li>
-	<li><a href="#" target="_blank">外套</a></li>
-	<li><a href="#" target="_blank">棉衣</a></li>
-	<li><a href="#" target="_blank">毛衣</a></li>
-	<li><a href="#" target="_blank">连衣裙</a></li>
-	<li><a href="#" target="_blank">裤子</a></li>
-	<li><a href="#" target="_blank">T恤</a></li>
+        <li><a href="/search.php?category=2&keywords=%E7%BE%BD%E7%BB%92%E6%9C%8D" target="_blank">羽绒服</a></li>
+	<li><a href="/search.php?category=2&keywords=%E5%A4%96%E5%A5%97" target="_blank">外套</a></li>
+	<li><a href="/search.php?category=2&keywords=%E6%A3%89%E8%A1%A3" target="_blank">棉衣</a></li>
+	<li><a href="/search.php?category=2&keywords=%E6%AF%9B%E8%A1%A3" target="_blank">毛衣</a></li>
+	<li><a href="/search.php?category=2&keywords=%E8%A3%A4%E5%AD%90" target="_blank">裤子</a></li>
+	<li><a href="/search.php?category=2&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
+        
       </ul>
     </h3>
     <div class="floor-cate">
@@ -100,13 +100,13 @@
       </div>
       <div class="menu clearfix">
         <ul class='clearfix'>
-          <li><a href="#" target="_blank">羽绒服</a></li>
-	  <li><a href="#" target="_blank">外套</a></li>
-	  <li><a href="#" target="_blank">棉衣</a></li>
-	  <li><a href="#" target="_blank">毛衣</a></li>
-	  <li><a href="#" target="_blank">连衣裙</a></li>
-	  <li><a href="#" target="_blank">裤子</a></li>
-	  <li><a href="#" target="_blank">T恤</a></li>
+          <li><a href="/search.php?category=1&keywords=%E7%BE%BD%E7%BB%92%E6%9C%8D" target="_blank">羽绒服</a></li>
+  	<li><a href="/search.php?category=1&keywords=%E5%A4%96%E5%A5%97" target="_blank">外套</a></li>
+  	<li><a href="/search.php?category=1&keywords=%E6%A3%89%E8%A1%A3" target="_blank">棉衣</a></li>
+  	<li><a href="/search.php?category=1&keywords=%E6%AF%9B%E8%A1%A3" target="_blank">毛衣</a></li>
+  	<li><a href="/search.php?category=1&keywords=%E8%A3%A4%E5%AD%90" target="_blank">裤子</a></li>
+  	<li><a href="/search.php?category=1&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
+          
          </ul>
       </div>
       <ul>
