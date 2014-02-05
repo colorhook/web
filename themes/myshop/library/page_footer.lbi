@@ -16,8 +16,9 @@
       <h3>支付方式</h3>
       <ul>
        <li><a href="/article.php?id=11" target="_blank">如何支付</a></li>
-       <li><a href="/article.php?id=10" target="_blank">支付宝支付</a></li>
        <li><a href="/article.php?id=9" target="_blank">银行汇款</a></li>
+       <li><a href="/article.php?id=10" target="_blank">支付宝支付</a></li>
+       
       </ul>
     </div>
     <div class="express guide-item f_l">
@@ -31,8 +32,9 @@
     <div class="contact guide-item f_l">
       <h3>联系合作</h3>
       <ul>
-       <li><a href="/article.php?id=15" target="_blank">常见问题</a></li>
-       <li><a href="/article.php?id=22" target="_blank">加盟代理／VIP</a></li>
+       <li><a href="/article.php?id=20" target="_blank">联系我们</a></li>
+       <li><a href="/article.php?id=19" target="_blank">公司简介</a></li>
+       <li><a href="/article.php?id=22" target="_blank">加盟代理</a></li>
        <li><a href="/article.php?id=23" target="_blank">上门洽谈</a></li>
        <li><a href="/article.php?id=21" target="_blank">资费标准</a></li>
       </ul>
