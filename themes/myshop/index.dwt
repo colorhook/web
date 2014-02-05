@@ -135,7 +135,7 @@
   <h3>女装最新上市</h3>
   <ul class="clearfix">
     <!--{foreach from=$new_goods item=goods}-->
-    <li {if $smarty.foreach.new_goods.index eq 0} class='first'{/if}>
+    <li {if $smarty.foreach.goods.index eq 0} class='first'{/if}>
       <a href="{$goods.url}" target="_blank">
         <span class="img"><img src="{$goods.thumb}" width="190" height="290"/></span>
 	      <span class="summary">
