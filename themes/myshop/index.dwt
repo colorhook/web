@@ -17,16 +17,16 @@
 {* 包含脚本文件 *}
 {insert_scripts files='jquery.slides.js,common.js,index.js'}
 <div id="J-slider" class="ms-slider">
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	<div class="item" style="background-image:url(/data/afficheimg/20140206tglaia.jpg)">
 	  <a href="#">&nbsp;</a>
 	</div>
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	<div class="item" style="background-image:url(/data/afficheimg/20140206yejkfz.jpg)">
 	  <a href="#">&nbsp;</a>
 	</div>
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	<div class="item" style="background-image:url(/data/afficheimg/20140206xnckur.jpg)">
 	  <a href="#">&nbsp;</a>
 	</div>
-	<div class="item" style="background-image:url(http://m.alicdn.com/product/yunos-taobao/tv/img/jiaodi-1.jpg)">
+	<div class="item" style="background-image:url(/data/afficheimg/20140206ctxggu.jpg)">
 	  <a href="#">&nbsp;</a>
 	</div>
 </div>
@@ -139,7 +139,7 @@
         <span class="img"><img src="{$goods.thumb}" width="190" height="290"/></span>
 	      <span class="summary">
 	       <span class="title" title="{$goods.name|escape:html}">{$goods.short_style_name}</span>
-	       <span class="price">建议销售价：￥<!-- {if $goods.promote_price neq ""} -->
+	       <span class="price">建议销售价：<!-- {if $goods.promote_price neq ""} -->
             {$goods.promote_price}
             <!-- {else}-->
             {$goods.shop_price}
