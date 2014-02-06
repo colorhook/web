@@ -21,17 +21,17 @@
   <!--/foreach-->
 
 	<div class="item" style="background-image:url(/data/afficheimg/20140206yejkfz.jpg)">
-	  <a href="#">&nbsp;</a>
+	  <a href="article.php?id=32"></a>
 	</div>
 	<div class="item" style="background-image:url(/data/afficheimg/20140206tglaia.jpg)">
-	  <a href="/category.php?id=2">&nbsp;</a>
+	  <a href="category.php?id=2"></a>
 	</div>
 	
 	<div class="item" style="background-image:url(/data/afficheimg/20140206xnckur.jpg)">
-	  <a href="/category.php?id=3">&nbsp;</a>
+	  <a href="category.php?id=3"></a>
 	</div>
 	<div class="item" style="background-image:url(/data/afficheimg/20140206ctxggu.jpg)">
-	  <a href="/category.php?id=4">&nbsp;</a>
+	  <a href="category.php?id=4"></a>
 	</div>
 
 </div>
