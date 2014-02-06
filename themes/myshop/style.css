@@ -318,6 +318,7 @@ visibility:hidden;
      #goodsInfo .textInfo li dd.ddL{border-right:1px solid #eeecec;}
    #goodsInfo .textInfo a{color:#006bce; text-decoration:underline;}
    #goodsInfo .textInfo .loop{background:#f7f7f7; margin-top:8px;}
+   #goodsInfo .box{oveflow:hidden;}
    /*用户评论*/
    .ie6{padding-left:25px; _padding-left:15px; height:1%;}/*购买此商品的人还购买的商品*/
    .comments li{background:url(images/lineBg.gif) repeat-x left bottom; padding:3px 8px; width:97%; _height:1%; text-align:left; position:relative;
