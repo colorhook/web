@@ -1661,6 +1661,12 @@ function assign_template($ctype = '', $catlist = array())
 	  $smarty->assign('category_origin_list', cat_list(0, 0, false, 2, false));
     $smarty->assign('catalog_list',  cat_list(0, 0, false, 1, false));
     $smarty->assign('navigator_list',        get_navigator($ctype, $catlist));  //自定义导航栏
+    
+    $smarty->assign('articles_guide', get_cat_articles(8, 1, 8));    //新手引导
+    $smarty->assign('articles_pay', get_cat_articles(9, 1, 8));    //支付方式
+    $smarty->assign('articles_express', get_cat_articles(10, 1, 8));    //配送方式
+    $smarty->assign('articles_contact', get_cat_articles(11, 1, 8));    // 联系合作
+    $smarty->assign('articles_help', get_cat_articles(12, 1, 8));    //帮助中心
 
     if (!empty($GLOBALS['_CFG']['search_keywords']))
     {
