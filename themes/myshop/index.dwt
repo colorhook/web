@@ -70,15 +70,15 @@
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a href="goods.php?id=526" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
+        <p><a href="goods.php?id=573" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
 	<p><a href="goods.php?id=616" target="_blank"><img src="../images/assets/floor_w_2.jpg" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=573" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=280" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
       </div>
       <div class="column column-2">
-        <p><a href="goods.php?id=493" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
+        <p><a href="goods.php?id=538" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
       </div>
       <div class="column column-3">
-         <p><a href="goods.php?id=280" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
+         <p><a href="goods.php?id=494" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
 	 <p><a href="goods.php?id=549" target="_blank"><img src="../images/assets/floor_w_6.jpg" width="199" height="140"/></a></p>
       </div>
     </div>
@@ -118,16 +118,16 @@
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a href="goods.php?id=555" target="_blank"><img src="../images/assets/floor_m_1.jpg" width="200" height="140"/></a></p>
+        <p><a href="goods.php?id=561" target="_blank"><img src="../images/assets/floor_m_1.jpg" width="200" height="140"/></a></p>
 	<p><a href="goods.php?id=556" target="_blank"><img src="../images/assets/floor_m_2.jpg" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=559" target="_blank"><img src="../images/assets/floor_m_3.jpg" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=560" target="_blank"><img src="../images/assets/floor_m_3.jpg" width="200" height="140"/></a></p>
       </div>
       <div class="column column-2">
-        <p><a href="goods.php?id=561" target="_blank"><img src="../images/assets/floor_m_4.jpg" width="399" height="422"/></a></p>
+        <p><a href="goods.php?id=559" target="_blank"><img src="../images/assets/floor_m_4.jpg" width="399" height="422"/></a></p>
       </div>
       <div class="column column-3">
-         <p><a href="goods.php?id=564" target="_blank"><img src="../images/assets/floor_m_5.jpg" width="199" height="281"/></a></p>
-	 <p><a href="goods.php?id=560" target="_blank"><img src="../images/assets/floor_m_6.jpg" width="199" height="140"/></a></p>
+         <p><a href="goods.php?id=555" target="_blank"><img src="../images/assets/floor_m_5.jpg" width="199" height="281"/></a></p>
+	 <p><a href="goods.php?id=564" target="_blank"><img src="../images/assets/floor_m_6.jpg" width="199" height="140"/></a></p>
       </div>
     </div>
   </div>
@@ -158,27 +158,27 @@
 
 
     <li class="first">
-      <a href="#" target="_blank">
+      <a href="goods.php?id=607" target="_blank">
         <span class="img"><img src="../images/assets/1.jpg" width="190" height="290"/></span>
       </a>
      </li>
      <li>
-      <a href="#" target="_blank">
+      <a href="goods.php?id=600" target="_blank">
         <span class="img"><img src="../images/assets/2.jpg" width="190" height="290"/></span>
       </a>
      </li>
      <li>
-      <a href="#" target="_blank">
+      <a href="goods.php?id=523" target="_blank">
         <span class="img"><img src="../images/assets/3.jpg" width="190" height="290"/></span>
       </a>
      </li>
      <li>
-      <a href="#" target="_blank">
+      <a href="goods.php?id=493" target="_blank">
         <span class="img"><img src="../images/assets/4.jpg" width="190" height="290"/></span>
       </a>
      </li>
      <li>
-      <a href="#" target="_blank">
+      <a href="goods.php?id=521" target="_blank">
         <span class="img"><img src="../images/assets/5.jpg" width="190" height="290"/></span>
       </a>
      </li>
