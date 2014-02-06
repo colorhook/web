@@ -72,7 +72,7 @@
   <h3>在线客服</h3>
   <div class="tel">
     <p>咨询电话</p>
-    <em>{service_phone}</em>
+    <em>{$service_phone}</em>
   </div>
   <ul class="list">
     <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>销售咨询</em></a></li>
