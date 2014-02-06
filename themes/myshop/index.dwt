@@ -231,7 +231,7 @@
     </div>
     <div class="ms-notice sys-item">
       <h3>网站公告<span>Site Notice</span></h3>
-      <div class="hd">
+      <div class="bd">
 	      <ul>
           <!--{foreach from=$articles_notice item=article name=article}-->
           <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
