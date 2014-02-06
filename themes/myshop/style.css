@@ -790,6 +790,7 @@ a:active,
   height:400px;
   background:white;
   text-align:center;
+  z-index:9999999;
 }
 #J_sidebar em{font-style:normal;}
 #J_sidebar h3{
