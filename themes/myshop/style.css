@@ -105,7 +105,16 @@ visibility:hidden;
   /*布局*/
   .AreaL{width:200px; float:left; margin-right:10px;}
   .AreaR{width:790px; float:left;}
-
+  .AreaR h3{padding:10px;}
+  .AreaR h3 span {
+  float: left;
+  width: 400px;
+  height: 33px;
+  line-height: 33px;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 12px;
+  }
 /* ====================
      导航部分
 ==================== */
@@ -156,7 +165,7 @@ visibility:hidden;
 	height:36px; line-height:36px; padding:0 12px;
 	margin-top:5px;
   }
-  #ur_here a{color:#006cce; text-decoration:none;}
+
 
 /* ====================
      模块
@@ -165,8 +174,8 @@ visibility:hidden;
    .cart{background:url(images/catBg.gif) no-repeat left top; padding:15px 10px 15px 50px;
    color:#006bcd; height:50px;  _padding:12px 10px 15px 50px;
    }
-   .cart a{color:#006bcd; text-decoration:none;}
-   .cart a:hover{color:#006bcd; text-decoration:underline;}
+
+
    /*商品分类*/
    #category_tree{border:4px solid #e5e5e5; background-color:#fff;}
    #category_tree dl{margin:6px;}
@@ -275,8 +284,8 @@ visibility:hidden;
    .RelaArticle a:hover{background:url(images/bg.gif) no-repeat 0px -170px; padding:0px 0px 0px 10px; color:#ff6600; text-decoration:none;}
    /*浏览历史，收藏*/
    .history h2{height:26px; line-height:26px; padding:0px 10px 0 20px; text-align:center; font-size:12px;
-   background:url(images/bg.gif) no-repeat 0px -466px; float:left; color:#57a7f0;
-   margin:6px 5px 0 0; border:1px solid #c5e3ff; border-bottom:none; background-color:#FFFFFF;
+   background:url(images/bg.gif) no-repeat 0px -466px; float:left; 
+   margin:6px 5px 0 0; border:1px solid #e5e5e5; border-bottom:none; background-color:#FFFFFF;
    }
    .history .h2bg{height:26px; line-height:26px; padding:0px 10px 0 20px; text-align:center; font-size:12px;
    background:url(images/bg.gif) no-repeat 0px -508px; float:left; color:#a0a0a0;
@@ -419,7 +428,7 @@ visibility:hidden;
    .pagebar a{display:block; float:left; margin:0 2px; color:#0066cc; text-decoration:none;}
    .pagebar a:hover{color:#ff5a6a; text-decoration:none;}
    .pagebar .page_now{display:block; float:left; margin:0 5px; color:#ff5a6a; font-weight:bold; background:#fff;}
-   #pager a{color:#0066cc; text-decoration:none;}
+
 
    /*底部导航+友情链接*/
    #bottomNav{width:958px;}

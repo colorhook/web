@@ -1,7 +1,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <div class="box">
  <div class="box_1">
-  <h3>
+  <h3 class="clearfix">
   <span>{$lang.goods_list}</span><a name='goods_list'></a>
   <form method="GET" class="sort" name="listform">
   {$lang.btn_display}：

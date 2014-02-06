@@ -1980,13 +1980,19 @@ function get_navigator($ctype = '', $catlist = array())
     );
     while ($row = $GLOBALS['db']->fetchRow($res))
     {
+        $sub = cat_list($row['cid'], 0, false, 0, true);
+        foreach($sub as $subkey=>$subvalue){    
+            if($subvalue['cat_id'] == $row['cid']){       
+                unset($sub[$subkey]);         
+            }    
+        }
         $navlist[$row['type']][] = array(
             'name'      =>  $row['name'],
             'opennew'   =>  $row['opennew'],
             'url'       =>  $row['url'],
             'ctype'     =>  $row['ctype'],
             'cid'       =>  $row['cid'],
-            'sub'       =>  get_categories_tree($row['cid'])
+            'sub'       =>  $sub
             );
     }
 

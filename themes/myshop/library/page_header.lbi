@@ -67,59 +67,14 @@
     <div class="cate-list">
          <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
          <div class="item">
-         <h3><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}</a></h3>
+         <h3><a href="{$nav.url}" {if $nav.opennew eq 1}target="_blank" {/if}>{$nav.name}<span></span></a></h3>
+         <ul>
+           <!-- {foreach name=nav_middle_list_sub from=$nav.sub item=navsub} -->
+           <li><a href="{$navsub.url}" target="_blank">{$navsub.name}</a></li>
+           <!-- {/foreach} -->
+         </ul>
          </div>
          <!-- {/foreach} -->
-    <!--
-      <div class="item">
-        <h3><a href="#">精品女装<span>&gt;</span></a></h3>
-	<ul>
-	  <li><a href="#" target="_blank">韩系</a></li>
-	  <li><a href="#" target="_blank">日系</a></li>
-	  <li><a href="#" target="_blank">欧美风</a></li>
-	</ul>
-       </div>
-       <div class="item">
-        <h3><a href="#">精品男装<span>&gt;</span></a></h3>
-	<ul>
-	  <li><a href="#" target="_blank">韩系</a></li>
-	  <li><a href="#" target="_blank">日系</a></li>
-	  <li><a href="#" target="_blank">欧美风</a></li>
-	</ul>
-       </div>
-       <div class="item">
-        <h3><a href="#">韩国代购<span>&gt;</span></a></h3>
-	<ul>
-	  <li><a href="#" target="_blank">韩系</a></li>
-	  <li><a href="#" target="_blank">日系</a></li>
-	  <li><a href="#" target="_blank">欧美风</a></li>
-	</ul>
-       </div>
-       <div class="item">
-        <h3><a href="#">时尚潮鞋<span>&gt;</span></a></h3>
-	<ul>
-	  <li><a href="#" target="_blank">韩系</a></li>
-	  <li><a href="#" target="_blank">日系</a></li>
-	  <li><a href="#" target="_blank">欧美风</a></li>
-	</ul>
-       </div>
-       <div class="item">
-        <h3><a href="#">百搭包包<span>&gt;</span></a></h3>
-	<ul>
-	  <li><a href="#" target="_blank">韩系</a></li>
-	  <li><a href="#" target="_blank">日系</a></li>
-	  <li><a href="#" target="_blank">欧美风</a></li>
-	</ul>
-       </div>
-       <div class="item">
-        <h3><a href="#">时尚童装<span>&gt;</span></a></h3>
-	<ul>
-	  <li><a href="#" target="_blank">韩系</a></li>
-	  <li><a href="#" target="_blank">日系</a></li>
-	  <li><a href="#" target="_blank">欧美风</a></li>
-	</ul>
-       </div>
-       -->
     </div>
   </div>
   
