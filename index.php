@@ -126,6 +126,9 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     $smarty->assign('group_buy_goods', index_get_group_buy());      // 团购商品
     $smarty->assign('auction_list',    index_get_auction());        // 拍卖活动
     $smarty->assign('shop_notice',     $_CFG['shop_notice']);       // 商店公告
+    $smarty->assign('articles_newbie', get_cat_articles(5, 1, 8));    //新手教程
+    $smarty->assign('articles_lecture', get_cat_articles(6, 1, 8));    //时尚讲坛
+    $smarty->assign('articles_notice', get_cat_articles(4, 1, 8));    //网站公告
 
     /* 首页主广告设置 */
     $smarty->assign('index_ad',     $_CFG['index_ad']);

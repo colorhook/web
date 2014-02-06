@@ -208,11 +208,11 @@
       <h3>新手教程<span>Novice Tutorials</span></h3>
       <div class="bd">
        <ul>
-         <li><a href="#">关于主图</a></li>
-	 <li><a href="#">如何发布宝贝</a></li>
-	 <li><a href="#">如何下架宝贝</a></li>
-	 <li><a href="#">如何设置包邮</a></li>
-	 <li><a href="#">宝贝分类及运费模版设置</a></li>
+         <!--{foreach from=$articles_newbie item=article name=article}-->
+         <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
+           <a href="{$article.url}" target="_blank">{$article.title}</a>
+         </li>
+         <!--{/foreach}-->
        </ul>
       </div>
     </div>
@@ -220,18 +220,25 @@
       <h3>时尚讲堂<span>Fasion Lecture</span></h3>
       <div class="bd">
        <ul>
-         <li><a href="#">【警惕】莫让二维码成支付宝被盗</a></li>
-	 <li><a href="#">【置顶】虚假交易申诉流程优化公告</a></li>
-	 <li><a href="#">【网商杂谈】吸引买家、为买家排除</a></li>
-	 <li><a href="#">【热点话题】淘宝卖家怒砸十五辆车</a></li>
-	 <li><a href="#">【经验畅谈】淘宝开店必学之店铺运</a></li>
+         <!--{foreach from=$articles_lecture item=article name=article}-->
+         <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
+           <a href="{$article.url}" target="_blank">{$article.title}</a>
+         </li>
+         <!--{/foreach}-->
+         
        </ul>
       </div>
     </div>
     <div class="ms-notice sys-item">
       <h3>网站公告<span>Site Notice</span></h3>
       <div class="hd">
-	<p>{$shop_notice}</p>
+	      <ul>
+          <!--{foreach from=$articles_notice item=article name=article}-->
+          <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
+            <a href="{$article.url}" target="_blank">{$article.title}</a>
+          </li>
+          <!--{/foreach}-->
+        </ul>
       </div>
     </div>
   </div>
