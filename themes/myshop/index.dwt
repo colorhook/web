@@ -141,7 +141,7 @@
     <!--{foreach from=$new_goods item=goods name=goods}-->
     <li {if $smarty.foreach.goods.index eq 0} class='first'{/if}>
       <a href="{$goods.url}" target="_blank">
-        <span class="img"><img data-src="{$goods.thumb}" src="../images/assets/thumb_m.jpg" width="190" height="290"/></span>
+        <span class="img"><img data-src="{$goods.thumb}" src="../images/assets/thumb_w.jpg" width="190" height="290"/></span>
 	      <span class="summary">
 	       <span class="title" title="{$goods.name|escape:html}">{$goods.short_style_name}</span>
 	       <span class="price">建议销售价：<!-- {if $goods.promote_price neq ""} -->
