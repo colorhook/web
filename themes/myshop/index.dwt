@@ -173,16 +173,17 @@
       </a>
      </li>
      <li>
-      <a href="goods.php?id=493" target="_blank">
-        <span class="img"><img src="../images/assets/4.jpg" width="190" height="290"/></span>
-      </a>
-     </li>
-     <li>
-      <a href="goods.php?id=521" target="_blank">
+      <a href="goods.php?id=476" target="_blank">
         <span class="img"><img src="../images/assets/5.jpg" width="190" height="290"/></span>
       </a>
      </li>
-
+     
+     <li>
+      <a href="goods.php?id=568" target="_blank">
+        <span class="img"><img src="../images/assets/4.jpg" width="190" height="290"/></span>
+      </a>
+     </li>
+     
   </ul>
  </div>
 </div>
