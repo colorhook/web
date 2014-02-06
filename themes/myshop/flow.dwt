@@ -762,7 +762,7 @@
             <td width="50%" valign="top" bgcolor="#ffffff">
             <h6><span>用户登录：</span></h6>
             <form action="flow.php?step=login" method="post" name="loginForm" id="loginForm" onsubmit="return checkLoginForm(this)">
-                <table width="90%" border="0" cellpadding="8" cellspacing="1" bgcolor="#B0D8FF" class="table">
+                <table width="90%" border="0" cellpadding="8" cellspacing="1" bgcolor="#dddddd" class="table">
                   <tr>
                     <td bgcolor="#ffffff"><div align="right"><strong>{$lang.username}</strong></div></td>
                     <td bgcolor="#ffffff"><input name="username" type="text" class="inputBg" id="username" /></td>
@@ -800,7 +800,7 @@
             <td valign="top" bgcolor="#ffffff">
             <h6><span>用户注册：</span></h6>
             <form action="flow.php?step=login" method="post" name="formUser" id="registerForm" onsubmit="return checkSignupForm(this)">
-               <table width="98%" border="0" cellpadding="8" cellspacing="1" bgcolor="#B0D8FF" class="table">
+               <table width="98%" border="0" cellpadding="8" cellspacing="1" bgcolor="#dddddd" class="table">
                   <tr>
                     <td bgcolor="#ffffff" align="right" width="25%"><strong>{$lang.username}</strong></td>
                     <td bgcolor="#ffffff"><input name="username" type="text" class="inputBg" id="username" onblur="is_registered(this.value);" /><br />
