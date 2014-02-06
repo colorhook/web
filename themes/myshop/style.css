@@ -55,8 +55,8 @@ visibility:hidden;
   .f3{color:#9e9e9e;}
   .f4{color:#fe596a;}
   .f4_b{color:#fe596a; font-weight:bold;}
-  .f5{ font-size:14px; font-weight:bold;}
-  .f6{color:#006bd0;}
+  .f5{font-weight:bold;}
+  .f6{}
   .market{ font-size:14px; text-decoration:line-through;}
   .shop{color:#fe596a; font-size:14px; font-weight:600;}
   .market_s{text-decoration:line-through;}
