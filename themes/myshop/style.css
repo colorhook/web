@@ -84,7 +84,7 @@ visibility:hidden;
   .box_2{border:1px solid #e5e5e5; background:url(images/box_2Bg.gif) repeat-x top left;
   background-color:#edf8fe;  overflow:hidden;
   }
-  .boxCenterList{padding:8px;}
+  .boxCenterList{padding:8px;clear:both;}
   /*模块标题*/
 
   h3.border{border:1px solid #e5e5e5; border-bottom:none;}
