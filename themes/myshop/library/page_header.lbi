@@ -42,7 +42,7 @@
 
 	<div class="ui-searchbar-main">
 	   <input type="text" id="keyword" class="ui-searchbar-keyword" name="keywords" autocomplete="off" value="{$search_keywords|escape}"
-	     x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:translate" lang="en" placeholder="请输入关键词">
+	     x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:translate" placeholder="请输入关键词">
 	   <input type="submit" name="imageField" id="searchbar-submit" class="ui-searchbar-submit" value="搜索">
 	</div>
      </form>
