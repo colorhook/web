@@ -791,6 +791,13 @@ a:active,
   background:white;
   text-align:center;
   z-index:9999999;
+  _bottom: 0;
+  _position: absolute;
+  _top: expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight－100);
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 #J_sidebar em{font-style:normal;}
 #J_sidebar h3{
