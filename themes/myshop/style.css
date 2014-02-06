@@ -685,7 +685,7 @@ visibility:hidden;
 .cate-list .item ul{position:absolute;
   display:none;
   left: 180px;
-  top: -3px;
+  top: 0;
   z-index: 1000;
   width: 144px;
   height:397px;
