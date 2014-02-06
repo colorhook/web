@@ -46,9 +46,9 @@ visibility:hidden;
 .word{word-break:break-all;}
 
   /*边框*/
-  .B_blue{border:1px solid #c5e4ff;}
-  .B_input{border:1px solid #0f97ed;}
-  .inputBg{border:1px solid #b3b3b3; background:url(images/inputbg.gif) repeat-x left top; height:18px;}
+  .B_blue{border:1px solid #e5e5e5;}
+  .B_input{border:1px solid #e5e5e5;}
+  .inputBg{border:1px solid #e5e5e5; background:url(images/inputbg.gif) repeat-x left top; height:18px;}
   /*字体颜色*/
   .f1{color:#ff6666;}
   .f2{color:#006bd0; font-weight:bold; margin-right:15px;}
@@ -80,14 +80,14 @@ visibility:hidden;
   }
   /*模块容器*/
   .box{padding-bottom:2px; overflow:hidden;}
-  .box_1{border:1px solid #c5e4ff; background-color:#fff;}
-  .box_2{border:1px solid #c5e4ff; background:url(images/box_2Bg.gif) repeat-x top left;
+  .box_1{border:1px solid #e5e5e5; background-color:#fff;}
+  .box_2{border:1px solid #e5e5e5; background:url(images/box_2Bg.gif) repeat-x top left;
   background-color:#edf8fe;  overflow:hidden;
   }
   .boxCenterList{padding:8px;}
   /*模块标题*/
 
-  h3.border{border:1px solid #c5e4ff; border-bottom:none;}
+  h3.border{border:1px solid #e5e5e5; border-bottom:none;}
   h3 img{position:relative; top:7px;}
  
   h5{height:26px; line-height:26px; text-align:right; background-color:#edf7ff; font-size:12px;
@@ -104,7 +104,7 @@ visibility:hidden;
   .blank5{height:5px; line-height:5px;/* _margin:-3px 0;*/ clear:both; visibility:hidden;}
   /*布局*/
   .AreaL{width:200px; float:left; margin-right:10px;}
-  .AreaR{width:750px; float:left;}
+  .AreaR{width:790px; float:left;}
 
 /* ====================
      导航部分
