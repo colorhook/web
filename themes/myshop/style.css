@@ -18,7 +18,7 @@ div{margin:0 auto; padding:0;}
 h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,form,img,p{
 margin:0; padding:0; border:none; list-style-type:none;font-size:12px;font-weight:normal;
 }
-img{display:block;}
+.ms-floor img{display:block;}
 .block{
   width:1000px; height:auto;
 }
