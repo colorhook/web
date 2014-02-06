@@ -788,7 +788,7 @@ a:active,
   top: 135px;
   right: 20px;
   width:90px;
-  height:400px;
+  height:280px;
   background:white;
   text-align:center;
   z-index:9999999;
@@ -817,7 +817,7 @@ a:active,
   text-align:center;
 }
 #J_sidebar .list{
-  height:280px;
+  height:160px;
   border-left:1px solid #f2f2f2;
   border-right:1px solid #f2f2f2;
 }
