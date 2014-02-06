@@ -403,7 +403,7 @@ function reg(str){
    <div class="blank"></div>
    <!--商品详情end-->
    <!--商品描述，商品属性 START-->
-     <div class="box">
+     <div class="box" style="overflow:hidden">
      <div class="box_1">
       <h3 style="padding:0 5px;">
         <div id="com_b" class="history clearfix">
