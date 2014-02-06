@@ -784,7 +784,7 @@ a:active,
 /* sidebar */
 #J_sidebar{
   position:fixed;
-  top: 100px;
+  top: 135px;
   right: 20px;
   width:90px;
   height:400px;
@@ -793,7 +793,7 @@ a:active,
   z-index:9999999;
   _bottom: 0;
   _position: absolute;
-  _top: expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight－100);
+  _top: expression(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight－135);
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
