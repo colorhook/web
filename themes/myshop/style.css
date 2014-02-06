@@ -670,7 +670,7 @@ visibility:hidden;
 .cate-list h3 a:active{
   background:#303030;
 }
-.ms-cate .cate-list{position:absolute;height:400px;width:180px;background:#c61936;left:0;top:32px;padding-top:3px;z-index:100000;display:none}
+.ms-cate .cate-list{position:absolute;height:400px;width:180px;background:#e52142;left:0;top:32px;padding-top:3px;z-index:100000;display:none}
 .show .ms-cate .cate-list{display:block}
 .cate-list .item{height:40px;line-height:40px;color:white;}
 .cate-list .item ul{position:absolute;
