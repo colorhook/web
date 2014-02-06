@@ -79,7 +79,7 @@ visibility:hidden;
   text-align:center; line-height:21px; color:#fff; border:none; cursor:pointer;
   }
   /*模块容器*/
-  .box{padding-bottom:2px; overflow:hidden;}
+  .box{padding-bottom:2px;}
   .box_1{border:1px solid #e5e5e5; background-color:#fff;}
   .box_2{border:1px solid #e5e5e5; background:url(images/box_2Bg.gif) repeat-x top left;
   background-color:#edf8fe;  overflow:hidden;
