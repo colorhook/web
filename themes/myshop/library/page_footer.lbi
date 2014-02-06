@@ -68,4 +68,23 @@
  <p> &copy; 2013-2014 杭州莱客 版权所有 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增值电信业务经营许可证：浙ICP备13012194号-4</p>
  <p class="copyright"></p>
 </div>
+<div id="J_sidebar">
+  <h3>在线客服</h3>
+  <div class="tel">
+    <p>咨询电话</p>
+    <em>400 xxx xxx</em>
+  </div>
+  <ul class="list">
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>销售咨询</em></a></li>
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>销售咨询</em></a></li>
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>销售咨询</em></a></li>
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>销售咨询</em></a></li>
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>加盟代理</em></a></li>
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>售后服务</em></a></li>
+    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>管理投诉</em></a></li>
+  </ul>
+  <div class="back">
+    <a href="#" target="_self">回到顶部<span>&uarr;<span></a>
+  </div>
+</div>
 
