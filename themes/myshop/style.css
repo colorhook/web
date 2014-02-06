@@ -168,7 +168,7 @@ visibility:hidden;
    .cart a{color:#006bcd; text-decoration:none;}
    .cart a:hover{color:#006bcd; text-decoration:underline;}
    /*商品分类*/
-   #category_tree{border:4px solid #f1faff; background-color:#fff;}
+   #category_tree{border:4px solid #e5e5e5; background-color:#fff;}
    #category_tree dl{margin:6px;}
    #category_tree dt{background:url(images/lineBg.gif) repeat-x left bottom;
    color:#3f3f3f;  padding:2px 0 3px 12px;
@@ -182,7 +182,7 @@ visibility:hidden;
    /*销售排行*/
    .top10Tit{background:url(images/bg.gif) no-repeat 0px -85px; height:30px;}
    .top10List{border:1px solid #d7ecfd; background-color:#fff; margin:0px 4px 4px 4px;}
-	 .top10List ul{border-bottom:1px solid #e2f3fd; position:relative;}
+	 .top10List ul{border-bottom:1px solid #e5e5e5; position:relative;}
 	 .top10List .iteration{position:absolute; top:6px; left:6px;}
 	 .top10List .iteration1{padding-left:3px;}
 	 .top10List li.topimg{width:35px; height:35px;}

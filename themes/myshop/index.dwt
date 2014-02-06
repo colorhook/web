@@ -66,16 +66,16 @@
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a href="#" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
-	<p><a href="#" target="_blank"><img src="../images/assets/floor_w_2.jpg" width="200" height="140"/></a></p>
-	<p><a href="#" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
+        <p><a href="goods.php?id=526" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=616" target="_blank"><img src="../images/assets/floor_w_2.jpg" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=573" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
       </div>
       <div class="column column-2">
-        <p><a href="#" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
+        <p><a href="goods.php?id=493" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
       </div>
       <div class="column column-3">
-         <p><a href="#" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
-	 <p><a href="#" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="199" height="140"/></a></p>
+         <p><a href="goods.php?id=280" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
+	 <p><a href="goods.php?id=549" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="199" height="140"/></a></p>
       </div>
     </div>
   </div>
@@ -114,16 +114,16 @@
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a href="#" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
-	<p><a href="#" target="_blank"><img src="../images/assets/floor_w_2.jpg" width="200" height="140"/></a></p>
-	<p><a href="#" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
+        <p><a href="goods.php?id=555" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=556" target="_blank"><img src="../images/assets/floor_w_2.jpg" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=559" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
       </div>
       <div class="column column-2">
-        <p><a href="#" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
+        <p><a href="goods.php?id=561" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
       </div>
       <div class="column column-3">
-         <p><a href="#" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
-	 <p><a href="#" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="199" height="140"/></a></p>
+         <p><a href="goods.php?id=564" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
+	 <p><a href="goods.php?id=560" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="199" height="140"/></a></p>
       </div>
     </div>
   </div>
