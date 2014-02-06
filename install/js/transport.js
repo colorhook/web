@@ -352,7 +352,7 @@ var Transport =
     {
       try
       {
-        legalParams = "JSON=" + params.toJSONString();
+        legalParams = "JSON=" + JSON.stringify(params);
       }
       catch (ex)
       {
