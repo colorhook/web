@@ -3,7 +3,7 @@
 
 //update or create a repository
 function updateGit(){
-  $str = "cd ../ && sudo -u root git pull 2>&1";
+  $str = "cd ../ && git pull 2>&1";
   return shell_exec($str);
 }
 
