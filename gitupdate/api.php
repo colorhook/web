@@ -3,7 +3,7 @@
 
 //update or create a repository
 function updateGit(){
-  $str = "cd ../ && git pull 2>&1";
+  $str = "cd /var/www/git/web && git pull 2>&1";
   return shell_exec($str);
 }
 
