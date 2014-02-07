@@ -1,0 +1,72 @@
+{
+  "name" : "home",
+  "banner": [
+    {"img": "data/afficheimg/20140206yejkfz.jpg", "href": "article.php?id=32"},
+    {"img": "data/afficheimg/20140206tglaia.jpg", "href": "category.php?id=2"}
+  ],
+  "floors": [
+    {
+      "name": "女装",
+      "id": 1,
+      "slogan":{"img" :"data/affichimg", "href": "#"},
+      "tags": "t1,t2,t3",
+      "items": [
+        {"img":"img","href":"#1"},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""}
+      ]
+    },
+    {
+      "name": "男装",
+      "id": 2,
+      "slogan":{"img" :"data/affichimg", "href": "#2"},
+      "tags": "t1,t2,t3",
+      "items": [
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""}
+      ]
+    },
+    {
+      "name": "童装",
+      "id": 5,
+      "slogan":{"img" :"data/affichimg", "href": "#2"},
+      "tags": "t1,t2,t3",
+      "items": [
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""}
+      ]
+    },
+    {
+      "name": "包包",
+      "id": "49",
+      "slogan":{"img" :"data/affichimg", "href": "#2"},
+      "tags": "t1,t2,t3",
+      "items": [
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""},
+        {"img":"","href":""}
+      ]
+    }
+  ],
+  "latest": [
+    {"img":"","href":"#1"},
+    {"img":"","href":"#2"},
+    {"img":"","href":"#3"},
+    {"img":"","href":"#4"},
+    {"img":"","href":"#5"}
+  ]
+}

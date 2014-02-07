@@ -1,0 +1,109 @@
+<!-- $Id: home.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
+{include file="pageheader.htm"}
+<div class="main-div tab-div">
+
+    <!-- tab bar -->
+    <div id="tabbar-div">
+      <p>
+        <span class="tab-front" id="banner-tab">banner首页焦点图</span>
+        <span class="tab-back" id="floor-tab">楼层</span>
+        <span class="tab-back" id="latest-tab">最新推荐</span>
+      </p>
+    </div>
+    
+    <!-- tab body -->
+    <div id="tabbody-div">
+      <div id="banner-table">
+        <ul>
+          <!--{foreach from=$data.banner item=banner name=banner}-->
+          <li {if $smarty.foreach.banner.index eq 0} class='first'{/if}>
+           <label class='img'>图片：</label><input class='img' type="text" value="{$banner.img}"/>
+           <label class='href'>链接：</label><input class='href' type="text" value="{$banner.href}"/>
+          </li>
+          <!--{/foreach}-->
+        </ul>
+        <div class="save"><input type="button" value="保存"></div>
+      </div>
+      
+      
+      <div id="floor-table" style="display:none">
+        <ul>
+          <!--{foreach from=$data.floors item=floor name=floor}-->
+          <li {if $smarty.foreach.floor.index eq 0} class='first'{/if}>
+            <h5>{$floor.name}</h5>
+            <div class="page_floor_item">
+              <h6>slogan图片</h6>
+              <div class="slogan">
+                <label class='img'>图片：</label><input class='img' type="text" value="{$floor.slogan.img}">
+                <label class='href'>链接：</label><input class='href' type="text" value="{$floor.slogan.href}">     
+              </div>
+              <div class="tags">
+                <h6>搜索热词</h6>
+                <input type="text" value="{$floor.tags}">
+              </div>
+              <div class="items">
+                <h6>左侧图片1</h6>
+                <label class='img'>图片：</label><input class='img img1' type="text" value="{$floor.items[0].img}">
+                <label class='href'>链接：</label><input class='href href1' type="text" value="{$floor.items[0].href}">
+                <h6>左侧图片2</h6>
+                <label class='img'>图片：</label><input class='img img2' type="text" value="{$floor.items[0].img}">
+                <label class='href'>链接：</label><input class='href href2' type="text" value="{$floor.items[0].href}">
+                <h6>左侧图片3</h6>
+                <label class='img'>图片：</label> <input class='img img3' type="text" value="{$floor.items[0].img}">
+                <label class='href'>链接：</label><input class='href href3' type="text" value="{$floor.items[0].href}">
+                <h6>中间图片</h6>
+                <label class='img'>图片：</label><input class='img img4' type="text" value="{$floor.items[0].img}">
+                <label class='href'>链接：</label><input class='href href4' type="text" value="{$floor.items[0].href}">
+                <h6>右侧图片1</h6>
+                <label class='img'>图片：</label><input class='img img5' type="text" value="{$floor.items[0].img}">
+                <label class='href'>链接：</label><input class='href href5' type="text" value="{$floor.items[0].href}">
+                <h6>右侧图片2</h6>
+                <label class='img'>图片：</label><input class='img img6' type="text" value="{$floor.items[0].img}">
+                <label class='href'>链接：</label><input class='href href6' type="text" value="{$floor.items[0].href}">
+              </div>
+            </div>
+            <div class="save"><input type="button" value="保存"></div>
+          </li>
+          <!--{/foreach}-->
+        </ul>
+      </div>
+      
+      <div id="latest-table" style="display:none">
+        <ul>
+          <!--{foreach from=$data.latest item=latest name=latest}-->
+          <li {if $smarty.foreach.latest.first} class='first'{/if}>
+           <label class='img'>图片：</label><input class="img" type="text" value="{$latest.img}"/>
+           <label class='href'>链接：</label><input class="href" type="text" value="{$latest.href}"/>
+          </li>
+          <!--{/foreach}-->
+        </ul>
+        <div class="save"><input type="button" value="保存"></div>
+      </div>
+      
+      
+    </div>
+{insert_scripts files="jquery-1.9.0.min.js"}
+<script>
+$(function(){
+  $("#tabbar-div span").mouseenter(function(){
+    if($(this).hasClass('tab-back')){
+      $(this).attr('class', 'tab-hover');
+    }
+  }).mouseleave(function(){
+    if($(this).hasClass('tab-hover')){
+      $(this).attr('class', 'tab-back');
+    }
+  }).click(function(){
+    if($(this).hasClass('tab-back') || $(this).hasClass('tab-hover')){
+      var currentId = $(".tab-front").attr('id').replace('-tab', '-table');
+      $('#'+currentId).hide();
+      $(".tab-front").attr('class', 'tab-back')
+      $(this).attr('class', 'tab-front');
+      currentId = $(".tab-front").attr('id').replace('-tab', '-table');
+      $('#'+currentId).show();
+    }
+  });
+});
+</script>
+</div>
+{include file="pagefooter.htm"}
