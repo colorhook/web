@@ -377,7 +377,7 @@ function get_user_rank_prices($goods_id, $shop_price)
                 "ON mp.goods_id = '$goods_id' AND mp.user_rank = r.rank_id " .
             "WHERE r.show_price = 1 OR r.rank_id = '$_SESSION[user_rank]'";
     $res = $GLOBALS['db']->query($sql);
-
+    var_dump($sql);
     $arr = array();
     while ($row = $GLOBALS['db']->fetchRow($res))
     {
@@ -386,7 +386,7 @@ function get_user_rank_prices($goods_id, $shop_price)
                         'rank_name' => htmlspecialchars($row['rank_name']),
                         'price'     => price_format($row['price']));
     }
-
+    var_dump($arr);
     return $arr;
 }
 
