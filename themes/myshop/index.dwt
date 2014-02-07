@@ -133,6 +133,102 @@
   </div>
 </div>
 
+<!-- 童装 -->
+<div class="ms-floor ms-child">
+  <div class="ms-mod clearfix">
+    <h3 class="clearfix">
+      <ul class='q-link clearfix'>
+        <li><a href="/search.php?category=5&keywords=男童套装" target="_blank">男童套装</a></li>
+	<li><a href="/search.php?category=5&keywords=女童上衣" target="_blank">女童上衣</a></li>
+	<li><a href="/search.php?category=5&keywords=男女裤装" target="_blank">男女裤装</a></li>
+	<li><a href="/search.php?category=5&keywords=连衣裙" target="_blank">连衣裙</a></li>
+	<li><a href="/search.php?category=5&keywords外套" target="_blank">外套</a></li>
+	<li><a href="/search.php?category=5&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
+
+        
+      </ul>
+    </h3>
+    <div class="floor-cate">
+      <div class="slogan">
+        <img src="../images/assets/slogan_c.gif"/>
+	      <a href="category.php?id=5" target="_blank"></a>
+      </div>
+      <div class="menu clearfix">
+        <ul class='clearfix'>             
+          <li><a href="/search.php?category=5&keywords=男童套装" target="_blank">男童套装</a></li>
+  	<li><a href="/search.php?category=5&keywords=女童上衣" target="_blank">女童上衣</a></li>
+  	<li><a href="/search.php?category=5&keywords=男女裤装" target="_blank">男女裤装</a></li>
+  	<li><a href="/search.php?category=5&keywords=连衣裙" target="_blank">连衣裙</a></li>
+  	<li><a href="/search.php?category=5&keywords外套" target="_blank">外套</a></li>
+  	<li><a href="/search.php?category=5&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
+         </ul>
+      </div>
+      <ul>
+    </div>
+    <div class="goods clearfix">
+      <div class="column column-1">
+        <p><a href="goods.php?id=660" target="_blank"><img src="../images/assets/floor_c_1.gif" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=663" target="_blank"><img src="../images/assets/floor_c_2.gif" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=661" target="_blank"><img src="../images/assets/floor_c_3.gif" width="200" height="140"/></a></p>
+      </div>
+      <div class="column column-2">
+        <p><a href="goods.php?id=658" target="_blank"><img src="../images/assets/floor_c_4.gif" width="399" height="422"/></a></p>
+      </div>
+      <div class="column column-3">
+         <p><a href="goods.php?id=669" target="_blank"><img src="../images/assets/floor_c_5.gif" width="199" height="281"/></a></p>
+	 <p><a href="goods.php?id=667" target="_blank"><img src="../images/assets/floor_c_6.gif" width="199" height="140"/></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 包包 -->
+<div class="ms-floor ms-baobao">
+  <div class="ms-mod clearfix">
+    <h3 class="clearfix">
+      <ul class='q-link clearfix'>
+        <li><a href="search.php?category=49&keywords=斜挎包" target="_blank">斜挎包</a></li>
+	<li><a href="search.php?category=49&keywords=单肩包" target="_blank">单肩包</a></li>
+	<li><a href="search.php?category=49&keywords=手提包" target="_blank">手提包</a></li>
+	<li><a href="search.php?category=49&keywords=钱包" target="_blank">钱包</a></li>
+        
+      </ul>
+    </h3>
+    <div class="floor-cate">
+      <div class="slogan">
+        <img src="../images/assets/slogan_b.gif"/>
+	      <a href="category.php?id=49" target="_blank"></a>
+      </div>
+      <div class="menu clearfix">
+        <ul class='clearfix'>
+          <li><a href="search.php?category=49&keywords=斜挎包" target="_blank">斜挎包</a></li>
+  	<li><a href="/search.php?category=49&keywords=单肩包" target="_blank">单肩包</a></li>
+  	<li><a href="/search.php?category=49&keywords=手提包" target="_blank">手提包</a></li>
+  	<li><a href="/search.php?category=49&keywords=钱包" target="_blank">钱包</a></li>
+          
+         </ul>
+      </div>
+      <ul>
+    </div>
+    <div class="goods clearfix">
+      <div class="column column-1">
+        <p><a href="goods.php?id=629" target="_blank"><img src="../images/assets/floor_b_1.gif" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=626" target="_blank"><img src="../images/assets/floor_b_2.gif" width="200" height="140"/></a></p>
+	<p><a href="goods.php?id=672" target="_blank"><img src="../images/assets/floor_b_3.gif" width="200" height="140"/></a></p>
+      </div>
+      <div class="column column-2">
+        <p><a href="goods.php?id=654" target="_blank"><img src="../images/assets/floor_b_4.gif" width="399" height="422"/></a></p>
+      </div>
+      <div class="column column-3">
+         <p><a href="goods.php?id=635" target="_blank"><img src="../images/assets/floor_b_5.gif" width="199" height="281"/></a></p>
+	 <p><a href="goods.php?id=636" target="_blank"><img src="../images/assets/floor_b_6.gif" width="199" height="140"/></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!-- 最新 -->
 <div class="ms-new">
  <div class="ms-mod">

@@ -13,8 +13,8 @@
  * $Id: common.php 17217 2011-01-19 06:29:08Z liubo $
 */
 
-$_LANG['app_name'] = 'ECSHOP';
-$_LANG['cp_home'] = 'ECSHOP 管理中心';
+$_LANG['app_name'] = '32like';
+$_LANG['cp_home'] = '32like 管理中心';
 $_LANG['copyright'] = '版权所有 &copy; 2005-2012 上海商派网络科技有限公司，并保留所有权利。';
 $_LANG['query_info'] = '共执行 %d 个查询，用时 %s 秒';
 $_LANG['memory_info'] = '，内存占用 %0.3f MB';
@@ -129,6 +129,7 @@ $_LANG['gram'] = '克';
 $_LANG['kilogram'] = '千克';
 
 /* 菜单分类部分 */
+$_LANG['01_page'] = '页面维护';
 $_LANG['02_cat_and_goods'] = '商品管理';
 $_LANG['03_promotion'] = '促销管理';
 $_LANG['04_order'] = '订单管理';
@@ -145,6 +146,8 @@ $_LANG['14_sms'] = '短信管理';
 $_LANG['15_rec'] = '推荐管理';
 $_LANG['16_email_manage'] = '邮件群发管理';
 
+/* 页面管理 */
+$_LANG['01_page_home'] = '首页维护';
 /* 商品管理 */
 $_LANG['01_goods_list'] = '商品列表';
 $_LANG['02_goods_add'] = '添加新商品';

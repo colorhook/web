@@ -280,7 +280,7 @@ function reg(str){
        </dd>
        <dd class="ddR">
        <!--点击数-->
-       <strong>{$lang.goods_click_count}：</strong>{$goods.click_count}
+       <!--<strong>{$lang.goods_click_count}：</strong>{$goods.click_count}-->
        </dd>
       </li>
       <li class="clearfix">
@@ -550,11 +550,11 @@ function reg(str){
 
 <!-- {if $bought_goods} -->
      <div class="box">
-     <div class="box_1">
-      <h3><span class="text">{$lang.shopping_and_other}</span></h3>
-      <div class="boxCenterList clearfix ie6">
+     <div class="box_1 clearfix">
+      <h3 class="clearfix"><span class="text">{$lang.shopping_and_other}</span></h3>
+      <div class="boxCenterList clearfix">
        <!--{foreach from=$bought_goods item=bought_goods_data}-->
-        <div class="goodsItem">
+        <div class="goodsItem clearfix">
          <a href="{$bought_goods_data.url}"><img src="{$bought_goods_data.goods_thumb}" alt="{$bought_goods_data.goods_name}"  class="goodsimg" /></a><br />
          <p><a href="{$bought_goods_data.url}" title="{$bought_goods_data.goods_name}">{$bought_goods_data.short_name}</a></p> 
          <!-- {if $bought_goods_data.promote_price neq 0} -->
@@ -570,11 +570,8 @@ function reg(str){
     <div class="blank5"></div>
     <!-- {/if} -->
  <!-- #EndLibraryItem -->
-<!-- #BeginLibraryItem "/library/bought_note_guide.lbi" -->
+ {insert_scripts files='transport.js,utils.js'}
 
-{insert_scripts files='transport.js,utils.js'}
-<div id="ECS_BOUGHT">{* ECSHOP 提醒您：动态载入bought_notes.lbi，显示当前商品的购买记录 *}{insert name='bought_notes' id=$id}</div>
- <!-- #EndLibraryItem -->
 <!-- #BeginLibraryItem "/library/comments.lbi" -->
 
 {insert_scripts files='transport.js,utils.js'}
