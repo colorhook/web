@@ -28,4 +28,24 @@ if ($_REQUEST['act'] == 'home')
     $smarty->display('page_home.htm');
    
 }
+else if($_REQUEST['act'] == 'save')
+{
+  $page = $_REQUEST['page'];
+  $data = $_REQUEST['data'];
+  $key = $_REQUEST['key'];
+  $result = array();
+  try{
+    if($key == 'floors'){
+      $floor = get_page_data($page, $key);
+      $floor[$_REQUEST['index']] = $data;
+      set_page_data($page, $key, $floor);
+    }else{
+      set_page_data($page, $key, $data);
+    }
+    $result['success'] = true;
+  }catch(Exception $e){
+    $result['success'] = false;
+  }
+  echo json_encode($result);
+}
 ?>

@@ -1,7 +1,16 @@
 <!-- $Id: home.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
 {include file="pageheader.htm"}
 <style>
-main-div ul{list-style-type: none;}
+.main-div ul{list-style-type: none;}
+.main-div input.img,.main-div input.href{width:360px;}
+.main-div input.img{margin-right:5px;}
+.main-div .uploadfile{margin-right:10px;text-decoration:underline;cursor:pointer;}
+.main-div .save input{width:80px;margin-left:40px;}
+.main-div h5{padding:14px 0 4px 0;margin:0;-webkit-margin-before: 0em;-webkit-margin-after: 0em;font-size:16px;color:#a11111;}
+.main-div h6{padding:16px 0 5px 0;margin:0;-webkit-margin-before: 0em;-webkit-margin-after: 0em;font-size:12px;}
+#floors-table .save{padding:0 0 10px 0;margin-bottom:10px;border-bottom:#e5e5e5 2px dashed;}
+#floors-table .save input{margin-left:0;margin-top:10px;}
+.uploadfile{display:none;}
 </style>
 <div class="main-div tab-div">
 
@@ -9,7 +18,7 @@ main-div ul{list-style-type: none;}
     <div id="tabbar-div">
       <p>
         <span class="tab-front" id="banner-tab">banner首页焦点图</span>
-        <span class="tab-back" id="floor-tab">楼层</span>
+        <span class="tab-back" id="floors-tab">楼层</span>
         <span class="tab-back" id="latest-tab">最新推荐</span>
       </p>
     </div>
@@ -20,52 +29,62 @@ main-div ul{list-style-type: none;}
         <ul>
           <!--{foreach from=$data.banner item=banner name=banner}-->
           <li {if $smarty.foreach.banner.index eq 0} class='first'{/if}>
-           <label class='img'>图片：</label><input class='img' type="text" value="{$banner.img}"/>
+           <label class='img'>图片(1600*400)：</label><input class='img' type="text" value="{$banner.img}"/>
+           <a class="uploadfile" href="#">上传文件</a>
            <label class='href'>链接：</label><input class='href' type="text" value="{$banner.href}"/>
           </li>
           <!--{/foreach}-->
         </ul>
-        <div class="save"><input type="button" value="保存"></div>
+        <div class="save"><input class="button" type="button" value="保存"></div>
       </div>
       
       
-      <div id="floor-table" style="display:none">
+      <div id="floors-table" style="display:none">
         <ul>
           <!--{foreach from=$data.floors item=floor name=floor}-->
-          <li {if $smarty.foreach.floor.index eq 0} class='first'{/if}>
-            <h5>{$floor.name}</h5>
+          <li class='floor-item' data-name='{$floor.name}' data-index='{$smarty.foreach.floor.index}' {if $smarty.foreach.floor.index eq 0} class='first'{/if}>
+            <h5><span>楼层：</span>{$floor.name}</h5>
             <div class="page_floor_item">
               <h6>slogan图片</h6>
               <div class="slogan">
                 <label class='img'>图片：</label><input class='img' type="text" value="{$floor.slogan.img}">
+                <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href' type="text" value="{$floor.slogan.href}">     
               </div>
-              <div class="tags">
-                <h6>搜索热词</h6>
-                <input type="text" value="{$floor.tags}">
+              <div class="cat_id clearfix">
+                <h6>分类ID: <input type="text" value="{$floor.id}"></h6>
+              </div>
+              <div class="tags clearfix">
+                <h6>搜索热词: <input type="text" value="{$floor.tags}"></h6>
               </div>
               <div class="items">
-                <h6>左侧图片1</h6>
+                <h6>左侧图片1(200*140)</h6>
                 <label class='img'>图片：</label><input class='img img1' type="text" value="{$floor.items[0].img}">
+                <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href href1' type="text" value="{$floor.items[0].href}">
-                <h6>左侧图片2</h6>
-                <label class='img'>图片：</label><input class='img img2' type="text" value="{$floor.items[0].img}">
-                <label class='href'>链接：</label><input class='href href2' type="text" value="{$floor.items[0].href}">
-                <h6>左侧图片3</h6>
-                <label class='img'>图片：</label> <input class='img img3' type="text" value="{$floor.items[0].img}">
-                <label class='href'>链接：</label><input class='href href3' type="text" value="{$floor.items[0].href}">
-                <h6>中间图片</h6>
-                <label class='img'>图片：</label><input class='img img4' type="text" value="{$floor.items[0].img}">
-                <label class='href'>链接：</label><input class='href href4' type="text" value="{$floor.items[0].href}">
-                <h6>右侧图片1</h6>
-                <label class='img'>图片：</label><input class='img img5' type="text" value="{$floor.items[0].img}">
-                <label class='href'>链接：</label><input class='href href5' type="text" value="{$floor.items[0].href}">
-                <h6>右侧图片2</h6>
-                <label class='img'>图片：</label><input class='img img6' type="text" value="{$floor.items[0].img}">
-                <label class='href'>链接：</label><input class='href href6' type="text" value="{$floor.items[0].href}">
+                <h6>左侧图片2(200*140)</h6>
+                <label class='img'>图片：</label><input class='img img2' type="text" value="{$floor.items[1].img}">
+                <a class="uploadfile" href="#">上传文件</a>
+                <label class='href'>链接：</label><input class='href href2' type="text" value="{$floor.items[1].href}">
+                <h6>左侧图片3(200*140)</h6>
+                <label class='img'>图片：</label> <input class='img img3' type="text" value="{$floor.items[2].img}">
+                <a class="uploadfile" href="#">上传文件</a>
+                <label class='href'>链接：</label><input class='href href3' type="text" value="{$floor.items[2].href}">
+                <h6>中间图片(399*422)</h6>
+                <label class='img'>图片：</label><input class='img img4' type="text" value="{$floor.items[3].img}">
+                <a class="uploadfile" href="#">上传文件</a>
+                <label class='href'>链接：</label><input class='href href4' type="text" value="{$floor.items[3].href}">
+                <h6>右侧图片1(199*281)</h6>
+                <label class='img'>图片：</label><input class='img img5' type="text" value="{$floor.items[4].img}">
+                <a class="uploadfile" href="#">上传文件</a>
+                <label class='href'>链接：</label><input class='href href5' type="text" value="{$floor.items[4].href}">
+                <h6>右侧图片2(199*140)</h6>
+                <label class='img'>图片：</label><input class='img img6' type="text" value="{$floor.items[5].img}">
+                <a class="uploadfile" href="#">上传文件</a>
+                <label class='href'>链接：</label><input class='href href6' type="text" value="{$floor.items[5].href}">
               </div>
             </div>
-            <div class="save"><input type="button" value="保存"></div>
+            <div class="save"><input class="button" type="button" value="保存"></div>
           </li>
           <!--{/foreach}-->
         </ul>
@@ -75,17 +94,21 @@ main-div ul{list-style-type: none;}
         <ul>
           <!--{foreach from=$data.latest item=latest name=latest}-->
           <li {if $smarty.foreach.latest.first} class='first'{/if}>
-           <label class='img'>图片：</label><input class="img" type="text" value="{$latest.img}"/>
+           <label class='img'>图片(190*290)：</label><input class="img" type="text" value="{$latest.img}"/>
+           <a class="uploadfile" href="#">上传文件</a>
            <label class='href'>链接：</label><input class="href" type="text" value="{$latest.href}"/>
           </li>
           <!--{/foreach}-->
         </ul>
-        <div class="save"><input type="button" value="保存"></div>
+        <div class="save"><input class="button" type="button" value="保存"></div>
       </div>
       
       
     </div>
 {insert_scripts files="jquery-1.9.0.min.js"}
+<script>
+;(function(a,c,d){var b=function(h){(typeof h==="string")&&(h={text:h});(typeof h==="object")||(h={});var m={time:3000,text:"hello, world.",width:400,x:0,y:0,autoPos:true,type:"normal"};for(name in h){if(h.hasOwnProperty(name)){m[name]=h[name]}}for(name in m){if(m.hasOwnProperty(name)&&typeof m[name]==="function"){m[name]=m[name]()}}var l='<div class="toast-box" style="max-width:'+m.width+'px;"><p>'+m.text+"</p></div>",j=c(l);c("body").append(j);if(m.type.indexOf("normal")!=-1){if(m.autoPos){var g=parseInt(j.width()),e=parseInt(c(a).width()),k=parseInt(j.height()),f=parseInt(c(a).height()),i=(e-g-60)/2;posTop=f-k-200;posTop=posTop>0?posTop:50;j.css({left:i+"px",top:posTop+"px"})}else{j.css({left:m.x+"px",top:m.y+"px"})}}if(m.type.indexOf("fixedTop")!=-1){j.css({top:0,left:0}).addClass("no-border-radius fixedTop")}if(m.type.indexOf("fixedBottom")!=-1){j.css({bottom:0,left:0}).addClass("no-border-radius fixedBottom")}j.hide();j.fadeOut=j.fadeOut||(function(){var n=1,o=j,p=25;return function(){setTimeout(function(){n-=0.1;o.css("opacity",n);if(n<=0){return}setTimeout(arguments.callee,p)},p)}})();return{show:function(n){j.show();if(!!n){return this}setTimeout(function(){j.fadeOut(function(){j.remove()})},m.time)},close:function(){j.fadeOut(function(){j.remove()});return this},hide:function(){j.fadeOut();return this},remove:function(){j.remove();return this},setText:function(n){m.text=n;j.find("p").html(n);return this},getText:function(){return m.text},getElement:function(){return j}}};b.init=function(){c("body").append('<style type="text/css">.toast-box {display: none;padding: 15px 30px;z-index: 999;position: fixed;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;background: #000;filter: alpha(opacity=60);_background: #575757;background: #000\0;filter: alpha(opacity=60)\0;background: rgba(0, 0, 0, 0.6);}.toast-box p {color: white;color: rgba(255,255,255,.9);font-size: 16px;text-align: center;width: 100%;display: block;margin: 0 auto;}.toast-box img {margin: 10px;} .toast-box.no-border-radius {-moz-border-radius: 0px;-webkit-border-radius: 0px;border-radius: 0px;}.toast-box.fixedTop,.toast-box.fixedBottom{width:100% !important;max-width:100% !important;}</style>')};a.Toast=b})(window,$);
+</script>
 <script>
 $(function(){
   $("#tabbar-div span").mouseenter(function(){
@@ -106,6 +129,90 @@ $(function(){
       $('#'+currentId).show();
     }
   });
+});
+//Toast.init();
+//success response
+function showSuccess(msg){
+   alert(msg || '保存成功'); 
+}
+function showFail(msg){
+  alert(msg || '保存失败'); 
+}
+function handlePageAjaxResponse(response){
+        var json;
+        try{
+          json = $.parseJSON(response);
+        }catch(err){
+          return showFail();
+        }
+        if(json.success){
+          showSuccess();
+        }else{
+          showFail(json.msg);
+        }    
+}
+
+$(function(){
+  //banner
+  $("#banner-table .save input").click(function(e){
+    e.preventDefault();
+    var items = [];
+    $("#banner-table li").each(function(index, item){
+      items.push({
+        img: $('input.img', item).val(),
+        href: $('input.href', item).val()
+      });
+    });
+    $.post('page.php?act=save&page=home', {
+      key: 'banner',
+      data: items
+    }, handlePageAjaxResponse);
+  });
+  // floors
+  $("#floors-table .floor-item").each(function(index, item){
+    var $item = $(item);
+    var index = $item.attr('data-index');
+    $(".save input", item).click(function(){
+      var items = {
+        name: $item.attr('data-name'),
+        id: $('.cat_id input', item).val(),
+        slogan: {
+          img: $('.slogan input.img', item).val(),
+          href: $('.slogan input.href', item).val()
+        },
+        tags: $(".tags input", item).val(),
+        items: []
+      }
+      $.each([1,2,3,4,5,6], function(index, sIndex){
+        items.items.push({
+          img: $('input.img'+sIndex, item).val(),
+          href: $('input.href'+sIndex, item).val()
+        });
+      });
+      $.post('page.php?act=save&page=home', {
+        key: 'floors',
+        index: index,
+        data: items
+      }, handlePageAjaxResponse);
+      
+    });
+  });
+  
+  //latest
+  $("#latest-table .save input").click(function(){
+    var items = [];
+    $("#latest-table li").each(function(index, item){
+      items.push({
+        img: $('input.img', item).val(),
+        href: $('input.href', item).val()
+      });
+    });
+    $.post('page.php?act=save&page=home', {
+      key: 'latest',
+      data: items
+    }, handlePageAjaxResponse);
+  });
+  
 });
 </script>
 </div>
