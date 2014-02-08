@@ -659,6 +659,8 @@ visibility:hidden;
 	border-radius: 0;
 	padding: 1px 6px;
 	position: absolute;
+  z－index:200;
+  zoom:1;
 	right: -93px;
 	_right: -96px;
 	_overflow: visible;
