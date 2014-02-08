@@ -4,6 +4,14 @@ data/config*
 data/flashdata
 data/install.lock
 data/install.txt
+data/*.gif
+data/*.png
+data/*.bak
+data/**/*.bak
+data/**/*.gif
+data/**/*.png
+data/**/*.jpg
+data/*.json
 includes/abc_log.php
 includes/log.txt
 install/
