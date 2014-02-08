@@ -101,12 +101,20 @@
     <li><a href="http://wpa.qq.com/msgrd?v=3&uin=690738893&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>加盟代理</em></a></li>
     <li><a href="http://wpa.qq.com/msgrd?v=3&uin=584468637&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>售后服务</em></a></li>
     <li><a href="http://wpa.qq.com/msgrd?v=3&uin=584261602&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>管理投诉</em></a></li>
-    <!--<li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>加盟代理</em></a></li>
-    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>售后服务</em></a></li>
-    <li><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank"><span class="icon">QQ</span><em>管理投诉</em></a></li>-->
   </ul>
   <div class="back">
     <a href="#" target="_self">回到顶部<span>&uarr;<span></a>
   </div>
 </div>
+<script>
+$(function(){
+  function update(){
+    var topPos = document.documentElement.scrollTop + 135
+    $("#J_sidebar").stop().animate({top: topPos+"px"});
+  }
+  $(window).resize(update);
+  $(document).scroll(update);
+  update();
+});
+</script>
 

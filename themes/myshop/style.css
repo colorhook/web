@@ -172,7 +172,7 @@ visibility:hidden;
 ==================== */
    /*购物车*/
    .cart{background:url(images/catBg.gif) no-repeat left top; padding:15px 10px 15px 50px;
-   color:#006bcd; height:50px;  _padding:12px 10px 15px 50px;
+   color:#006bcd; height:50px;  /*_padding:12px 10px 15px 50px;*/
    }
 
 
@@ -546,12 +546,14 @@ visibility:hidden;
     height: 0;
     padding-top: 13px;
     background-image: url(images/pagination.png);
+    _background:#999;
     background-position: 0 0;
     float: left;
     overflow: hidden;
 }
-.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
-.slidesjs-pagination li a:hover { background-position: 0 -26px }
+.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px;_background-position: 0 0; }
+.slidesjs-pagination li a:hover { background-position: 0 -26px;_background-position: 0 0; }
+.slidesjs-pagination li a:hover, .slidesjs-pagination a.active{_background:#a11111;}
 
 /* search */
 .ui-header-searchbar {
@@ -697,7 +699,6 @@ visibility:hidden;
   height:397px;
   background:#ffffff;
   border:#303030 3px solid;
-  
 }
 .cate-list .active ul{display:block}
 .cate-list .item ul a{
@@ -796,8 +797,7 @@ a:active,
   text-align:center;
   z-index:9999999;
   _bottom: 0;
-  _position: absolute;
-  _top: expression(eval(documentElement.scrollTop+documentElement.clientHeight-this.offsetHeight－135));
+  position: absolute;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
