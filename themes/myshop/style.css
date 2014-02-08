@@ -663,6 +663,7 @@ visibility:hidden;
 	_right: -96px;
 	_overflow: visible;
 	top: -3px;
+  _border:solid 1px red;
   *display:block;
 }
 .search-hots{padding-left: 510px;padding-top: 5px;padding-right:95px}
