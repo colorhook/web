@@ -112,8 +112,7 @@ $(function(){
     var topPos = (document.documentElement.scrollTop || document.body.scrollTop) + 135
     $("#J_sidebar").stop().animate({top: topPos+"px"});
   }
-  $(window).resize(update);
-  $(document).scroll(update);
+  $(window).resize(update).scroll(update);
   update();
 });
 </script>
