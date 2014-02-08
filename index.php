@@ -127,8 +127,23 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     $smarty->assign('auction_list',    index_get_auction());        // 拍卖活动
     $smarty->assign('shop_notice',     $_CFG['shop_notice']);       // 商店公告
     $smarty->assign('articles_newbie', get_cat_articles(5, 1, 8));    //新手教程
-    $smarty->assign('articles_lecture', get_cat_articles(6, 1, 8));    //时尚讲坛
+    $smarty->assign('articles_lecture',get_cat_articles(6, 1, 8));    //时尚讲坛
     $smarty->assign('articles_notice', get_cat_articles(4, 1, 8));    //网站公告
+    
+    $page_data = get_page_data('home');
+    foreach($page_data['floors'] as $key=>&$value){
+      $tmp =explode(',', $value['tags']);
+      $catid = $value['id'];
+      $_tags = array();
+      foreach($tmp as $tagKey=>$tagValue){
+        $_tags[] = array(
+          "url" => "search.php?category=$catid&keywords=" . urlEncode($tagValue),
+          "label"=> $tagValue
+        );
+      }
+      $value['_tags'] = $_tags;
+    }
+    $smarty->assign('page_data',       $page_data); //首页自定义数据
 
     /* 首页主广告设置 */
     $smarty->assign('index_ad',     $_CFG['index_ad']);

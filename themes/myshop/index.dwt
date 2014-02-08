@@ -17,216 +17,56 @@
 {* 包含脚本文件 *}
 {insert_scripts files='jquery.slides.js,common.js,index.js'}
 <div id="J-slider" class="ms-slider">
-  <!--foreach from=$ad_banner item=banner name=banner-->
-  <!--/foreach-->
-
-	<div class="item" style="background-image:url(/data/afficheimg/20140206yejkfz.jpg)">
-	  <a href="article.php?id=32"></a>
+  <!--{foreach from=$page_data.banner item=banner name=banner}-->
+	<div class="item" style="background-image:url({$banner.img})">
+	  <a href="{$banner.href}" target="_blank"></a>
 	</div>
-	<div class="item" style="background-image:url(/data/afficheimg/20140206tglaia.jpg)">
-	  <a href="category.php?id=2"></a>
-	</div>
-	
-	<div class="item" style="background-image:url(/data/afficheimg/20140206xnckur.jpg)">
-	  <a href="category.php?id=3"></a>
-	</div>
-	<div class="item" style="background-image:url(/data/afficheimg/20140206ctxggu.jpg)">
-	  <a href="category.php?id=4"></a>
-	</div>
-
+  <!--{/foreach}-->
 </div>
 
-
-<!-- women -->
-<div class="ms-floor ms-women">
+<!--floors-->
+<!--{foreach from=$page_data.floors item=floor name=floor}-->
+<div class="ms-floor ms-floor-{$smarty.foreach.floor.index}">
   <div class="ms-mod clearfix">
     <h3 class="clearfix">
       <ul class='q-link clearfix'>
-        <li><a href="/search.php?category=2&keywords=%E7%BE%BD%E7%BB%92%E6%9C%8D" target="_blank">羽绒服</a></li>
-	<li><a href="/search.php?category=2&keywords=%E5%A4%96%E5%A5%97" target="_blank">外套</a></li>
-	<li><a href="/search.php?category=2&keywords=%E6%A3%89%E8%A1%A3" target="_blank">棉衣</a></li>
-	<li><a href="/search.php?category=2&keywords=%E6%AF%9B%E8%A1%A3" target="_blank">毛衣</a></li>
-	<li><a href="/search.php?category=2&keywords=%E8%A3%A4%E5%AD%90" target="_blank">裤子</a></li>
-	<li><a href="/search.php?category=2&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
-        
+        <!--{foreach from=$floor._tags item=tag name=tag}-->
+         <li><a href="{$tag.url}" target="_blank">{$tag.label}</a></li>
+        <!--{/foreach}-->
       </ul>
     </h3>
     <div class="floor-cate">
       <div class="slogan">
-        <img src="../images/assets/slogan_w.jpg"/>
-	      <a href="category.php?id=2" target="_blank"></a>
+        <img src="{$floor.slogan.img}"/>
+	      <a href="{$floor.slogan.href}" target="_blank"></a>
       </div>
       <div class="menu clearfix">
-        <ul class='clearfix'>
-          <li><a href="/search.php?category=2&keywords=%E7%BE%BD%E7%BB%92%E6%9C%8D" target="_blank">羽绒服</a></li>
-  	<li><a href="/search.php?category=2&keywords=%E5%A4%96%E5%A5%97" target="_blank">外套</a></li>
-  	<li><a href="/search.php?category=2&keywords=%E6%A3%89%E8%A1%A3" target="_blank">棉衣</a></li>
-  	<li><a href="/search.php?category=2&keywords=%E6%AF%9B%E8%A1%A3" target="_blank">毛衣</a></li>
-  	<li><a href="/search.php?category=2&keywords=%E8%A3%A4%E5%AD%90" target="_blank">裤子</a></li>
-  	<li><a href="/search.php?category=2&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
+        <ul class='q-link2 clearfix'>
+          <!--{foreach from=$floor._tags item=tag name=tag}-->
+           <li><a href="{$tag.url}" target="_blank">{$tag.label}</a></li>
+          <!--{/foreach}-->
          </ul>
       </div>
       <ul>
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a href="goods.php?id=573" target="_blank"><img src="../images/assets/floor_w_1.jpg" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=616" target="_blank"><img src="../images/assets/floor_w_2.jpg" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=280" target="_blank"><img src="../images/assets/floor_w_3.jpg" width="200" height="140"/></a></p>
+        <p><a href="{$floor.items[0].href}" target="_blank"><img src="{$floor.items[0].img}" width="200" height="140"/></a></p>
+	      <p><a href="{$floor.items[1].href}" target="_blank"><img src="{$floor.items[1].img}" width="200" height="140"/></a></p>
+        <p><a href="{$floor.items[2].href}" target="_blank"><img src="{$floor.items[2].img}" width="200" height="140"/></a></p>
       </div>
       <div class="column column-2">
-        <p><a href="goods.php?id=538" target="_blank"><img src="../images/assets/floor_w_4.jpg" width="399" height="422"/></a></p>
+        <p><a href="{$floor.items[3].href}" target="_blank"><img src="{$floor.items[3].img}" width="399" height="422"/></a></p>
       </div>
       <div class="column column-3">
-         <p><a href="goods.php?id=494" target="_blank"><img src="../images/assets/floor_w_5.jpg" width="199" height="281"/></a></p>
-	 <p><a href="goods.php?id=549" target="_blank"><img src="../images/assets/floor_w_6.jpg" width="199" height="140"/></a></p>
+         <p><a href="{$floor.items[4].href}" target="_blank"><img src="{$floor.items[4].img}" width="199" height="281"/></a></p>
+	 <p><a href="{$floor.items[5].href}" target="_blank"><img src="{$floor.items[5].img}" width="199" height="140"/></a></p>
       </div>
     </div>
   </div>
 </div>
+<!--{/foreach}-->
 
-<!-- man -->
-<div class="ms-floor ms-women">
-  <div class="ms-mod clearfix">
-    <h3 class="clearfix">
-      <ul class='q-link clearfix'>
-        <li><a href="/search.php?category=1&keywords=%E7%BE%BD%E7%BB%92%E6%9C%8D" target="_blank">羽绒服</a></li>
-	<li><a href="/search.php?category=1&keywords=%E5%A4%96%E5%A5%97" target="_blank">外套</a></li>
-	<li><a href="/search.php?category=1&keywords=%E6%A3%89%E8%A1%A3" target="_blank">棉衣</a></li>
-	<li><a href="/search.php?category=1&keywords=%E6%AF%9B%E8%A1%A3" target="_blank">毛衣</a></li>
-	<li><a href="/search.php?category=1&keywords=%E8%A3%A4%E5%AD%90" target="_blank">裤子</a></li>
-	<li><a href="/search.php?category=1&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
-      </ul>
-    </h3>
-    <div class="floor-cate">
-      <div class="slogan">
-        <img src="../images/assets/slogan_m.jpg"/>
-	      <a href="category.php?id=1" target="_blank"></a>
-      </div>
-      <div class="menu clearfix">
-        <ul class='clearfix'>
-          <li><a href="/search.php?category=1&keywords=%E7%BE%BD%E7%BB%92%E6%9C%8D" target="_blank">羽绒服</a></li>
-  	<li><a href="/search.php?category=1&keywords=%E5%A4%96%E5%A5%97" target="_blank">外套</a></li>
-  	<li><a href="/search.php?category=1&keywords=%E6%A3%89%E8%A1%A3" target="_blank">棉衣</a></li>
-  	<li><a href="/search.php?category=1&keywords=%E6%AF%9B%E8%A1%A3" target="_blank">毛衣</a></li>
-  	<li><a href="/search.php?category=1&keywords=%E8%A3%A4%E5%AD%90" target="_blank">裤子</a></li>
-  	<li><a href="/search.php?category=1&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
-          
-         </ul>
-      </div>
-      <ul>
-    </div>
-    <div class="goods clearfix">
-      <div class="column column-1">
-        <p><a href="goods.php?id=561" target="_blank"><img src="../images/assets/floor_m_1.jpg" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=556" target="_blank"><img src="../images/assets/floor_m_2.jpg" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=560" target="_blank"><img src="../images/assets/floor_m_3.jpg" width="200" height="140"/></a></p>
-      </div>
-      <div class="column column-2">
-        <p><a href="goods.php?id=559" target="_blank"><img src="../images/assets/floor_m_4.jpg" width="399" height="422"/></a></p>
-      </div>
-      <div class="column column-3">
-         <p><a href="goods.php?id=555" target="_blank"><img src="../images/assets/floor_m_5.jpg" width="199" height="281"/></a></p>
-	 <p><a href="goods.php?id=564" target="_blank"><img src="../images/assets/floor_m_6.jpg" width="199" height="140"/></a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- 童装 -->
-<div class="ms-floor ms-child">
-  <div class="ms-mod clearfix">
-    <h3 class="clearfix">
-      <ul class='q-link clearfix'>
-        <li><a href="/search.php?category=5&keywords=男童套装" target="_blank">男童套装</a></li>
-	<li><a href="/search.php?category=5&keywords=女童上衣" target="_blank">女童上衣</a></li>
-	<li><a href="/search.php?category=5&keywords=男女裤装" target="_blank">男女裤装</a></li>
-	<li><a href="/search.php?category=5&keywords=连衣裙" target="_blank">连衣裙</a></li>
-	<li><a href="/search.php?category=5&keywords外套" target="_blank">外套</a></li>
-	<li><a href="/search.php?category=5&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
-
-        
-      </ul>
-    </h3>
-    <div class="floor-cate">
-      <div class="slogan">
-        <img src="../images/assets/slogan_c.gif"/>
-	      <a href="category.php?id=5" target="_blank"></a>
-      </div>
-      <div class="menu clearfix">
-        <ul class='clearfix'>             
-          <li><a href="/search.php?category=5&keywords=男童套装" target="_blank">男童套装</a></li>
-  	<li><a href="/search.php?category=5&keywords=女童上衣" target="_blank">女童上衣</a></li>
-  	<li><a href="/search.php?category=5&keywords=男女裤装" target="_blank">男女裤装</a></li>
-  	<li><a href="/search.php?category=5&keywords=连衣裙" target="_blank">连衣裙</a></li>
-  	<li><a href="/search.php?category=5&keywords外套" target="_blank">外套</a></li>
-  	<li><a href="/search.php?category=5&keywords=T%E6%81%A4" target="_blank">T恤</a></li>
-         </ul>
-      </div>
-      <ul>
-    </div>
-    <div class="goods clearfix">
-      <div class="column column-1">
-        <p><a href="goods.php?id=660" target="_blank"><img src="../images/assets/floor_c_1.gif" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=663" target="_blank"><img src="../images/assets/floor_c_2.gif" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=661" target="_blank"><img src="../images/assets/floor_c_3.gif" width="200" height="140"/></a></p>
-      </div>
-      <div class="column column-2">
-        <p><a href="goods.php?id=658" target="_blank"><img src="../images/assets/floor_c_4.gif" width="399" height="422"/></a></p>
-      </div>
-      <div class="column column-3">
-         <p><a href="goods.php?id=669" target="_blank"><img src="../images/assets/floor_c_5.gif" width="199" height="281"/></a></p>
-	 <p><a href="goods.php?id=667" target="_blank"><img src="../images/assets/floor_c_6.gif" width="199" height="140"/></a></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- 包包 -->
-<div class="ms-floor ms-baobao">
-  <div class="ms-mod clearfix">
-    <h3 class="clearfix">
-      <ul class='q-link clearfix'>
-        <li><a href="search.php?category=49&keywords=斜挎包" target="_blank">斜挎包</a></li>
-	<li><a href="search.php?category=49&keywords=单肩包" target="_blank">单肩包</a></li>
-	<li><a href="search.php?category=49&keywords=手提包" target="_blank">手提包</a></li>
-	<li><a href="search.php?category=49&keywords=钱包" target="_blank">钱包</a></li>
-        
-      </ul>
-    </h3>
-    <div class="floor-cate">
-      <div class="slogan">
-        <img src="../images/assets/slogan_b.gif"/>
-	      <a href="category.php?id=49" target="_blank"></a>
-      </div>
-      <div class="menu clearfix">
-        <ul class='clearfix'>
-          <li><a href="search.php?category=49&keywords=斜挎包" target="_blank">斜挎包</a></li>
-  	<li><a href="/search.php?category=49&keywords=单肩包" target="_blank">单肩包</a></li>
-  	<li><a href="/search.php?category=49&keywords=手提包" target="_blank">手提包</a></li>
-  	<li><a href="/search.php?category=49&keywords=钱包" target="_blank">钱包</a></li>
-          
-         </ul>
-      </div>
-      <ul>
-    </div>
-    <div class="goods clearfix">
-      <div class="column column-1">
-        <p><a href="goods.php?id=629" target="_blank"><img src="../images/assets/floor_b_1.gif" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=626" target="_blank"><img src="../images/assets/floor_b_2.gif" width="200" height="140"/></a></p>
-	<p><a href="goods.php?id=672" target="_blank"><img src="../images/assets/floor_b_3.gif" width="200" height="140"/></a></p>
-      </div>
-      <div class="column column-2">
-        <p><a href="goods.php?id=654" target="_blank"><img src="../images/assets/floor_b_4.gif" width="399" height="422"/></a></p>
-      </div>
-      <div class="column column-3">
-         <p><a href="goods.php?id=635" target="_blank"><img src="../images/assets/floor_b_5.gif" width="199" height="281"/></a></p>
-	 <p><a href="goods.php?id=636" target="_blank"><img src="../images/assets/floor_b_6.gif" width="199" height="140"/></a></p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <!-- 最新 -->
@@ -234,13 +74,12 @@
  <div class="ms-mod">
   <h3>女装最新上市</h3>
   <ul class="clearfix">
-    <!--
-    <!--{foreach from=$new_goods item=goods name=goods}-->
+    <!--{foreach from=$page_data.latest item=goods name=goods}-->
     <li {if $smarty.foreach.goods.index eq 0} class='first'{/if}>
-      <a href="{$goods.url}" target="_blank">
-        <span class="img"><img data-src="{$goods.thumb}" src="../images/assets/thumb_w.jpg" width="190" height="290"/></span>
+      <a href="{$goods.href}" target="_blank">
+        <span class="img"><img data-src="{$goods.thumb}" src="{$goods.img}" width="190" height="290"/></span>
 	      <span class="summary" style="display:none">
-	       <span class="title" title="{$goods.name|escape:html}">{$goods.short_style_name}</span>
+	       <span class="title" title="{$goods.name|escape:html}">{\$goods.short_style_name}</span>
 	       <span class="price">建议销售价：<!-- {if $goods.promote_price neq ""} -->
             {$goods.promote_price}
             <!-- {else}-->
@@ -250,36 +89,6 @@
       </a>
     </li>
     <!--{/foreach}-->
-    -->
-
-
-    <li class="first">
-      <a href="goods.php?id=607" target="_blank">
-        <span class="img"><img src="../images/assets/1.jpg" width="190" height="290"/></span>
-      </a>
-     </li>
-     <li>
-      <a href="goods.php?id=600" target="_blank">
-        <span class="img"><img src="../images/assets/2.jpg" width="190" height="290"/></span>
-      </a>
-     </li>
-     <li>
-      <a href="goods.php?id=523" target="_blank">
-        <span class="img"><img src="../images/assets/3.jpg" width="190" height="290"/></span>
-      </a>
-     </li>
-     <li>
-      <a href="goods.php?id=476" target="_blank">
-        <span class="img"><img src="../images/assets/5.jpg" width="190" height="290"/></span>
-      </a>
-     </li>
-     
-     <li>
-      <a href="goods.php?id=568" target="_blank">
-        <span class="img"><img src="../images/assets/4.jpg" width="190" height="290"/></span>
-      </a>
-     </li>
-     
   </ul>
  </div>
 </div>
