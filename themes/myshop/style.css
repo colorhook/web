@@ -660,9 +660,10 @@ visibility:hidden;
 	padding: 1px 6px;
 	position: absolute;
 	right: -93px;
-	_right: -66px;
+	_right: -86px;
 	_overflow: visible;
 	top: -3px;
+  *display:block;
 }
 .search-hots{padding-left: 510px;padding-top: 5px;padding-right:95px}
 .search-hots a{padding:0 4px}
