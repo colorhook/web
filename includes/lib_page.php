@@ -66,7 +66,7 @@ function set_page_data($page , $key, $value)
       $tmp = $tmp[$k];
     }
   }
-  file_put_contents($file, @json_encode($tmp, JSON_PRETTY_PRINT));
+  file_put_contents($file, json_encode($tmp));
 }
 
 ?>
