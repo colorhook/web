@@ -662,10 +662,10 @@ visibility:hidden;
   z－index:200;
   zoom:1;
 	right: -93px;
-	_right: 0px;
+	_right: 5px;
 	_overflow: visible;
 	top: -3px;
-  *display:block;
+
 }
 .search-hots{padding-left: 510px;padding-top: 5px;padding-right:95px}
 .search-hots a{padding:0 4px}
