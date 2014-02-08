@@ -759,7 +759,7 @@ a:active,
 .ms-floor .floor-cate{float:left;width:180px;height:424px;}
 .ms-floor .floor-cate .menu{width:178px;height:168px;background:#fafaf9;border:#e5e5e5 1px solid}
 .ms-floor .floor-cate .menu ul{padding:20px 10px 0 10px;line-height:24px}
-.ms-floor .floor-cate .menu li{float:left;margin:0 4px;white-spacing:nowrap;}
+.ms-floor .floor-cate .menu li{float:left;margin:0 4px;white-space:nowrap;}
 .ms-floor .goods{float:right;border-right:#e5e5e5 1px solid;border-bottom:#e5e5e5 1px solid;}
 .ms-floor .goods .column{float:left}
 .ms-floor .goods .column p{border-top:#e5e5e5 1px solid;border-left:#e5e5e5 1px solid;}
