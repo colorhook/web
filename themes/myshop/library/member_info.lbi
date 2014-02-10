@@ -1,6 +1,6 @@
 <div id="append_parent"></div>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<p class="f_l">欢迎光临莱客<span style="font-weight: bold;margin-left: 10px;">电话：400-003-2132</span></p>
+<p class="f_l">欢迎光临莱客<span style="font-weight: bold;margin-left: 10px;">咨询热线：400-003-2132</span></p>
 <p class="f_r">
 {if $user_info}
   <a href="user.php">{$user_info.username}</a>
