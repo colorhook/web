@@ -148,6 +148,7 @@ $_LANG['16_email_manage'] = '邮件群发管理';
 
 /* 页面管理 */
 $_LANG['01_page_home'] = '首页维护';
+$_LANG['02_page_upload'] = '图片上传';
 /* 商品管理 */
 $_LANG['01_goods_list'] = '商品列表';
 $_LANG['02_goods_add'] = '添加新商品';

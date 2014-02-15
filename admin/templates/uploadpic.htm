@@ -1,0 +1,27 @@
+<!-- $Id: home.htm 16854 2009-12-07 06:20:09Z sxc_shop $ -->
+{include file="pageheader.htm"}
+<style>
+.main-div ul{list-style-type: none;}
+.main-div input.img,.main-div input.href{width:360px;}
+.main-div input.img{margin-right:5px;}
+.main-div .uploadfile{margin-right:10px;text-decoration:underline;cursor:pointer;}
+.main-div .save input{width:80px;margin-left:40px;}
+.main-div h5{padding:14px 0 4px 0;margin:0;-webkit-margin-before: 0em;-webkit-margin-after: 0em;font-size:16px;color:#a11111;}
+.main-div h6{padding:16px 0 5px 0;margin:0;-webkit-margin-before: 0em;-webkit-margin-after: 0em;font-size:12px;}
+#floors-table .save{padding:0 0 10px 0;margin-bottom:10px;border-bottom:#e5e5e5 2px dashed;}
+#floors-table .save input{margin-left:0;margin-top:10px;}
+.uploadfile{display:none;}
+</style>
+<div class="main-div tab-div">
+  <!-- {if $upload_img}-->
+  <label>上传文件成功</label><input type="text" value="{$upload_img}" style="width:600px" /><br/>
+  <!-- {/if} -->
+  <!-- {if $upload_err}-->
+  <label>上传文件失败</label><input type="text" value="{$upload_err}" style="width:600px" /><br/>
+  <!-- {/if} -->
+  <form action="uploadpic.php?act=upload" method="post" enctype="multipart/form-data"> 
+   <input type="file" name="img" class="file" id="fileField" size="28"/> 
+   <input type="submit" name="submit" class="btn" value="上传" /> 
+  </form> 
+</div>
+{include file="pagefooter.htm"}

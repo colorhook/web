@@ -51,16 +51,16 @@
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a href="{$floor.items[0].href}" target="_blank"><img src="{$floor.items[0].img}" width="200" height="140"/></a></p>
-	      <p><a href="{$floor.items[1].href}" target="_blank"><img src="{$floor.items[1].img}" width="200" height="140"/></a></p>
-        <p><a href="{$floor.items[2].href}" target="_blank"><img src="{$floor.items[2].img}" width="200" height="140"/></a></p>
+        <p><a class="first-x first-y" href="{$floor.items[0].href}" target="_blank"><img src="{$floor.items[0].img}" width="200" height="140"/></a></p>
+	      <p><a class="first-x" href="{$floor.items[1].href}" target="_blank"><img src="{$floor.items[1].img}" width="200" height="140"/></a></p>
+        <p><a class="first-x" href="{$floor.items[2].href}" target="_blank"><img src="{$floor.items[2].img}" width="200" height="140"/></a></p>
       </div>
       <div class="column column-2">
-        <p><a href="{$floor.items[3].href}" target="_blank"><img src="{$floor.items[3].img}" width="399" height="422"/></a></p>
+        <p><a class="first-y" href="{$floor.items[3].href}" target="_blank"><img src="{$floor.items[3].img}" width="399" height="422"/></a></p>
       </div>
       <div class="column column-3">
-         <p><a href="{$floor.items[4].href}" target="_blank"><img src="{$floor.items[4].img}" width="199" height="281"/></a></p>
-	 <p><a href="{$floor.items[5].href}" target="_blank"><img src="{$floor.items[5].img}" width="199" height="140"/></a></p>
+         <p class="first"><a class="first-y" href="{$floor.items[4].href}" target="_blank"><img src="{$floor.items[4].img}" width="199" height="281"/></a></p>
+	       <p class="last"><a href="{$floor.items[5].href}" target="_blank"><img src="{$floor.items[5].img}" width="199" height="140"/></a></p>
       </div>
     </div>
   </div>

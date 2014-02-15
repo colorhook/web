@@ -43,7 +43,15 @@
         <ul>
           <!--{foreach from=$data.floors item=floor name=floor}-->
           <li class='floor-item' data-name='{$floor.name}' data-index='{$smarty.foreach.floor.index}' {if $smarty.foreach.floor.index eq 0} class='first'{/if}>
-            <h5><span>楼层：</span>{$floor.name}</h5>
+            <h5><span>楼层：</span>{$floor.name}
+               <span style="display:none;margin-left:200px">
+                 是否启用：
+                 <!-- {if $floor.enabled} -->
+                 <input type="checkbox" class="enabled" checked="checked">
+                 <!-- {else} -->
+                 <input type="checkbox" class="enabled">
+                 <!-- {/if} -->
+               </span></h5>
             <div class="page_floor_item">
               <h6>slogan图片</h6>
               <div class="slogan">
@@ -175,6 +183,7 @@ $(function(){
     $(".save input", item).click(function(){
       var items = {
         name: $item.attr('data-name'),
+        enabled: true,
         id: $('.cat_id input', item).val(),
         slogan: {
           img: $('.slogan input.img', item).val(),
