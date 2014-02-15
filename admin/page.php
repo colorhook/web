@@ -32,6 +32,7 @@ else if($_REQUEST['act'] == 'save')
 {
   $page = $_REQUEST['page'];
   $data = $_REQUEST['data'];
+  $data['enabled'] = $data['enabled'] == 'true';
   $key = $_REQUEST['key'];
   $result = array();
   try{

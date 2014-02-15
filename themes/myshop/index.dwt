@@ -26,6 +26,8 @@
 
 <!--floors-->
 <!--{foreach from=$page_data.floors item=floor name=floor}-->
+
+<!--{if $floor.enabled}-->
 <div class="ms-floor ms-floor-{$smarty.foreach.floor.index}">
   <div class="ms-mod clearfix">
     <h3 class="clearfix">
@@ -65,6 +67,7 @@
     </div>
   </div>
 </div>
+<!-- {/if} -->
 <!--{/foreach}-->
 
 
