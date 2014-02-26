@@ -191,6 +191,7 @@ elseif ($_REQUEST['act'] == 'insert')
     $other['office_phone'] = isset($_POST['extend_field3']) ? htmlspecialchars(trim($_POST['extend_field3'])) : '';
     $other['home_phone'] = isset($_POST['extend_field4']) ? htmlspecialchars(trim($_POST['extend_field4'])) : '';
     $other['mobile_phone'] = isset($_POST['extend_field5']) ? htmlspecialchars(trim($_POST['extend_field5'])) : '';
+	$other['rel_admin'] = isset($_POST['rel_admin']) ? htmlspecialchars(trim($_POST['rel_admin'])) : '';
 
     $db->autoExecute($ecs->table('users'), $other, 'UPDATE', "user_name = '$username'");
 
@@ -246,6 +247,7 @@ elseif ($_REQUEST['act'] == 'edit')
         $user['office_phone']   = $row['office_phone'];
         $user['home_phone']     = $row['home_phone'];
         $user['mobile_phone']   = $row['mobile_phone'];
+		$user['rel_admin']   = $row['rel_admin'];
     }
     else
     {
@@ -351,10 +353,11 @@ elseif ($_REQUEST['act'] == 'update')
     $birthday = $_POST['birthdayYear'] . '-' .  $_POST['birthdayMonth'] . '-' . $_POST['birthdayDay'];
     $rank = empty($_POST['user_rank']) ? 0 : intval($_POST['user_rank']);
     $credit_line = empty($_POST['credit_line']) ? 0 : floatval($_POST['credit_line']);
+	
 
     $users  =& init_users();
 
-    if (!$users->edit_user(array('username'=>$username, 'password'=>$password, 'email'=>$email, 'gender'=>$sex, 'bday'=>$birthday ), 1))
+    if (!$users->edit_user(array('username'=>$username, 'password'=>$password, 'email'=>$email, 'gender'=>$sex, 'bday'=>$birthday), 1))
     {
         if ($users->error == ERR_EMAIL_EXISTS)
         {
@@ -408,7 +411,7 @@ elseif ($_REQUEST['act'] == 'update')
     $other['office_phone'] = isset($_POST['extend_field3']) ? htmlspecialchars(trim($_POST['extend_field3'])) : '';
     $other['home_phone'] = isset($_POST['extend_field4']) ? htmlspecialchars(trim($_POST['extend_field4'])) : '';
     $other['mobile_phone'] = isset($_POST['extend_field5']) ? htmlspecialchars(trim($_POST['extend_field5'])) : '';
-
+	$other['rel_admin'] = isset($_POST['rel_admin']) ? htmlspecialchars(trim($_POST['rel_admin'])) : '';
     $db->autoExecute($ecs->table('users'), $other, 'UPDATE', "user_name = '$username'");
 
     /* 记录管理员操作 */

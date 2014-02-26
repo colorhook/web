@@ -73,6 +73,7 @@ class ecshop extends integrate
         $this->field_reg_date = 'reg_time';
         $this->need_sync = false;
         $this->is_ecshop = 1;
+		$this->rel_admin = '';
     }
 
 
