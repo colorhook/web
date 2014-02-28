@@ -13,10 +13,6 @@
  * $Id: ecshop.php 17217 2011-01-19 06:29:08Z liubo $
  */
 
-if (!defined('IN_ECS'))
-{
-    die('Hacking attempt');
-}
 
 /* 模块的基本信息 */
 if (isset($set_modules) && $set_modules == TRUE)
@@ -71,9 +67,25 @@ class ecshop extends integrate
         $this->field_gender = 'sex';
         $this->field_bday = 'birthday';
         $this->field_reg_date = 'reg_time';
+        $this->field_reladmin = 'rel_admin';
         $this->need_sync = false;
         $this->is_ecshop = 1;
-		$this->rel_admin = '';
+		    $this->rel_admin = '';
+        $this->insert_table_field_reladmin();
+    }
+    
+    /**
+     * hack
+     * 为user表增加一个rel_admin的字段，代表该会员属于谁跟单
+     */
+    function insert_table_field_reladmin(){
+      $sql = "SHOW COLUMNS FROM " . $this->table($this->user_table);
+      $result = $this->db->getCol($sql);
+      $index = array_search('rel_admin',$result);
+      if($index == false){
+        $sql = "ALTER TABLE " . $this->table($this->user_table) . " ADD rel_admin VARCHAR(255) NULL default ''";
+        $result = $this->db->query($sql);
+      } 
     }
 
 

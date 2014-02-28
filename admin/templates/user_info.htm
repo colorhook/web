@@ -56,6 +56,21 @@
       {html_options options=$special_ranks selected=$user.user_rank}
     </select></td>
   </tr>
+  <tr {if $rel_admin_priv} {else}style=""{/if}>
+    <td class="label">所属客服:</td>
+    <td>
+      <select name="rel_admin">
+        <option value="0">空缺</option>
+        {foreach from=$admin_list item=admin}
+        {if $user.rel_admin eq $admin.user_id}
+        <option value="{$admin.user_id}" selected="selected">{$admin.user_name}</option>
+        {else}
+        <option value="{$admin.user_id}">{$admin.user_name}</option>
+        {/if}
+        {/foreach}
+      </select>
+    </td>
+  </tr>
   <tr>
     <td class="label">{$lang.gender}:</td>
     <td>{html_radios name="sex" options=$lang.sex checked=$user.sex }</td>

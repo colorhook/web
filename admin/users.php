@@ -17,11 +17,39 @@ define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
 
+
+/* 获取管理员列表 */
+function get_admin_userlist()
+{
+    $list = array();
+    $sql  = 'SELECT user_id, user_name, email, add_time, last_login '.
+            'FROM ' .$GLOBALS['ecs']->table('admin_user').' ORDER BY user_id DESC';
+    $list = $GLOBALS['db']->getAll($sql);
+
+    return $list;
+}
+function find_rel_admin_name($id, $list){
+  $count = count($list);
+  for($i = 0; $i < $count; $i++){
+    if($list[$i]['user_id'] == $id){
+      return $list[$i]['user_name'];
+    }
+  }
+  return "";
+}
+/* 是否具备查看所属客服功能 */
+function has_user_rel_admin_priv(){
+  return admin_priv('users_rel_admin', '', false);
+}
 /*------------------------------------------------------ */
 //-- 用户帐号列表
 /*------------------------------------------------------ */
-
-if ($_REQUEST['act'] == 'list')
+if ($_REQUEST['act'] == 'dev'){
+  $priv = has_user_rel_admin_priv();
+  var_dump($_SESSION);
+  var_dump($priv);
+}
+else if ($_REQUEST['act'] == 'list')
 {
     /* 检查权限 */
     admin_priv('users_manage');
@@ -37,10 +65,12 @@ if ($_REQUEST['act'] == 'list')
     $smarty->assign('user_ranks',   $ranks);
     $smarty->assign('ur_here',      $_LANG['03_users_list']);
     $smarty->assign('action_link',  array('text' => $_LANG['04_users_add'], 'href'=>'users.php?act=add'));
-
+    
     $user_list = user_list();
 
     $smarty->assign('user_list',    $user_list['user_list']);
+    $smarty->assign('admin_list',  get_admin_userlist());
+    $smarty->assign('rel_admin_priv', has_user_rel_admin_priv());
     $smarty->assign('filter',       $user_list['filter']);
     $smarty->assign('record_count', $user_list['record_count']);
     $smarty->assign('page_count',   $user_list['page_count']);
@@ -62,7 +92,7 @@ elseif ($_REQUEST['act'] == 'query')
     $smarty->assign('filter',       $user_list['filter']);
     $smarty->assign('record_count', $user_list['record_count']);
     $smarty->assign('page_count',   $user_list['page_count']);
-
+    $smarty->assign('rel_admin_priv', has_user_rel_admin_priv());
     $sort_flag  = sort_flag($user_list['filter']);
     $smarty->assign($sort_flag['tag'], $sort_flag['img']);
 
@@ -92,6 +122,8 @@ elseif ($_REQUEST['act'] == 'add')
     $smarty->assign('form_action',      'insert');
     $smarty->assign('user',             $user);
     $smarty->assign('special_ranks',    get_rank_list(true));
+    $smarty->assign('admin_list',  get_admin_userlist());
+    $smarty->assign('rel_admin_priv', has_user_rel_admin_priv());
 
     assign_query_info();
     $smarty->display('user_info.htm');
@@ -191,7 +223,7 @@ elseif ($_REQUEST['act'] == 'insert')
     $other['office_phone'] = isset($_POST['extend_field3']) ? htmlspecialchars(trim($_POST['extend_field3'])) : '';
     $other['home_phone'] = isset($_POST['extend_field4']) ? htmlspecialchars(trim($_POST['extend_field4'])) : '';
     $other['mobile_phone'] = isset($_POST['extend_field5']) ? htmlspecialchars(trim($_POST['extend_field5'])) : '';
-	$other['rel_admin'] = isset($_POST['rel_admin']) ? htmlspecialchars(trim($_POST['rel_admin'])) : '';
+	  $other['rel_admin'] = isset($_POST['rel_admin']) ? htmlspecialchars(trim($_POST['rel_admin'])) : '';
 
     $db->autoExecute($ecs->table('users'), $other, 'UPDATE', "user_name = '$username'");
 
@@ -222,7 +254,7 @@ elseif ($_REQUEST['act'] == 'edit')
     $user   = $users->get_user_info($row['user_name']);
 
     $sql = "SELECT u.user_id, u.sex, u.birthday, u.pay_points, u.rank_points, u.user_rank , u.user_money, u.frozen_money, u.credit_line, u.parent_id, u2.user_name as parent_username, u.qq, u.msn,
-    u.office_phone, u.home_phone, u.mobile_phone".
+    u.office_phone, u.home_phone, u.mobile_phone, u.rel_admin".
         " FROM " .$ecs->table('users'). " u LEFT JOIN " . $ecs->table('users') . " u2 ON u.parent_id = u2.user_id WHERE u.user_id='$_GET[id]'";
 
     $row = $db->GetRow($sql);
@@ -247,7 +279,7 @@ elseif ($_REQUEST['act'] == 'edit')
         $user['office_phone']   = $row['office_phone'];
         $user['home_phone']     = $row['home_phone'];
         $user['mobile_phone']   = $row['mobile_phone'];
-		$user['rel_admin']   = $row['rel_admin'];
+		    $user['rel_admin']      = $row['rel_admin'];
     }
     else
     {
@@ -332,6 +364,8 @@ elseif ($_REQUEST['act'] == 'edit')
     $smarty->assign('ur_here',          $_LANG['users_edit']);
     $smarty->assign('action_link',      array('text' => $_LANG['03_users_list'], 'href'=>'users.php?act=list&' . list_link_postfix()));
     $smarty->assign('user',             $user);
+    $smarty->assign('admin_list',  get_admin_userlist());
+    $smarty->assign('rel_admin_priv', has_user_rel_admin_priv());
     $smarty->assign('form_action',      'update');
     $smarty->assign('special_ranks',    get_rank_list(true));
     $smarty->display('user_info.htm');
@@ -657,6 +691,8 @@ elseif ($_REQUEST['act'] == 'aff_list')
     $user_list['record_count'] = $all_count;
 
     $smarty->assign('user_list',    $user_list['user_list']);
+    $smarty->assign('admin_list',  get_admin_userlist());
+    $smarty->assign('rel_admin_priv', has_user_rel_admin_priv());
     $smarty->assign('record_count', $user_list['record_count']);
     $smarty->assign('full_page',    1);
     $smarty->assign('action_link',  array('text' => $_LANG['back_note'], 'href'=>"users.php?act=edit&id=$auid"));
@@ -687,7 +723,7 @@ function user_list()
         $filter['rank'] = empty($_REQUEST['rank']) ? 0 : intval($_REQUEST['rank']);
         $filter['pay_points_gt'] = empty($_REQUEST['pay_points_gt']) ? 0 : intval($_REQUEST['pay_points_gt']);
         $filter['pay_points_lt'] = empty($_REQUEST['pay_points_lt']) ? 0 : intval($_REQUEST['pay_points_lt']);
-
+        $filter['rel_admin'] = empty($_REQUEST['rel_admin']) ? 0 : intval($_REQUEST['rel_admin']);
         $filter['sort_by']    = empty($_REQUEST['sort_by'])    ? 'user_id' : trim($_REQUEST['sort_by']);
         $filter['sort_order'] = empty($_REQUEST['sort_order']) ? 'DESC'     : trim($_REQUEST['sort_order']);
 
@@ -718,12 +754,23 @@ function user_list()
         {
             $ex_where .=" AND pay_points < '$filter[pay_points_lt]' ";
         }
+        if ($filter['rel_admin'])
+        {
+            $ex_where .=" AND rel_admin = '$filter[rel_admin]' ";
+        }else{
+          if(!has_user_rel_admin_priv()){
+            $user_rank = $_SESSION['admin_id'];
+            $ex_where .=" AND rel_admin = '$user_rank' ";
+          }
+        }
+        
 
         $filter['record_count'] = $GLOBALS['db']->getOne("SELECT COUNT(*) FROM " . $GLOBALS['ecs']->table('users') . $ex_where);
 
         /* 分页大小 */
         $filter = page_and_size($filter);
-        $sql = "SELECT user_id, user_name, email, is_validated, user_money, frozen_money, rank_points, pay_points, reg_time ".
+        $admin_list = get_admin_userlist();
+        $sql = "SELECT user_id, user_name, email, rel_admin, is_validated, user_money, frozen_money, rank_points, pay_points, reg_time ".
                 " FROM " . $GLOBALS['ecs']->table('users') . $ex_where .
                 " ORDER by " . $filter['sort_by'] . ' ' . $filter['sort_order'] .
                 " LIMIT " . $filter['start'] . ',' . $filter['page_size'];
@@ -743,6 +790,7 @@ function user_list()
     for ($i=0; $i<$count; $i++)
     {
         $user_list[$i]['reg_time'] = local_date($GLOBALS['_CFG']['date_format'], $user_list[$i]['reg_time']);
+        $user_list[$i]['rel_admin_name'] = find_rel_admin_name($user_list[$i]['rel_admin'], $admin_list);
     }
 
     $arr = array('user_list' => $user_list, 'filter' => $filter,

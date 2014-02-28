@@ -17,6 +17,16 @@ define('IN_ECS', true);
 
 require(dirname(__FILE__) . '/includes/init.php');
 
+/**
+ * hack for user_rel_admin role
+ */
+$sql = "SELECT action_id FROM " . $ecs->table('admin_action') . " WHERE action_code = 'users_rel_admin'";
+if(!$db->getOne($sql)){
+  $sql = "INSERT INTO " . $ecs->table('admin_action') . " (parent_id, action_code, relevance) VALUES (3, 'users_rel_admin', '')";
+ $db->query($sql);
+}
+
+
 /* act操作项的初始化 */
 if (empty($_REQUEST['act']))
 {
@@ -567,6 +577,7 @@ elseif ($_REQUEST['act'] == 'allot')
 {
     include_once(ROOT_PATH . 'languages/' .$_CFG['lang']. '/admin/priv_action.php');
 
+    
     admin_priv('allot_priv');
     if ($_SESSION['admin_id'] == $_GET['id'])
     {
@@ -635,6 +646,10 @@ elseif ($_REQUEST['act'] == 'update_allot')
     {
          sys_msg('update_allot_error', 1);
     }
+    
+    
+    
+    
     /* 取得当前管理员用户名 */
     $admin_name = $db->getOne("SELECT user_name FROM " .$ecs->table('admin_user'). " WHERE user_id = '$_POST[id]'");
 

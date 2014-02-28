@@ -235,13 +235,13 @@ class integrate
             $fields[] = $this->field_reg_date;
             $values[] = $reg_date;
         }
-		/*
-		if ($rel_admin)
+		
+		    if ($rel_admin)
         {
             $fields[] = $this->field_reladmin;
             $values[] = $rel_admin;
         }
-		*/
+		
         $sql = "INSERT INTO " . $this->table($this->user_table).
                " (" . implode(',', $fields) . ")".
                " VALUES ('" . implode("', '", $values) . "')";
@@ -322,11 +322,11 @@ class integrate
             $values[] = $this->field_bday . "='" . $cfg['bday'] . "'";
         }
 		
-		/*
-		if ((!empty($cfg['rel_admin'])) && $this->field_reladmin != 'NULL')
+		 
+		    if ((!empty($cfg['rel_admin'])) && $this->field_reladmin != 'NULL')
         {
             $values[] = $this->field_reladmin . "='" . $cfg['rel_admin'] . "'";
-        }*/
+        }
 
         if ($values)
         {
@@ -439,20 +439,20 @@ class integrate
     {
         $post_username = $username;
 
-        /*$sql = "SELECT " . $this->field_id . " AS user_id," . $this->field_name . " AS user_name," .
+        $sql = "SELECT " . $this->field_id . " AS user_id," . $this->field_name . " AS user_name," .
                     $this->field_email . " AS email," . $this->field_gender ." AS sex,".
-                    $this->field_bday . " AS birthday," . $this->field_reg_date . " AS reg_time, ".
-					$this->field_reladmin . " AS rel_admin".
-                    $this->field_pass . " AS password ".
-               " FROM " . $this->table($this->user_table) .
-               " WHERE " .$this->field_name . "='$post_username'";*/
-
-		$sql = "SELECT " . $this->field_id . " AS user_id," . $this->field_name . " AS user_name," .
-                    $this->field_email . " AS email," . $this->field_gender ." AS sex,".
-                    $this->field_bday . " AS birthday," . $this->field_reg_date . " AS reg_time, ".
+                    $this->field_bday . " AS birthday," . $this->field_reg_date . " AS reg_time, " .
+					          $this->field_reladmin . " AS rel_admin, ".
                     $this->field_pass . " AS password ".
                " FROM " . $this->table($this->user_table) .
                " WHERE " .$this->field_name . "='$post_username'";
+
+		/*$sql = "SELECT " . $this->field_id . " AS user_id," . $this->field_name . " AS user_name," .
+                    $this->field_email . " AS email," . $this->field_gender ." AS sex,".
+                    $this->field_bday . " AS birthday," . $this->field_reg_date . " AS reg_time, ".
+                    $this->field_pass . " AS password ".
+               " FROM " . $this->table($this->user_table) .
+               " WHERE " .$this->field_name . "='$post_username'";*/
 
         $row = $this->db->getRow($sql);
 
@@ -472,7 +472,7 @@ class integrate
         $sql = "SELECT " . $this->field_id . " AS user_id," . $this->field_name . " AS user_name," .
                     $this->field_email . " AS email," . $this->field_gender ." AS sex,".
                     $this->field_bday . " AS birthday," . $this->field_reg_date . " AS reg_time, ".
-					$this->field_reladmin . " AS rel_admin ".
+					          $this->field_reladmin . " AS rel_admin, " .
                     $this->field_pass . " AS password ".
                " FROM " . $this->table($this->user_table) .
                " WHERE " .$this->field_id . "='$id'";
@@ -747,7 +747,7 @@ class integrate
             else
             {
                $sql = "INSERT INTO " . $GLOBALS['ecs']->table('users').
-                            "(user_name, email, sex, birthday, reg_time, password)".
+                            "(user_name, email, sex, birthday, rel_admin, reg_time, password)".
                       " VALUES('$username', '" .$main_profile['email']."','".
                             $main_profile['sex'] . "','" . $main_profile['birthday'] . "','" .
                             $main_profile['reg_time'] . "', '$md5password')";
@@ -773,7 +773,7 @@ class integrate
             {
                 $values[] = "birthday='" . $main_profile['birthday'] . "'";
             }
-			if ($main_profile['rel_admin'] != $profile['rel_admin'])
+			      if ($main_profile['rel_admin'] != $profile['rel_admin'])
             {
                 $values[] = "rel_admin='" . $main_profile['rel_admin'] . "'";
             }
