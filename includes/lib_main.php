@@ -1667,6 +1667,8 @@ function assign_template($ctype = '', $catlist = array())
     $smarty->assign('articles_express', get_cat_articles(10, 1, 8));    //配送方式
     $smarty->assign('articles_contact', get_cat_articles(11, 1, 8));    // 联系合作
     $smarty->assign('articles_help', get_cat_articles(12, 1, 8));    //帮助中心
+	$smarty->assign('articles_data_archive', get_cat_articles(14, 1, 8));    //下载数据包
+
 
     if (!empty($GLOBALS['_CFG']['search_keywords']))
     {
