@@ -14,7 +14,7 @@ if(!$file){
 }
 $file = preg_replace("/\//", "", $file);
 $file = preg_replace("/\\\\/", "", $file);
-$file = ROOT_PATH . 'images/upload/File/' . $file;
+$fullpath = ROOT_PATH . 'images/upload/File/' . $file;
 
 if (file_exists($file)){
 	header('Content-Description: File Transfer');    
@@ -24,10 +24,11 @@ if (file_exists($file)){
 	header('Expires: 0');    
 	header('Cache-Control: must-revalidate, post-check=0, pre-check=0');    
 	header('Pragma: public');    
-	header('Content-Length: ' . filesize($file));    
-	ob_clean();
-	flush();    
-	readfile($file);
+	header('Content-Length: ' . filesize($fullpath));    
+	$stream = fopen(ROOT_PATH . 'images/upload/File/' . $file, "r");
+	echo fread($stream, filesize($fullpath));
+	fclose($file);
+	exit();
 }else{
   echo "File: $file not found";
 }
