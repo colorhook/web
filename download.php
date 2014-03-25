@@ -16,6 +16,12 @@ $file = preg_replace("/\//", "", $file);
 $file = preg_replace("/\\\\/", "", $file);
 $fullpath = ROOT_PATH . 'images/upload/File/' . $file;
 
+$url = "/images/upload/File/" . $file;
+header("HTTP/1.1 301 Moved Permanently");
+header("Location: $url");
+exit();
+return;
+
 if (file_exists($fullpath)){
 	header('Content-Description: File Transfer');    
 	header('Content-Type: application/octet-stream');    
