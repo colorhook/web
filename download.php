@@ -16,7 +16,7 @@ $file = preg_replace("/\//", "", $file);
 $file = preg_replace("/\\\\/", "", $file);
 $fullpath = ROOT_PATH . 'images/upload/File/' . $file;
 
-if (file_exists($file)){
+if (file_exists($fullpath)){
 	header('Content-Description: File Transfer');    
 	header('Content-Type: application/octet-stream');    
 	header('Content-Disposition: attachment; filename='.basename($file));
