@@ -33,6 +33,11 @@ if(isset($_REQUEST['cat_id']) && $_REQUEST['cat_id'] < 0)
     $article_id = $db->getOne("SELECT article_id FROM " . $ecs->table('article') . " WHERE cat_id = '".intval($_REQUEST['cat_id'])."' ");
 }
 
+if (empty($_SESSION['user_id'])){
+	if($_REQUEST['id'] == 44){
+		ecs_header("Location: ./user.php\n");
+	}
+}
 /*------------------------------------------------------ */
 //-- PROCESSOR
 /*------------------------------------------------------ */

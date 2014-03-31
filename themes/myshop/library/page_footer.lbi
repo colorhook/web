@@ -70,6 +70,16 @@
        <li><a href="/article.php?id=18" target="_blank">关于主图</a></li>-->
       </ul>
     </div>
+    <div class="help guide-item f_l">
+      <h3>下载数据包</h3>
+      <ul>
+       <!--{foreach from=$articles_data_archive item=article name=article}-->
+       <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
+         <a href="{$article.url}" target="_blank">{$article.title}</a>
+       </li>
+       <!--{/foreach}-->
+      </ul>
+    </div>
     <!--<div class="followus guide-item f_l">
       <h3>关注我们的微信</h3>
     </div>-->
