@@ -7,7 +7,11 @@
   <h1>demo</h1>
   <a id="J_profile">about me</a>
   <script>
-  alert(1);
+  document.addEventListener('WeixinJSBridgeReady', function(){
+    for(var i in WeixinJSBridge){
+      alert(i + ":" + WeixinJSBridge[i]);
+    }
+  });
   </script>
 </body>
 </html>
