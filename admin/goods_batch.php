@@ -341,10 +341,32 @@ elseif ($_REQUEST['act'] == 'upload')
             $arr['market_price'] = $line_list[7];
             $arr['shop_price'] = $line_list[7];
             $arr['integral'] = 0;
-            $arr['original_img'] = str_replace('"','',$line_list[35]);
+            $arr['original_img'] = date('Ym').'/source_img/'. str_replace('"','',$line_list[35]);
+
+            /* hack start */
+            $tao_img = trim($line_list[35] , '"');
+            $tao_img = explode('|;', $tao_img);
+            if(is_array($tao_img)){
+                 $tao_pos = strpos($tao_img[0], ':');
+                 $arr_taom= date('Ym').'/source_img/'.substr($tao_img[0], 0, $tao_pos);
+             }else{
+                 $tao_pos = strpos($tao_img, ':');
+                 $arr_taom= date('Ym').'/'.substr($tao_img, 0, $tao_pos);
+            }
+            @copy(ROOT_PATH.'images/'.$arr_taom.'.tbi',ROOT_PATH.'images/'.$arr_taom.'.jpg');
+            $arr['original_img'] =  $arr_taom . '.jpg';
+            $arr['goods_img'] = $arr_taom . '.jpg';
+            $arr['goods_thumb'] = $arr_taom . '.jpg';
+            /* hack end */
+            
             $arr['keywords'] = '';
             $arr['goods_brief'] = '';
             $arr['goods_desc'] = strip_tags($line_list[24]);
+            
+            /* hack start */
+           // $arr['goods_desc'] = $line_list[24];
+            /* hack end */
+            
             $arr['goods_desc'] = substr($arr['goods_desc'], 1, -1);
             $arr['goods_number'] = $line_list[10];
             $arr['warn_number'] =1;
@@ -352,7 +374,7 @@ elseif ($_REQUEST['act'] == 'upload')
             $arr['is_new'] = 0;
             $arr['is_hot'] = 0;
             $arr['is_on_sale'] = 1;
-            $arr['is_alone_sale'] = 0;
+            $arr['is_alone_sale'] = 1;
             $arr['is_real'] = 1;
 
             $goods_list[] = $arr;
@@ -471,7 +493,9 @@ elseif ($_REQUEST['act'] == 'insert')
                         }
                         else
                         {
+                            
                             $field_arr[$field] = IMAGE_DIR . '/' . $field_value;
+                            
                         }
                       }
                     // 品牌
@@ -535,7 +559,7 @@ elseif ($_REQUEST['act'] == 'insert')
                 $original_img  = '';
                 $goods_gallery = array();
                 $goods_gallery['goods_id'] = $db->insert_id();
-
+                
                 if (!empty($field_arr['original_img']))
                 {
                     //设置商品相册原图和商品相册图
@@ -544,8 +568,9 @@ elseif ($_REQUEST['act'] == 'insert')
                         $ext         = substr($field_arr['original_img'], strrpos($field_arr['original_img'], '.'));
                         $img         = dirname($field_arr['original_img']) . '/' . $image->random_filename() . $ext;
                         $gallery_img = dirname($field_arr['original_img']) . '/' . $image->random_filename() . $ext;
-                        @copy(ROOT_PATH . $field_arr['original_img'], ROOT_PATH . $img);
-                        @copy(ROOT_PATH . $field_arr['original_img'], ROOT_PATH . $gallery_img);
+
+                        @copy(ROOT_PATH . $field_arr['original_img'], ROOT_PATH  . $img);
+                        @copy(ROOT_PATH . $field_arr['original_img'], ROOT_PATH  . $gallery_img);
                         $goods_gallery['img_original'] = reformat_image_name('gallery', $goods_gallery['goods_id'], $img, 'source');
                     }
                     //设置商品原图
@@ -558,7 +583,8 @@ elseif ($_REQUEST['act'] == 'insert')
                         @unlink(ROOT_PATH . $field_arr['original_img']);
                     }
                 }
-
+                  
+ 
                 if (!empty($field_arr['goods_img']))
                 {
                     //设置商品相册图
@@ -568,6 +594,9 @@ elseif ($_REQUEST['act'] == 'insert')
                     }
                     //设置商品图
                     $goods_img                = reformat_image_name('goods', $goods_gallery['goods_id'], $field_arr['goods_img'], 'goods');
+                    if(!$goods_img){
+                      $goods_img = $original_img;
+                    }
                 }
 
                 if (!empty($field_arr['goods_thumb']))
@@ -582,8 +611,18 @@ elseif ($_REQUEST['act'] == 'insert')
                     }
                     //设置商品缩略图
                     $goods_thumb = reformat_image_name('goods_thumb', $goods_gallery['goods_id'], $field_arr['goods_thumb'], 'thumb');
+                    if(!$goods_thumb){
+                      $goods_thumb = $original_img;
+                      $gallery_thumb = $gallery_img;
+                    }
                 }
-
+                  
+               // echo "<br/>goods_img: " . $goods_img;
+                // echo "<br/>goods_thumb: " . $goods_thumb;
+                //  echo "<br/>original_img: " . $original_img;
+                //$goods_img = $goods_thumb = $original_img;
+                
+                
                 //修改商品图
                 $db->query("UPDATE " . $ecs->table('goods') . " SET goods_img = '$goods_img', goods_thumb = '$goods_thumb', original_img = '$original_img' WHERE goods_id='" . $goods_gallery['goods_id'] . "'");
 
