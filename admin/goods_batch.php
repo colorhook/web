@@ -361,13 +361,15 @@ elseif ($_REQUEST['act'] == 'upload')
             
             $arr['keywords'] = '';
             $arr['goods_brief'] = '';
-            $arr['goods_desc'] = htmlspecialchars($line_list[24]);
-            
-            /* hack start */
-           // $arr['goods_desc'] = $line_list[24];
+
+			/* hack start */
+            $arr['goods_desc'] = str_replace("\"\"","\"", $arr['goods_desc']);
             /* hack end */
+            $arr['goods_desc'] = htmlspecialchars($line_list[24]);
+            $arr['goods_desc'] = substr($arr['goods_desc'], 1, -1);
             
-           // $arr['goods_desc'] = substr($arr['goods_desc'], 1, -1);
+            
+            
             $arr['goods_number'] = $line_list[10];
             $arr['warn_number'] =1;
             $arr['is_best'] = 0;
