@@ -327,7 +327,7 @@ elseif ($_REQUEST['act'] == 'upload')
             if (($_POST['charset'] == 'UTF8') && (strpos(strtolower(EC_CHARSET), 'utf') == 0))
             {
                 //$line = ecs_iconv($_POST['charset'], 'GBK', $line);
-				$line = iconv($in_charset = 'UCS-2' , $out_charset = 'UTF-8' , $line);
+				$line = iconv($in_charset = 'UCS-2LE' , $out_charset = 'UTF-8' , $line);
             }
             // 初始化
             $arr    = array();
