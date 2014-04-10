@@ -321,12 +321,13 @@ elseif ($_REQUEST['act'] == 'upload')
             // 跳过第一行
             if ($line_number == 0)
             {
-                $line_number++;
+                $line_number++; 
                 continue;
             }
             if (($_POST['charset'] == 'UTF8') && (strpos(strtolower(EC_CHARSET), 'utf') == 0))
             {
-                $line = ecs_iconv($_POST['charset'], 'GBK', $line);
+                //$line = ecs_iconv($_POST['charset'], 'GBK', $line);
+				$line = iconv($in_charset = 'UTF-16LE' , $out_charset = 'UTF-8' , $line);
             }
             // 初始化
             $arr    = array();
