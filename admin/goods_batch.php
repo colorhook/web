@@ -217,7 +217,7 @@ elseif ($_REQUEST['act'] == 'upload')
             $arr['original_img'] = $line_list[25];
             $arr['keywords'] = '';
             $arr['goods_brief'] = '';
-            $arr['goods_desc'] = strip_tags($line_list[24], '<span><b><p><div><i><s><table><tr><td><th><li><ul><ol><strong><u><img'>);
+            $arr['goods_desc'] = strip_tags($line_list[24], '<span><b><p><div><i><s><table><tr><td><th><li><ul><ol><strong><u><img>');
             $arr['goods_desc'] = substr($arr['goods_desc'], 1, -1);
             $arr['goods_number'] = $line_list[10];
             $arr['warn_number'] =1;
