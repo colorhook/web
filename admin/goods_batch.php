@@ -363,10 +363,11 @@ elseif ($_REQUEST['act'] == 'upload')
             $arr['goods_brief'] = '';
 
 			/* hack start */
-            $arr['goods_desc'] = str_replace("\"\"","\"", $arr['goods_desc']);
+            $arr['goods_desc'] = preg_replace('/""/g','"', $arr['goods_desc']);
             /* hack end */
+			$arr['goods_desc'] = substr($arr['goods_desc'], 1, -1);
             $arr['goods_desc'] = htmlspecialchars($line_list[24]);
-            $arr['goods_desc'] = substr($arr['goods_desc'], 1, -1);
+            
             
             
             
