@@ -80,12 +80,19 @@ elseif ($_REQUEST['act'] == 'upload')
     $arr = array();
     $goods_list = array();
     $field_list = array_keys($_LANG['upload_goods']); // 字段列表
-
+	
 	/* hack encoding issue */
-	$data = file($_FILES['file']['tmp_name']);
-	if($_POST['charset'] == 'UTF8'){
-		$data = iconv($in_charset = 'UCS-2LE' , $out_charset = 'UTF-8' , $data);
+	function utf16_to_utf8($utf16_filename, $utf8_filename){
+		$buffer=mb_convert_encoding(file_get_contents($utf16_filename ), 'UTF-8', 'UTF-16LE' );
+		fwrite(fopen($utf8_filename, "w+"), $buffer);
 	}
+	
+	if($_POST['charset'] == 'UTF8'){
+	    utf16_to_utf8($_FILES['file']['tmp_name'], $_FILES['file']['tmp_name']);
+	}
+	
+	$data = file($_FILES['file']['tmp_name']);
+	
 	
 	
 	/*
@@ -329,8 +336,9 @@ elseif ($_REQUEST['act'] == 'upload')
             }
             if (($_POST['charset'] == 'UTF8') && (strpos(strtolower(EC_CHARSET), 'utf') == 0))
             {
-                $line = ecs_iconv($_POST['charset'], 'GBK', $line);
-				//$line = iconv($in_charset = 'UCS-2LE' , $out_charset = 'UTF-8' , $line);
+                //$line = ecs_iconv($_POST['charset'], 'GBK', $line);
+				//$line = iconv($in_charset = 'UTF-16LE' , $out_charset = 'UTF-8' , $line);
+				//$line = mb_convert_encoding($line, 'UTF-8', 'UTF-16LE');
             }
             // 初始化
             $arr    = array();
