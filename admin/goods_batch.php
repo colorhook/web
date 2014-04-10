@@ -83,6 +83,9 @@ elseif ($_REQUEST['act'] == 'upload')
 
 	/* hack encoding issue */
 	$data = file($_FILES['file']['tmp_name']);
+	if($_POST['charset'] == 'UTF8'){
+		$data = iconv($in_charset = 'UCS-2LE' , $out_charset = 'UTF-8' , $data);
+	}
 	
 	
 	/*
@@ -326,8 +329,8 @@ elseif ($_REQUEST['act'] == 'upload')
             }
             if (($_POST['charset'] == 'UTF8') && (strpos(strtolower(EC_CHARSET), 'utf') == 0))
             {
-                //$line = ecs_iconv($_POST['charset'], 'GBK', $line);
-				$line = iconv($in_charset = 'UCS-2LE' , $out_charset = 'UTF-8' , $line);
+                $line = ecs_iconv($_POST['charset'], 'GBK', $line);
+				//$line = iconv($in_charset = 'UCS-2LE' , $out_charset = 'UTF-8' , $line);
             }
             // 初始化
             $arr    = array();
