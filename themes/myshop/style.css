@@ -765,7 +765,7 @@ a:active,
 .ms-floor .goods .column{float:left}
 .ms-floor .goods .column p{border-top:#e5e5e5 1px solid;border-left:#e5e5e5 1px solid;}
 .ms-floor .goods .column a{position:relative;display:block;}
-.ms-floor .goods .column a .deco{position:absolute;display:block;height:32px;width:100%;bottom:0;background:rgba(0, 0, 0, 0.5);filter:alpha(opacity=50)\9;}
+.ms-floor .goods .column a .deco{position:absolute;display:block;height:32px;width:100%;bottom:0;background:rgba(0, 0, 0, 0.5);background:#000\9;filter:alpha(opacity=50)\9;}
 
 .ms-floor .goods .deco em{font-family:"Microsoft YaHei",tahoma,arial,\5b8b\4f53;}
 .ms-floor .goods .deco em{font-style:normal;color:white;height:32px;line-height:32px;position: relative;z-index: 100;padding-left:20px;}
@@ -796,7 +796,7 @@ a:active,
 .ms-new li.first{margin-left:0}
 .ms-new li .summary{
  position:absolute;text-align:center;display:block;height:32px;line-height:32px;
- background:rgba(0, 0, 0, 0.5);color:white;bottom:-1px;left:1px;width:190px;
+ background:rgba(0, 0, 0, 0.5);background:#000\9;color:white;bottom:-1px;left:1px;width:190px;
  filter:alpha(opacity=50)\9;
  -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -806,7 +806,7 @@ a:active,
 }
 .ms-new li .summary em{font-style:normal;font-family:"Microsoft YaHei",tahoma,arial,\5b8b\4f53;}
 .ms-new li .summary span{display:block;line-height:17px;}
-.ms-new li a:hover .summary,.ms-new li a:active .summary{background:#e52142}
+.ms-new li a:hover .summary,.ms-new li a:active .summary{background:#e52142;filter:alpha(opacity=100)\9;}
 .ms-new li a{width:290px;height:290px;display:block;}
 .ms-new li img{display:absolute;left:-1px;top:-1px;border:#e5e5e5 1px solid;}
 .ms-new li a:hover img{border:#f52142 1px dashed;}
