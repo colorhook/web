@@ -144,7 +144,38 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
         );
       }
       $value['_tags'] = $_tags;
+	  //获取商品的价格
+	  $floor_items = &$value['items'];
+	  foreach($floor_items as $item_key=>&$item_value){
+		$item_id = explode('?id=', $item_value['href']);
+	    if(count($item_id) > 1){
+			$item_id = intval($item_id[1]);
+		}else{
+			$item_id = null;
+		}
+		if($item_id){
+		  $good_info = get_goods_info($item_id);
+		  if($good_info){
+		    $item_value['price'] = $good_info['shop_price'];
+		  }
+		}
+	  }
     }
+	//page_data最新
+	foreach($page_data['latest'] as $key=>&$item_value){
+	  $item_id = explode('?id=', $item_value['href']);
+	  if(count($item_id) > 1){
+		$item_id = intval($item_id[1]);
+	  }else{
+		$item_id = null;
+	  }
+	  if($item_id){
+		$good_info = get_goods_info($item_id);
+		if($good_info){
+		  $item_value['price'] = $good_info['shop_price'];
+		}
+	  }
+	}
     $smarty->assign('page_data',       $page_data); //首页自定义数据
 
     /* 首页主广告设置 */

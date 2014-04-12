@@ -765,12 +765,25 @@ a:active,
 .ms-floor .goods .column{float:left}
 .ms-floor .goods .column p{border-top:#e5e5e5 1px solid;border-left:#e5e5e5 1px solid;}
 .ms-floor .goods .column a{position:relative;display:block;}
+.ms-floor .goods .column a .deco{position:absolute;display:block;height:32px;width:100%;bottom:0;background:rgba(0, 0, 0, 0.5);filter:alpha(opacity=50)\9;}
+
+.ms-floor .goods .deco em{font-family:"Microsoft YaHei",tahoma,arial,\5b8b\4f53;}
+.ms-floor .goods .deco em{font-style:normal;color:white;height:32px;line-height:32px;position: relative;z-index: 100;padding-left:20px;}
+.ms-new li img,
+.ms-floor .goods .column a .deco{
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
 .ms-floor .goods .column-1 a{width:200px;height:140px;}
 .ms-floor .goods .column-2 a{width:399px;height:422px;}
 .ms-floor .goods .column-3 .first a{width:199px;height:281px;}
 .ms-floor .goods .column-3 .last a{width:199px;height:140px;}
 .ms-floor .goods .column a img{position:absolute;left:-1px;top:-1px;border:transparent 1px solid;}
-.ms-floor .goods .column a:hover img{border:#e42141 1px solid;}
+.ms-floor .goods .column a:hover img{border:#f42141 1px dashed;}
+.ms-floor .goods .column a:hover .deco{background-color:#e52142;opacity:100;filter:alpha(opacity=100)\9;}
 
 .ms-floor .slogan{width:180px;height:254px;position:relative}
 .ms-floor .slogan img{position:absolute;right:0;bottom:0}
@@ -782,20 +795,21 @@ a:active,
 .ms-new li{float:left;margin-left:10px;width:190px;height:290px;position:relative;}
 .ms-new li.first{margin-left:0}
 .ms-new li .summary{
- position:absolute;text-align:center;display:block;padding-top:5px;height:40px;
- background:rgba(0, 0, 0, 0.5);color:white;bottom:0;left:0;width:190px;
+ position:absolute;text-align:center;display:block;height:32px;line-height:32px;
+ background:rgba(0, 0, 0, 0.5);color:white;bottom:-1px;left:1px;width:190px;
  filter:alpha(opacity=50)\9;
- -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+ -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
+.ms-new li .summary em{font-style:normal;font-family:"Microsoft YaHei",tahoma,arial,\5b8b\4f53;}
 .ms-new li .summary span{display:block;line-height:17px;}
 .ms-new li a:hover .summary,.ms-new li a:active .summary{background:#e52142}
 .ms-new li a{width:290px;height:290px;display:block;}
 .ms-new li img{display:absolute;left:-1px;top:-1px;border:#e5e5e5 1px solid;}
-.ms-new li a:hover img{border-color:#e52142;}
+.ms-new li a:hover img{border:#f52142 1px dashed;}
 /* article */
 .ms-article{min-height:400px}
 .ms-article h3{font-size:16px;font-weight:bold;padding:20px 0}

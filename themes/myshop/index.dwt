@@ -53,23 +53,68 @@
     </div>
     <div class="goods clearfix">
       <div class="column column-1">
-        <p><a class="first-x first-y" href="{$floor.items[0].href}" target="_blank"><img src="{$floor.items[0].img}" width="200" height="140"/></a></p>
-	      <p><a class="first-x" href="{$floor.items[1].href}" target="_blank"><img src="{$floor.items[1].img}" width="200" height="140"/></a></p>
-        <p><a class="first-x" href="{$floor.items[2].href}" target="_blank"><img src="{$floor.items[2].img}" width="200" height="140"/></a></p>
+
+        <p>
+	 <a class="first-x first-y" href="{$floor.items[0].href}" target="_blank">
+	   <img src="{$floor.items[0].img}" width="200" height="140"/>
+	   <span class="deco">
+	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[0].price}</span></em>
+	   </span>
+	 </a>
+	</p>
+
+	<p>
+	 <a class="first-x" href="{$floor.items[1].href}" target="_blank">
+	  <img src="{$floor.items[1].img}" width="200" height="140"/>
+	   <span class="deco">
+	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[1].price}</span></em>
+	   </span>
+	 </a>
+	</p>
+
+        <p>
+	 <a class="first-x" href="{$floor.items[2].href}" target="_blank">
+	  <img src="{$floor.items[2].img}" width="200" height="140"/>
+	   <span class="deco">
+	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[2].price}</span></em>
+	   </span>
+	 </a>
+	</p>
+
       </div>
       <div class="column column-2">
-        <p><a class="first-y" href="{$floor.items[3].href}" target="_blank"><img src="{$floor.items[3].img}" width="399" height="422"/></a></p>
+        <p>
+	  <a class="first-y" href="{$floor.items[3].href}" target="_blank">
+	    <img src="{$floor.items[3].img}" width="399" height="422"/>
+	   <span class="deco">
+	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[3].price}</span></em>
+	   </span>
+	  </a>
+	</p>
       </div>
       <div class="column column-3">
-         <p class="first"><a class="first-y" href="{$floor.items[4].href}" target="_blank"><img src="{$floor.items[4].img}" width="199" height="281"/></a></p>
-	       <p class="last"><a href="{$floor.items[5].href}" target="_blank"><img src="{$floor.items[5].img}" width="199" height="140"/></a></p>
+         <p class="first">
+	   <a class="first-y" href="{$floor.items[4].href}" target="_blank">
+	     <img src="{$floor.items[4].img}" width="199" height="281"/>
+	     <span class="deco">
+	       <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[4].price}</span></em>
+	     </span>
+	   </a>
+	  </p>
+	 <p class="last">
+	   <a href="{$floor.items[5].href}" target="_blank">
+	     <img src="{$floor.items[5].img}" width="199" height="140"/>
+	     <span class="deco">
+	       <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[5].price}</span></em>
+	     </span>
+	   </a>
+	 </p>
       </div>
     </div>
   </div>
 </div>
 <!-- {/if} -->
 <!--{/foreach}-->
-
 
 
 <!-- 最新 -->
@@ -80,15 +125,14 @@
     <!--{foreach from=$page_data.latest item=goods name=goods}-->
     <li {if $smarty.foreach.goods.index eq 0} class='first'{/if}>
       <a href="{$goods.href}" target="_blank">
-        <span class="img"><img data-src="{$goods.thumb}" src="{$goods.img}" width="190" height="290"/></span>
-	      <span class="summary" style="display:none">
-	       <span class="title" title="{$goods.name|escape:html}">{\$goods.short_style_name}</span>
-	       <span class="price">建议销售价：<!-- {if $goods.promote_price neq ""} -->
-            {$goods.promote_price}
-            <!-- {else}-->
-            {$goods.shop_price}
-            <!--{/if}--></span>
-	      </span>
+        <span class="img">
+	   <img data-src="{$goods.thumb}" src="{$goods.img}" width="190" height="290"/>
+	</span>
+	<!--{if $goods.price}-->
+	<span class="summary">
+	   <em class="flash-buy-price">闪购价：¥{$goods.price}</em>
+	</span>
+	<!--{/if}-->
       </a>
     </li>
     <!--{/foreach}-->
@@ -127,7 +171,7 @@
     <div class="ms-notice sys-item">
       <h3>网站公告<span>Site Notice</span></h3>
       <div class="bd">
-	      <ul>
+	 <ul>
           <!--{foreach from=$articles_notice item=article name=article}-->
           <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
             <a href="{$article.url}" target="_blank">{$article.title}</a>

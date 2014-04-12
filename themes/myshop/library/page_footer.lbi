@@ -10,9 +10,6 @@
          <a href="{$article.url}" target="_blank">{$article.title}</a>
        </li>
        <!--{/foreach}-->
-       <!--<li><a href="/article.php?id=8" target="_blank">如何上架和编辑宝贝</a></li>
-       <li><a href="/article.php?id=7" target="_blank">如何下架宝贝</a></li>
-       <li><a href="/article.php?id=24" target="_blank">淘宝助理上传宝贝教程</a></li>-->
       </ul>
     </div>
     <div class="pay guide-item f_l">
@@ -23,9 +20,6 @@
          <a href="{$article.url}" target="_blank">{$article.title}</a>
        </li>
        <!--{/foreach}-->
-       <!--<li><a href="/article.php?id=11" target="_blank">如何支付</a></li>
-       <li><a href="/article.php?id=9" target="_blank">银行汇款</a></li>
-       <li><a href="/article.php?id=10" target="_blank">支付宝支付</a></li>-->
       </ul>
     </div>
     <div class="express guide-item f_l">
@@ -36,10 +30,6 @@
           <a href="{$article.url}" target="_blank">{$article.title}</a>
         </li>
         <!--{/foreach}-->
-       <!--
-       <li><a href="/article.php?id=12" target="_blank">退换货政策</a></li>
-       <li><a href="/article.php?id=13" target="_blank">快递收费</a></li>
-       <li><a href="/article.php?id=14" target="_blank">如何设置包邮</a></li>-->
       </ul>
     </div>
     <div class="contact guide-item f_l">
@@ -50,10 +40,6 @@
          <a href="{$article.url}" target="_blank">{$article.title}</a>
        </li>
        <!--{/foreach}-->
-       <!--<li><a href="/article.php?id=20" target="_blank">联系我们</a></li>
-       <li><a href="/article.php?id=19" target="_blank">公司简介</a></li>
-       <li><a href="/article.php?id=22" target="_blank">加盟代理</a></li>
-       <li><a href="/article.php?id=23" target="_blank">上门洽谈</a></li>-->
       </ul>
     </div>
     <div class="help guide-item f_l">
@@ -64,10 +50,6 @@
          <a href="{$article.url}" target="_blank">{$article.title}</a>
        </li>
        <!--{/foreach}-->
-       <!--<li><a href="/article.php?id=15" target="_blank">常见问题</a></li>
-       <li><a href="/article.php?id=16" target="_blank">关于订购</a></li>
-       <li><a href="/article.php?id=17" target="_blank">关于支付</a></li>
-       <li><a href="/article.php?id=18" target="_blank">关于主图</a></li>-->
       </ul>
     </div>
     <div class="help guide-item f_l">
