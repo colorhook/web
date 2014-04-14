@@ -58,7 +58,7 @@
 	 <a class="first-x first-y" href="{$floor.items[0].href}" target="_blank">
 	   <img src="{$floor.items[0].img}" width="200" height="140"/>
 	   <span class="deco">
-	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[0].price}</span></em>
+	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[0].price}</span></em>
 	   </span>
 	 </a>
 	</p>
@@ -67,7 +67,7 @@
 	 <a class="first-x" href="{$floor.items[1].href}" target="_blank">
 	  <img src="{$floor.items[1].img}" width="200" height="140"/>
 	   <span class="deco">
-	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[1].price}</span></em>
+	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[1].price}</span></em>
 	   </span>
 	 </a>
 	</p>
@@ -76,7 +76,7 @@
 	 <a class="first-x" href="{$floor.items[2].href}" target="_blank">
 	  <img src="{$floor.items[2].img}" width="200" height="140"/>
 	   <span class="deco">
-	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[2].price}</span></em>
+	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[2].price}</span></em>
 	   </span>
 	 </a>
 	</p>
@@ -87,7 +87,7 @@
 	  <a class="first-y" href="{$floor.items[3].href}" target="_blank">
 	    <img src="{$floor.items[3].img}" width="399" height="422"/>
 	   <span class="deco">
-	     <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[3].price}</span></em>
+	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[3].price}</span></em>
 	   </span>
 	  </a>
 	</p>
@@ -97,7 +97,7 @@
 	   <a class="first-y" href="{$floor.items[4].href}" target="_blank">
 	     <img src="{$floor.items[4].img}" width="199" height="281"/>
 	     <span class="deco">
-	       <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[4].price}</span></em>
+	       <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[4].price}</span></em>
 	     </span>
 	   </a>
 	  </p>
@@ -105,7 +105,7 @@
 	   <a href="{$floor.items[5].href}" target="_blank">
 	     <img src="{$floor.items[5].img}" width="199" height="140"/>
 	     <span class="deco">
-	       <em class="flash-buy-price">闪购价：¥<span class="mui-price-font">{$floor.items[5].price}</span></em>
+	       <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[5].price}</span></em>
 	     </span>
 	   </a>
 	 </p>
@@ -130,7 +130,7 @@
 	</span>
 	<!--{if $goods.price}-->
 	<span class="summary">
-	   <em class="flash-buy-price">闪购价：¥{$goods.price}</em>
+	   <em class="flash-buy-price">建议销售价：¥{$goods.price}</em>
 	</span>
 	<!--{/if}-->
       </a>
