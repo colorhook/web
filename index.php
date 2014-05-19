@@ -133,6 +133,10 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     $smarty->assign('articles_notice', get_cat_articles(4, 1, 8));    //网站公告
     
     $page_data = get_page_data('home');
+	//bugfix
+	unset($page_data['latest']['enabled']);
+	unset($page_data['banner']['enabled']);
+
     foreach($page_data['floors'] as $key=>&$value){
       $tmp =explode(',', $value['tags']);
       $catid = $value['id'];

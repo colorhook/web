@@ -35,6 +35,7 @@
           </li>
           <!--{/foreach}-->
         </ul>
+		<div class="add" style='position:relative;left:800px;top:20px'><input class="button" type="button" value="新增一行"></div>
         <div class="save"><input class="button" type="button" value="保存"></div>
       </div>
       
@@ -166,15 +167,25 @@ $(function(){
     e.preventDefault();
     var items = [];
     $("#banner-table li").each(function(index, item){
-      items.push({
-        img: $('input.img', item).val(),
-        href: $('input.href', item).val()
-      });
+	  if($('input.img', item).val()){
+		  items.push({
+			img: $('input.img', item).val(),
+			href: $('input.href', item).val()
+		  });
+	  }
     });
     $.post('page.php?act=save&page=home', {
       key: 'banner',
       data: items
     }, handlePageAjaxResponse);
+  });
+  $("#banner-table .add input").click(function(e){
+    var tpl = "<li>" + 
+           "<label class='img'>图片(1600*400)：</label><input class='img' type='text' value=''/>" + 
+           "<a class='uploadfile' href='#'>上传文件</a>\n" + 
+           "<label class='href'>链接：</label><input class='href' type='text' value=''/>" +
+          "</li>"
+    $("#banner-table ul").append(tpl);
   });
   // floors
   $("#floors-table .floor-item").each(function(index, item){
@@ -211,10 +222,12 @@ $(function(){
   $("#latest-table .save input").click(function(){
     var items = [];
     $("#latest-table li").each(function(index, item){
-      items.push({
-        img: $('input.img', item).val(),
-        href: $('input.href', item).val()
-      });
+	  if($('input.img', item).val()){
+		  items.push({
+			img: $('input.img', item).val(),
+			href: $('input.href', item).val()
+		  });
+	  }
     });
     $.post('page.php?act=save&page=home', {
       key: 'latest',

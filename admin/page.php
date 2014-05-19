@@ -32,11 +32,11 @@ else if($_REQUEST['act'] == 'save')
 {
   $page = $_REQUEST['page'];
   $data = $_REQUEST['data'];
-  $data['enabled'] = $data['enabled'] == 'true';
   $key = $_REQUEST['key'];
   $result = array();
   try{
     if($key == 'floors'){
+	  $data['enabled'] = $data['enabled'] == 'true';
       $floor = get_page_data($page, $key);
       $floor[$_REQUEST['index']] = $data;
       set_page_data($page, $key, $floor);
