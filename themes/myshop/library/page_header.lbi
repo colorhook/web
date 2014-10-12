@@ -21,7 +21,10 @@
 
 <div class="ms-search ms-mod" class="clearfix">
   <div class="logo f_l">
-    <a href="./" target="_self"><img src="logo.png"/></a>
+    <a href="./" target="_self"><img src="logo.jpg"/></a>
+  </div>
+  <div class="safe f_r">
+    <img src="../images/safe.jpg"/>
   </div>
 
    <div class="ui-header-searchbar ui-searchbar ui-searchbar-full ui-header-searchbar ui-searchbar-mod-type ui-searchbar-mod-advanced">
@@ -59,11 +62,8 @@
 
 <div id="J_nav" class="ms-nav {if $show_nav}show{/if}" class="clearfix">
  <div class="ms-mod">
-  <div class="f_l ms-cate">
-    <div class="cate-title">
-      <h2>全部分类</h2>
-      <i></i>
-    </div>
+ 
+  <div class="ms-cate">
     <div class="cate-list">
          <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
          <div class="item">
@@ -78,7 +78,7 @@
     </div>
   </div>
   
-  <div class="f_r ms-menu">
+  <div class="ms-menu">
     <a href="../index.php"{if $navigator_list.config.index eq 1} class="cur"{/if}>{$lang.home}</a>
     <!-- {foreach name=nav_middle_list from=$navigator_list.middle item=nav} -->
     <span class="sep">|</span>
@@ -106,6 +106,7 @@ $(function(){
      });
 });
 $(function(){
+  return;
   var $nav = $("#J_nav");
   var $cate = $nav.find(".ms-cate");
   if(!$nav.hasClass("show")){

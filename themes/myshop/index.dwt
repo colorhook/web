@@ -24,6 +24,22 @@
   <!--{/foreach}-->
 </div>
 
+<div class="ms-promotion">
+  <div class="ms-mod clearfix">
+    <div class="f_l ms-promotion-item ms-promotion-item1">
+      <a href="#" target="_blank"><img src="../images/b1.jpg"></a>
+    </div>
+    <div class="f_l ms-promotion-item ms-promotion-item2">
+      <a href="#" target="_blank"><img src="../images/b2.jpg"></a>
+    </div>
+    <div class="f_l ms-promotion-item ms-promotion-item3">
+      <a href="#" target="_blank"><img src="../images/b3.jpg"></a>
+    </div>
+    <div class="f_r ms-promotion-broadcast">
+    </div>
+  </div>
+</div>
+
 <!--floors-->
 <!--{foreach from=$page_data.floors item=floor name=floor}-->
 
