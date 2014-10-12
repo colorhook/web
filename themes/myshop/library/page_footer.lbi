@@ -78,9 +78,11 @@
     -->
   </div>
 </div>
-<div class="ms-copyright ms-mod">
- <p> &copy; 2013-2014 杭州莱客 版权所有 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增值电信业务经营许可证：浙ICP备13012194号-4</p>
- <p class="copyright"></p>
+<div class="ms-copyright">
+  <div class="ms-mod">
+   <p> &copy; 2013-2014 杭州莱客 版权所有 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;增值电信业务经营许可证：浙ICP备13012194号-4</p>
+   <p class="copyright"></p>
+  </div>
 </div>
 <div id="J_sidebar">
   <h3>在线客服</h3>

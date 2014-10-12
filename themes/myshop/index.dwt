@@ -185,12 +185,7 @@
 
 
 <div class="ms-shop-tip ms-mod">
-  <img src="../images/vantage.jpg" width="1000" height="124"/>
-</div>
-<div class="ms-ensure">
-  <div class="ms-mod">
-    <div class="pay-image"></div>
-  </div>
+  <img src="../images/ensure.jpg" width="1150" height="63"/>
 </div>
 <script>
 $(function(){
