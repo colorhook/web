@@ -512,6 +512,7 @@ visibility:hidden;
 /******/
 .ms-mod{width:1150px;margin:0 auto;text-align:left;}
 .ms-cap{height:30px;line-height:30px;border-bottom:#e6e6e6 1px solid;color:#888;background:#f5f5f5}
+.ms-cap .sep{margin:0 4px}
 .ms-search{height:80px;padding-top:40px}
 .ms-search .logo,.ms-search .safe{position:relative;top:-1px}
 .ms-nav{}
@@ -654,7 +655,7 @@ visibility:hidden;
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	font: 400 20px/33px Arial;
+	font: 400 14px/33px Arial;
 	font-weight:bold;
 	background-color: #d10d43;
 	_height: 33px;
@@ -739,9 +740,11 @@ visibility:hidden;
 
 /* floor */
 .ms-floor{padding:20px 0}
-.ms-floor h3{height:32px;line-height:32px;overflow:hidden;}
+.ms-floor h3{height:63px;background:url(images/column-bg.jpg);overflow:hidden;text-align:center;margin-bottom: 22px}
+.ms-floor h3 .title{position:relative;top:41px;left:41px;font-size:14px;font-weight: 200}
 .ms-floor h3 ul{float:right;}
 .ms-floor h3 ul li{float:left;margin:0 10px}
+.ms-floor .q-link{padding-top:30px}
 a:link,
 a:visited{
   color: #303030;
@@ -786,8 +789,12 @@ a:active,
 .ms-floor .slogan img{position:absolute;right:0;bottom:0}
 .ms-floor .slogan a{position:absolute;width:180px;height:254px;left:0;top:0;z-index:100;background:white\9;filter:alpha(opacity=0)\9;}
 
+.ms-floor .floor-items li{float:left;width:222px;height:342px;margin-left:10px;}
+.ms-floor .floor-items li.first{margin-left:0px}
+.ms-floor .floor-items img{border:solid 1px transparent}
+.ms-floor .floor-items a:hover img{border:#f52142 1px dashed;}
 /* new top */
-.ms-new{padding:20px 0}
+.ms-new{padding:20px 0;display: none}
 .ms-new h3{font-weight:bold;padding:0 0 15px 0;font-size:16px}
 .ms-new li{float:left;margin-left:10px;width:190px;height:290px;position:relative;}
 .ms-new li.first{margin-left:0}
@@ -815,6 +822,14 @@ a:active,
 .ms-promotion{padding:24px 0}
 .ms-promotion-item{padding-right:3px}
 .ms-promotion-broadcast{width:300px;height:140px;background: url(images/b4.jpg) no-repeat}
+.ms-promotion-broadcast h3{padding:20px 0 0 30px;font-size:16px;color:#323232;font-weight: bold}
+.ms-promotion-broadcast ul{padding:10px 0 0 30px;width:270px;overflow:hidden;}
+.ms-promotion-broadcast a:link,
+.ms-promotion-broadcast a:visited{color:#323232}
+.ms-promotion-broadcast a:hover,
+.ms-promotion-broadcast a:active{text-decoration: underline}
+.ms-promotion-broadcast .first a:link,
+.ms-promotion-broadcast .first a:visited{color:#d10d43}
 /* sidebar */
 #J_sidebar{
   top: 135px;

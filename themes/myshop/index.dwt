@@ -36,6 +36,12 @@
       <a href="#" target="_blank"><img src="../images/b3.jpg"></a>
     </div>
     <div class="f_r ms-promotion-broadcast">
+      <h3>最新活动公告</h3>
+      <ul>
+        <li class='first'><a href="#" target="_blank">AAAAAAAAA</a></li>
+        <li><a href="#" target="_blank">BBBBBBBBBBBBBBBBBBBBB</a></li>
+        <li><a href="#" target="_blank">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</a></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -47,86 +53,37 @@
 <div class="ms-floor ms-floor-{$smarty.foreach.floor.index}">
   <div class="ms-mod clearfix">
     <h3 class="clearfix">
+      <span class="title">{$floor.name}</a></span>
       <ul class='q-link clearfix'>
+        <li><a href="{$floor.slogan.href}" target="_blank">查看更多&gt;&gt;</a></li>
         <!--{foreach from=$floor._tags item=tag name=tag}-->
-         <li><a href="{$tag.url}" target="_blank">{$tag.label}</a></li>
+         <!--<li><a href="{$tag.url}" target="_blank">{$tag.label}</a></li>-->
         <!--{/foreach}-->
       </ul>
     </h3>
-    <div class="floor-cate">
-      <div class="slogan">
-        <img src="{$floor.slogan.img}"/>
-	      <a href="{$floor.slogan.href}" target="_blank"></a>
-      </div>
-      <div class="menu clearfix">
-        <ul class='q-link2 clearfix'>
-          <!--{foreach from=$floor._tags item=tag name=tag}-->
-           <li><a href="{$tag.url}" target="_blank">{$tag.label}</a></li>
-          <!--{/foreach}-->
-         </ul>
-      </div>
-      <ul>
+    
+    <div class="floor-items">
+      <ul class="clearfix">
+        <!--{foreach from=$floor.items item=goods name=goods}-->
+        {if $smarty.foreach.goods.index lt 5}
+        <li {if $smarty.foreach.goods.index eq 0} class='first'{/if}{if $smarty.foreach.goods.index eq 4} class='last'{/if}>
+          <a href="{$goods.href}" target="_blank">
+            <span class="img">
+    	   <img data-src="{$goods.thumb}" src="{$goods.img}" width="220" height="340"/>
+    	</span>
+    	<!--{if $goods.price}-->
+    	<span class="summary">
+    	   <em class="flash-buy-price">建议销售价：¥{$goods.price}</em>
+    	</span>
+    	<!--{/if}-->
+          </a>
+        </li>
+        {/if}
+        <!--{/foreach}-->
+      </ul>
     </div>
-    <div class="goods clearfix">
-      <div class="column column-1">
+    
 
-        <p>
-	 <a class="first-x first-y" href="{$floor.items[0].href}" target="_blank">
-	   <img src="{$floor.items[0].img}" width="200" height="140"/>
-	   <span class="deco">
-	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[0].price}</span></em>
-	   </span>
-	 </a>
-	</p>
-
-	<p>
-	 <a class="first-x" href="{$floor.items[1].href}" target="_blank">
-	  <img src="{$floor.items[1].img}" width="200" height="140"/>
-	   <span class="deco">
-	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[1].price}</span></em>
-	   </span>
-	 </a>
-	</p>
-
-        <p>
-	 <a class="first-x" href="{$floor.items[2].href}" target="_blank">
-	  <img src="{$floor.items[2].img}" width="200" height="140"/>
-	   <span class="deco">
-	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[2].price}</span></em>
-	   </span>
-	 </a>
-	</p>
-
-      </div>
-      <div class="column column-2">
-        <p>
-	  <a class="first-y" href="{$floor.items[3].href}" target="_blank">
-	    <img src="{$floor.items[3].img}" width="399" height="422"/>
-	   <span class="deco">
-	     <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[3].price}</span></em>
-	   </span>
-	  </a>
-	</p>
-      </div>
-      <div class="column column-3">
-         <p class="first">
-	   <a class="first-y" href="{$floor.items[4].href}" target="_blank">
-	     <img src="{$floor.items[4].img}" width="199" height="281"/>
-	     <span class="deco">
-	       <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[4].price}</span></em>
-	     </span>
-	   </a>
-	  </p>
-	 <p class="last">
-	   <a href="{$floor.items[5].href}" target="_blank">
-	     <img src="{$floor.items[5].img}" width="199" height="140"/>
-	     <span class="deco">
-	       <em class="flash-buy-price">建议销售价：¥<span class="mui-price-font">{$floor.items[5].price}</span></em>
-	     </span>
-	   </a>
-	 </p>
-      </div>
-    </div>
   </div>
 </div>
 <!-- {/if} -->
