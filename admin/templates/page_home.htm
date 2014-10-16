@@ -11,6 +11,8 @@
 #floors-table .save{padding:0 0 10px 0;margin-bottom:10px;border-bottom:#e5e5e5 2px dashed;}
 #floors-table .save input{margin-left:0;margin-top:10px;}
 .uploadfile{display:none;}
+#broadcast-table ul li{margin:10px 0}
+#broadcast-table ul li label{margin-right:3px}
 </style>
 <div class="main-div tab-div">
 
@@ -19,7 +21,7 @@
       <p>
         <span class="tab-front" id="banner-tab">banner首页焦点图</span>
         <span class="tab-back" id="floors-tab">楼层</span>
-        <span class="tab-back" id="latest-tab">最新推荐</span>
+        <span class="tab-back" id="broadcast-tab">公告</span>
       </p>
     </div>
     
@@ -29,7 +31,7 @@
         <ul>
           <!--{foreach from=$data.banner item=banner name=banner}-->
           <li {if $smarty.foreach.banner.index eq 0} class='first'{/if}>
-           <label class='img'>图片(1600*400)：</label><input class='img' type="text" value="{$banner.img}"/>
+           <label class='img'>图片(1600*420)：</label><input class='img' type="text" value="{$banner.img}"/>
            <a class="uploadfile" href="#">上传文件</a>
            <label class='href'>链接：</label><input class='href' type="text" value="{$banner.href}"/>
           </li>
@@ -44,7 +46,7 @@
         <ul>
           <!--{foreach from=$data.floors item=floor name=floor}-->
           <li class='floor-item' data-name='{$floor.name}' data-index='{$smarty.foreach.floor.index}' {if $smarty.foreach.floor.index eq 0} class='first'{/if}>
-            <h5><span>楼层：</span>{$floor.name}
+            <h5><span>楼层：</span><input type="text" name="floor_name" class='floor_name' value="{$floor.name}"/>
                <span style="margin-left:200px">
                  是否启用：
                  <!-- {if $floor.enabled} -->
@@ -54,43 +56,33 @@
                  <!-- {/if} -->
                </span></h5>
             <div class="page_floor_item">
-              <h6>slogan图片</h6>
-              <div class="slogan">
-                <label class='img'>图片：</label><input class='img' type="text" value="{$floor.slogan.img}">
-                <a class="uploadfile" href="#">上传文件</a>
-                <label class='href'>链接：</label><input class='href' type="text" value="{$floor.slogan.href}">     
-              </div>
               <div class="cat_id clearfix">
                 <h6>分类ID: <input type="text" value="{$floor.id}"></h6>
               </div>
-              <div class="tags clearfix">
+              <div class="tags clearfix" style='display:none'>
                 <h6>搜索热词: <input type="text" value="{$floor.tags}"></h6>
               </div>
               <div class="items">
-                <h6>左侧图片1(200*140)</h6>
+                <h6>图片1(220*340)</h6>
                 <label class='img'>图片：</label><input class='img img1' type="text" value="{$floor.items[0].img}">
                 <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href href1' type="text" value="{$floor.items[0].href}">
-                <h6>左侧图片2(200*140)</h6>
+                <h6>图片2(220*340)</h6>
                 <label class='img'>图片：</label><input class='img img2' type="text" value="{$floor.items[1].img}">
                 <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href href2' type="text" value="{$floor.items[1].href}">
-                <h6>左侧图片3(200*140)</h6>
+                <h6>图片3(220*340)</h6>
                 <label class='img'>图片：</label> <input class='img img3' type="text" value="{$floor.items[2].img}">
                 <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href href3' type="text" value="{$floor.items[2].href}">
-                <h6>中间图片(399*422)</h6>
+                <h6>图片4(220*340)</h6>
                 <label class='img'>图片：</label><input class='img img4' type="text" value="{$floor.items[3].img}">
                 <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href href4' type="text" value="{$floor.items[3].href}">
-                <h6>右侧图片1(199*281)</h6>
+                <h6>图片5(220*340)</h6>
                 <label class='img'>图片：</label><input class='img img5' type="text" value="{$floor.items[4].img}">
                 <a class="uploadfile" href="#">上传文件</a>
                 <label class='href'>链接：</label><input class='href href5' type="text" value="{$floor.items[4].href}">
-                <h6>右侧图片2(199*140)</h6>
-                <label class='img'>图片：</label><input class='img img6' type="text" value="{$floor.items[5].img}">
-                <a class="uploadfile" href="#">上传文件</a>
-                <label class='href'>链接：</label><input class='href href6' type="text" value="{$floor.items[5].href}">
               </div>
             </div>
             <div class="save"><input class="button" type="button" value="保存"></div>
@@ -99,16 +91,52 @@
         </ul>
       </div>
       
-      <div id="latest-table" style="display:none">
+      <div id="broadcast-table" style="display:none">
         <ul>
-          <!--{foreach from=$data.latest item=latest name=latest}-->
-          <li {if $smarty.foreach.latest.first} class='first'{/if}>
-           <label class='img'>图片(190*290)：</label><input class="img" type="text" value="{$latest.img}"/>
-           <a class="uploadfile" href="#">上传文件</a>
-           <label class='href'>链接：</label><input class="href" type="text" value="{$latest.href}"/>
+
+          <li>
+          <label class='img'>推广1图片(280*140)</label>
+            <input class='img' type='text' value="{$data.broadcast[0].label}"/>
+          <label class='href'>推广1链接</label>
+            <input class='href' type='text' value="{$data.broadcast[0].href}"/>
           </li>
-          <!--{/foreach}-->
+          
+          <li>
+          <label class='img'>推广2图片(280*140)</label>
+            <input class='img' type='text' value="{$data.broadcast[1].label}"/>
+          <label class='href'>推广2链接</label>
+            <input class='href' type='text' value="{$data.broadcast[1].href}"/>
+          </li>
+          
+          <li>
+          <label class='img'>推广3图片(280*140)</label>
+            <input class='img' type='text' value="{$data.broadcast[2].label}"/>
+          <label class='href'>推广3链接</label>
+            <input class='href' type='text' value="{$data.broadcast[2].href}"/>
+          </li>
+          
+          <li>
+          <label class='img'>公告1文字</label>
+            <input class='img' type='text' value="{$data.broadcast[3].label}"/>
+          <label class='href'>公告1文字</label>
+            <input class='href' type='text' value="{$data.broadcast[3].href}"/>
+          </li>
+          
+          <li>
+          <label class='img'>公告2文字</label>
+            <input class='img' type='text' value="{$data.broadcast[4].label}"/>
+          <label class='href'>公告2文字</label>
+            <input class='href' type='text' value="{$data.broadcast[4].href}"/>
+          </li>
+          
+          <li>
+          <label class='img'>公告3文字</label>
+            <input class='img' type='text' value="{$data.broadcast[5].label}"/>
+          <label class='href'>公告3文字</label>
+            <input class='href' type='text' value="{$data.broadcast[5].href}"/>
+          </li>
         </ul>
+
         <div class="save"><input class="button" type="button" value="保存"></div>
       </div>
       
@@ -181,7 +209,7 @@ $(function(){
   });
   $("#banner-table .add input").click(function(e){
     var tpl = "<li>" + 
-           "<label class='img'>图片(1600*400)：</label><input class='img' type='text' value=''/>" + 
+           "<label class='img'>图片(1600*420)：</label><input class='img' type='text' value=''/>" + 
            "<a class='uploadfile' href='#'>上传文件</a>\n" + 
            "<label class='href'>链接：</label><input class='href' type='text' value=''/>" +
           "</li>"
@@ -193,14 +221,9 @@ $(function(){
     var index = $item.attr('data-index');
     $(".save input", item).click(function(){
       var items = {
-        name: $item.attr('data-name'),
+        name: $('.floor-name', item).val(),
         enabled: $('.enabled', item).prop("checked"),
         id: $('.cat_id input', item).val(),
-        slogan: {
-          img: $('.slogan input.img', item).val(),
-          href: $('.slogan input.href', item).val()
-        },
-        tags: $(".tags input", item).val(),
         items: []
       }
       $.each([1,2,3,4,5,6], function(index, sIndex){
@@ -219,18 +242,18 @@ $(function(){
   });
   
   //latest
-  $("#latest-table .save input").click(function(){
+  $("#broadcast-table .save input").click(function(){
     var items = [];
-    $("#latest-table li").each(function(index, item){
-	  if($('input.img', item).val()){
+    $("#broadcast-table li").each(function(index, item){
+	  
 		  items.push({
-			img: $('input.img', item).val(),
+		    label: $('input.img', item).val(),
 			href: $('input.href', item).val()
 		  });
-	  }
+	  
     });
     $.post('page.php?act=save&page=home', {
-      key: 'latest',
+      key: 'broadcast',
       data: items
     }, handlePageAjaxResponse);
   });

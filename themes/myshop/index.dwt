@@ -27,20 +27,20 @@
 <div class="ms-promotion">
   <div class="ms-mod clearfix">
     <div class="f_l ms-promotion-item ms-promotion-item1">
-      <a href="#" target="_blank"><img src="../images/b1.jpg"></a>
+      <a href="{$page_data.broadcast[0].href}" target="_blank"><img src="{$page_data.broadcast[0].label}"></a>
     </div>
     <div class="f_l ms-promotion-item ms-promotion-item2">
-      <a href="#" target="_blank"><img src="../images/b2.jpg"></a>
+      <a href="{$page_data.broadcast[1].href}" target="_blank"><img src="{$page_data.broadcast[1].label}"></a>
     </div>
     <div class="f_l ms-promotion-item ms-promotion-item3">
-      <a href="#" target="_blank"><img src="../images/b3.jpg"></a>
+      <a href="{$page_data.broadcast[2].href}" target="_blank"><img src="{$page_data.broadcast[2].label}"></a>
     </div>
     <div class="f_r ms-promotion-broadcast">
       <h3>最新活动公告</h3>
       <ul>
-        <li class='first'><a href="#" target="_blank">AAAAAAAAA</a></li>
-        <li><a href="#" target="_blank">BBBBBBBBBBBBBBBBBBBBB</a></li>
-        <li><a href="#" target="_blank">CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC</a></li>
+        <li class='first'><a href="{$page_data.broadcast[3].href}" target="_blank">{$page_data.broadcast[3].label}</a></li>
+        <li><a href="{$page_data.broadcast[4].href}" target="_blank">{$page_data.broadcast[4].label}</a></li>
+        <li><a href="{$page_data.broadcast[5].href}" target="_blank">{$page_data.broadcast[5].label}</a></li>
       </ul>
     </div>
   </div>
