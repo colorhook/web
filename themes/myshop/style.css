@@ -789,10 +789,10 @@ a:active,
 .ms-floor .slogan img{position:absolute;right:0;bottom:0}
 .ms-floor .slogan a{position:absolute;width:180px;height:254px;left:0;top:0;z-index:100;background:white\9;filter:alpha(opacity=0)\9;}
 
-.ms-floor .floor-items li{float:left;width:222px;height:342px;margin-left:10px;}
+.ms-floor .floor-items li{float:left;width:222px;height:342px;margin-left:10px;margin-bottom:10px}
 .ms-floor .floor-items li.first{margin-left:0px}
 .ms-floor .floor-items img{border:solid 1px transparent}
-.ms-floor .floor-items a:hover img{border:#f52142 1px dashed;}
+.ms-floor .floor-items a:hover img{border:transparent 1px dashed;}
 .ms-floor .floor-items a{display:block;position: relative;width:100%;height:100%}
 .ms-floor .floor-items .summary{
   -webkit-transition: 0.2s;

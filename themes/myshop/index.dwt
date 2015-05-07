@@ -65,8 +65,12 @@
     <div class="floor-items">
       <ul class="clearfix">
         <!--{foreach from=$floor.items item=goods name=goods}-->
-        {if $smarty.foreach.goods.index lt 5}
-        <li {if $smarty.foreach.goods.index eq 0} class='first'{/if}{if $smarty.foreach.goods.index eq 4} class='last'{/if}>
+        {if $smarty.foreach.goods.index lt 10}
+        <li 
+          {if $smarty.foreach.goods.index eq 0} class='first'{/if}
+          {if $smarty.foreach.goods.index eq 5} class='first'{/if}
+          {if $smarty.foreach.goods.index eq 4} class='last'{/if}
+          {if $smarty.foreach.goods.index eq 9} class='last'{/if}>
           <a href="{$goods.href}" target="_blank">
             <span class="img">
     	   <img data-src="{$goods.thumb}" src="{$goods.img}" width="220" height="340"/>
