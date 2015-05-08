@@ -242,12 +242,12 @@ $(function(){
     var index = $item.attr('data-index');
     $(".save input", item).click(function(){
       var items = {
-        name: $('.floor-name', item).val(),
+        name: $('.floor_name', item).val(),
         enabled: $('.enabled', item).prop("checked"),
         id: $('.cat_id input', item).val(),
         items: []
       }
-      $.each([1,2,3,4,5,6], function(index, sIndex){
+      $.each([1,2,3,4,5,6,7,8,9], function(index, sIndex){
         items.items.push({
           img: $('input.img'+sIndex, item).val(),
           href: $('input.href'+sIndex, item).val()
