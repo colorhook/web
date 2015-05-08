@@ -38,9 +38,13 @@
     <div class="f_r ms-promotion-broadcast">
       <h3>最新活动公告</h3>
       <ul>
-        <li class='first'><a href="{$page_data.broadcast[3].href}" target="_blank">{$page_data.broadcast[3].label}</a></li>
-        <li><a href="{$page_data.broadcast[4].href}" target="_blank">{$page_data.broadcast[4].label}</a></li>
-        <li><a href="{$page_data.broadcast[5].href}" target="_blank">{$page_data.broadcast[5].label}</a></li>
+        <!--{foreach from=$articles_notice item=article name=article}-->
+        {if $smarty.foreach.article.index lt 3}
+        <li {if $smarty.foreach.article.index eq 0} class='first'{/if}>
+          <a href="{$article.url}" target="_blank">{$article.title}</a>
+        </li>
+        {/if}
+        <!--{/foreach}-->
       </ul>
     </div>
   </div>
