@@ -140,14 +140,14 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
     foreach($page_data['floors'] as $key=>&$value){
       $tmp =explode(',', $value['tags']);
       $catid = $value['id'];
-      $_tags = array();
+      $ptags = array();
       foreach($tmp as $tagKey=>$tagValue){
-        $_tags[] = array(
+        $ptags[] = array(
           "url" => "search.php?category=$catid&keywords=" . urlEncode($tagValue),
           "label"=> $tagValue
         );
       }
-      $value['_tags'] = $_tags;
+      $value['_tags'] = $ptags;
 	  //获取商品的价格
 	  $floor_items = &$value['items'];
 	  foreach($floor_items as $item_key=>&$item_value){
