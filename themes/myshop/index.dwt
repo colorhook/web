@@ -59,7 +59,7 @@
     <h3 class="clearfix">
       <span class="title">{$floor.name}</a></span>
       <ul class='q-link clearfix'>
-        <li><a href="{$floor.slogan.href}" target="_blank">查看更多&gt;&gt;</a></li>
+        <li><a href="category.php?id={$floor.id}" target="_blank">查看更多&gt;&gt;</a></li>
         <!--{foreach from=$floor._tags item=tag name=tag}-->
          <!--<li><a href="{$tag.url}" target="_blank">{$tag.label}</a></li>-->
         <!--{/foreach}-->
