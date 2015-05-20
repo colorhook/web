@@ -18,7 +18,7 @@ if (!defined('IN_ECS'))
     die('Hacking attempt');
 }
 
-error_reporting(E_ALL | ~E_NOTICE);
+error_reporting(0);
 
 if (__FILE__ == '')
 {
