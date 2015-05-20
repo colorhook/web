@@ -138,6 +138,7 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
 	unset($page_data['banner']['enabled']);
 
     foreach($page_data['floors'] as $key=>&$value){
+    	/*
       $tmp =explode(',', $value['tags']);
       $catid = $value['id'];
       $ptags = array();
@@ -148,6 +149,7 @@ if (!$smarty->is_cached('index.dwt', $cache_id))
         );
       }
       $value['_tags'] = $ptags;
+      */
 	  //获取商品的价格
 	  $floor_items = &$value['items'];
 	  foreach($floor_items as $item_key=>&$item_value){
