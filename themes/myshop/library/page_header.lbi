@@ -1,5 +1,5 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-{insert_scripts files='jquery-1.9.0.min.js,transport.js,utils.js'}
+{insert_scripts files='jquery-1.9.0.min.js,jquery.lazyload.js,transport.js,utils.js'}
 <div class="ms-cap clearfix">
  <div class="ms-mod">
    <ul>
